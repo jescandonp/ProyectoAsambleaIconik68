@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informe de Gestión — Iconik 68</title>
+  <meta name="description" content="Informe de gestión anual de los Consejos de Administración General y Sectorial. Periodo Abril 2025 – Marzo 2026." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="assets/iconik-core.css" />
+
+  <style>
+    /* Collapsible EJE cards */
+    .eje-card > summary { list-style: none; }
+    .eje-card > summary::-webkit-details-marker { display: none; }
+
+    .eje-chevron { transition: transform 0.25s ease; }
+    .eje-card[open] .eje-chevron { transform: rotate(180deg); }
+
+    .eje-card > summary { cursor: pointer; }
+    .eje-card > summary:focus-visible { outline: 2px solid #003b93; outline-offset: 2px; border-radius: 0.75rem; }
+
+    /* Subtle expand animation */
+    .eje-body { animation: ejeOpen 0.25s ease; }
+    @keyframes ejeOpen {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body data-page="gestion" class="bg-surface text-on-surface font-body">
+
+  <div id="app-topnav"></div>
+  <div id="app-sidenav"></div>
+
+  <div class="lg:pl-64 pt-16 min-h-screen flex flex-col">
+    <main class="flex-1 px-6 py-10 md:px-10 max-w-5xl mx-auto w-full">
+
+      <!-- ── HEADER ─────────────────────────────────────────────────── -->
+      <header class="mb-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-5">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">groups</span>
+                Consejos de Administración
+              </span>
+              <span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-medium">
+                Abril 2025 – Marzo 2026
+              </span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold font-headline text-on-background tracking-tight mt-1">
+              Informe de Gestión Anual
+            </h1>
+            <p class="text-tertiary mt-3 max-w-2xl text-base leading-relaxed">
+              Tres pilares fundamentales de la gestión:
+              <span class="font-semibold text-primary">Transparencia Financiera</span>,
+              <span class="font-semibold text-primary">Estabilidad Operativa</span> y
+              <span class="font-semibold text-primary">Valorización del Activo</span>.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3 flex-shrink-0">
+            <button onclick="showOrganigrama()"
+              class="bg-surface-container-lowest text-primary border border-primary/20 px-5 py-3 rounded-xl font-semibold shadow-sm flex items-center gap-2 hover:bg-primary-fixed transition-all active:scale-95">
+              <span class="material-symbols-outlined text-sm">account_tree</span>
+              Ver Organigrama
+            </button>
+            <button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-semibold shadow-lg flex items-center gap-2 hover:shadow-xl transition-all active:scale-95">
+              <span class="material-symbols-outlined text-sm">download</span>
+              Descargar PDF
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- ── BANNER Consejos ─────────────────────────────────────────── -->
+      <div class="mb-8 p-4 bg-secondary-fixed rounded-xl flex items-center gap-3 ghost-border">
+        <span class="material-symbols-outlined text-on-secondary-fixed-variant flex-shrink-0" style="font-variation-settings:'FILL' 1;">groups</span>
+        <p class="text-on-secondary-fixed-variant text-sm">
+          Este informe corresponde a los <span class="font-bold">Consejos de Administración General y Sectorial</span> — órganos de control y dirección elegidos por los copropietarios del Edificio Iconik 68.
+          <button onclick="showOrganigrama()" class="inline-flex items-center gap-1 font-bold underline underline-offset-2 hover:no-underline ml-1">
+            Ver estructura organizacional
+            <span class="material-symbols-outlined text-xs">account_tree</span>
+          </button>
+        </p>
+      </div>
+
+      <!-- ── ACORDEÓN DE EJES ──────────────────────────────────────── -->
+      <div class="space-y-4">
+
+        <!-- ════════════════════════════════════════════════════════
+             EJE 1 — Interventoría y Auditoría Técnica (Construccity)
+             ════════════════════════════════════════════════════════ -->
+        <details class="eje-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border" open>
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">engineering</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Eje 1</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Interventoría y Auditoría Técnica</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full">+2 sem. adelanto</span>
+              <span class="material-symbols-outlined text-slate-400 eje-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="eje-body px-6 pb-6">
+            <p class="text-sm text-tertiary mb-6">
+              Auditoría liderada por <span class="font-semibold text-on-surface">Construccity</span> bajo modelo de "Frentes Simultáneos". Inicio: 17 de diciembre de 2025.
+            </p>
+
+            <!-- Métricas -->
+            <div class="grid grid-cols-3 gap-3 mb-7">
+              <div class="bg-surface-container-low p-4 rounded-xl text-center">
+                <p class="text-3xl font-bold font-headline text-primary">+15</p>
+                <p class="text-xs text-slate-500 mt-1 leading-tight">Jornadas intensivas en sitio</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl text-center">
+                <p class="text-3xl font-bold font-headline text-error">3</p>
+                <p class="text-xs text-slate-500 mt-1 leading-tight">Hallazgos críticos detectados</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl text-center">
+                <p class="text-2xl font-bold font-headline text-secondary">2 sem.</p>
+                <p class="text-xs text-slate-500 mt-1 leading-tight">Adelanto al cronograma</p>
+              </div>
+            </div>
+
+            <!-- Hallazgos críticos -->
+            <h3 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined text-error text-base">report_problem</span>
+              Hallazgos Críticos — Pendientes de Corrección por la Constructora
+            </h3>
+            <div class="space-y-3 mb-7">
+              <div class="flex gap-4 p-4 bg-red-50 rounded-xl border-l-4 border-error">
+                <div class="flex-shrink-0 w-9 h-9 bg-error rounded-full flex items-center justify-center text-on-error font-bold text-xs">01</div>
+                <div>
+                  <p class="font-bold text-error text-sm">Seguridad Vital — Cuarto de Tableros, Torre 1</p>
+                  <p class="text-sm text-tertiary mt-1">Riesgo inminente de electrocución por conexiones irregulares de obra. Se exigió normalización total de la red eléctrica antes de cualquier firma de recibo.</p>
+                  <span class="inline-block mt-2 text-[10px] font-bold text-error border border-error/30 px-2 py-0.5 rounded-full">CORRECCIÓN INMEDIATA REQUERIDA</span>
+                </div>
+              </div>
+              <div class="flex gap-4 p-4 bg-orange-50 rounded-xl border-l-4 border-orange-400">
+                <div class="flex-shrink-0 w-9 h-9 bg-orange-400 rounded-full flex items-center justify-center text-white font-bold text-xs">02</div>
+                <div>
+                  <p class="font-bold text-orange-700 text-sm">Deficiencia Funcional — Shut de Basuras, Torre 1</p>
+                  <p class="text-sm text-tertiary mt-1">Pendiente insuficiente vs. Torre 2. Generará atascos recurrentes y sobrecostos de mantenimiento por problemas de salubridad.</p>
+                  <span class="inline-block mt-2 text-[10px] font-bold text-orange-700 border border-orange-300 px-2 py-0.5 rounded-full">PLAN DE REMEDIACIÓN PENDIENTE</span>
+                </div>
+              </div>
+              <div class="flex gap-4 p-4 bg-yellow-50 rounded-xl border-l-4 border-yellow-400">
+                <div class="flex-shrink-0 w-9 h-9 bg-yellow-400 rounded-full flex items-center justify-center text-white font-bold text-xs">03</div>
+                <div>
+                  <p class="font-bold text-yellow-700 text-sm">Alerta Legal — Cubierta Centro Comercial</p>
+                  <p class="text-sm text-tertiary mt-1">La zona se presenta físicamente como terraza transitable, pero no figura con ese uso en la licencia de construcción. Riesgo legal y de seguros si se habilita al público.</p>
+                  <span class="inline-block mt-2 text-[10px] font-bold text-yellow-700 border border-yellow-300 px-2 py-0.5 rounded-full">ALERTA LEGAL ACTIVA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blindaje documental + Estado de entregas -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <h3 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-base">shield</span>
+                  Blindaje Documental
+                </h3>
+                <div class="space-y-2">
+                  <div class="bg-surface-container-low p-4 rounded-xl flex items-start gap-3">
+                    <span class="material-symbols-outlined text-secondary">folder_open</span>
+                    <div>
+                      <p class="font-bold text-sm">Repositorio Forense (Drive)</p>
+                      <p class="text-xs text-slate-500 mt-0.5">Trazabilidad total: registros fotográficos y normativa aplicable por hallazgo.</p>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-low p-4 rounded-xl flex items-start gap-3">
+                    <span class="material-symbols-outlined text-secondary">view_in_ar</span>
+                    <div>
+                      <p class="font-bold text-sm">Gemelo Digital (Modelo 3D)</p>
+                      <p class="text-xs text-slate-500 mt-0.5">Modelo volumétrico del conjunto para análisis espacial y mantenimiento futuro.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-base">checklist</span>
+                  Estado de Entregas — Etapa I
+                </h3>
+                <div class="space-y-2">
+                  <div class="p-4 bg-green-50 rounded-xl border border-green-200 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-green-600" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                    <div>
+                      <p class="font-bold text-sm text-green-800">Zonas No Esenciales</p>
+                      <p class="text-xs text-green-700">Recibidas y operativas</p>
+                    </div>
+                  </div>
+                  <div class="p-4 bg-red-50 rounded-xl border border-red-200 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-error" style="font-variation-settings:'FILL' 1;">block</span>
+                    <div>
+                      <p class="font-bold text-sm text-red-800">Zonas Esenciales</p>
+                      <p class="text-xs text-red-700">Bloqueadas — pendiente plan de remediación de la constructora.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ════════════════════════════════════════════════════════
+             EJE 2 — Modernización Tecnológica y Seguridad Integral
+             ════════════════════════════════════════════════════════ -->
+        <details class="eje-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">security</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Eje 2</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Modernización Tecnológica y Seguridad</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full">100% operativo</span>
+              <span class="material-symbols-outlined text-slate-400 eje-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="eje-body px-6 pb-6">
+            <p class="text-sm text-tertiary mb-6">
+              Contrato con <span class="font-semibold text-on-surface">Seguridad Gestión Ltda.</span> vigente hasta febrero 2027. 100% de rendimiento operativo del hardware instalado. El ecosistema de seguridad transitó de gasto operativo a inversión en infraestructura duradera.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-4">
+              <!-- Biométrico -->
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <span class="material-symbols-outlined text-primary text-2xl mb-3" style="font-variation-settings:'FILL' 1;">fingerprint</span>
+                <h3 class="font-bold text-sm mb-2">Sistema Biométrico y Accesos</h3>
+                <ul class="text-xs text-tertiary space-y-1.5">
+                  <li>· Terminales faciales ZKTeco en accesos peatonales, torres, sótano y zonas comunes</li>
+                  <li>· Electroimanes 300 LB + botones "Not Touch"</li>
+                  <li>· 500 Tags propietarios · 12 Tags maestros guardas</li>
+                  <li>· 2 antenas UHF largo alcance — flujo vehicular automatizado</li>
+                </ul>
+              </div>
+              <!-- CCTV -->
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <span class="material-symbols-outlined text-primary text-2xl mb-3" style="font-variation-settings:'FILL' 1;">videocam</span>
+                <h3 class="font-bold text-sm mb-2">CCTV — +15 Cámaras HD</h3>
+                <ul class="text-xs text-tertiary space-y-1.5">
+                  <li>· Plazoleta: 3 IP 2MP + 3 cámaras 180° sin puntos ciegos</li>
+                  <li>· Perímetro: 2 análogas tipo bala 2MP</li>
+                  <li>· Torre 3 ascensores: 3 cámaras 4MP <span class="text-green-700 font-bold">(ejecutado)</span></li>
+                  <li>· Torre 4: infraestructura lista — cámaras pendientes de apertura por constructora</li>
+                </ul>
+              </div>
+              <!-- Centro de Operaciones -->
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <span class="material-symbols-outlined text-primary text-2xl mb-3" style="font-variation-settings:'FILL' 1;">monitor</span>
+                <h3 class="font-bold text-sm mb-2">Centro de Operaciones</h3>
+                <ul class="text-xs text-tertiary space-y-1.5">
+                  <li>· DVR 16 canales + NVRs 4TB en rack metálico de seguridad</li>
+                  <li>· Monitor 32" en recepción para monitoreo en vivo</li>
+                  <li>· App móvil para supervisión administrativa remota</li>
+                  <li>· Carritos de mercado y Video Beam + telón para reuniones</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ════════════════════════════════════════════════════════
+             EJE 3 — Gestión Administrativa y Seguros
+             ════════════════════════════════════════════════════════ -->
+        <details class="eje-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">admin_panel_settings</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Eje 3</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Gestión Administrativa y Seguros</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-orange-700 bg-orange-50 border border-orange-200 px-2.5 py-1 rounded-full">Cambio de admin.</span>
+              <span class="material-symbols-outlined text-slate-400 eje-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="eje-body px-6 pb-6">
+            <div class="grid md:grid-cols-2 gap-5">
+              <!-- Cambio administración -->
+              <div class="bg-surface-container-low p-6 rounded-xl">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="material-symbols-outlined text-error">handshake</span>
+                  <h3 class="font-bold">Cambio de Empresa Administradora</h3>
+                </div>
+                <p class="text-sm text-tertiary mb-4">Tras un análisis detallado de cumplimiento, el Consejo General formalizó la no continuidad del contrato de administración actual.</p>
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center py-2 border-b border-outline-variant/10">
+                    <span class="text-sm font-medium">Fecha de terminación</span>
+                    <span class="text-sm font-bold text-on-surface">31 mayo 2026</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2">
+                    <span class="text-sm font-medium">Reunión de empalme</span>
+                    <span class="text-sm font-bold text-on-surface">21 abril 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pólizas -->
+              <div class="bg-surface-container-low p-6 rounded-xl">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="material-symbols-outlined text-secondary">verified_user</span>
+                  <h3 class="font-bold">Regularización de Pólizas</h3>
+                </div>
+                <p class="text-sm text-tertiary mb-4">Se detectó infraaseguramiento (valores por debajo del activo real). Se actualizó el avalúo catastral y se renovó la póliza de zonas comunes.</p>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="bg-primary-fixed p-3 rounded-lg text-center">
+                    <p class="text-2xl font-bold font-headline text-primary">$194M</p>
+                    <p class="text-[10px] text-on-primary-fixed-variant mt-0.5">Valor póliza renovada</p>
+                  </div>
+                  <div class="bg-primary-fixed p-3 rounded-lg text-center">
+                    <p class="text-2xl font-bold font-headline text-primary">3 cuotas</p>
+                    <p class="text-[10px] text-on-primary-fixed-variant mt-0.5">Sin intereses · $18.7M/mes</p>
+                  </div>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-3 italic">Año anterior: pagada en 10 cuotas con intereses.</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ════════════════════════════════════════════════════════
+             EJE 4 — Aseo, Mantenimiento y Paisajismo
+             ════════════════════════════════════════════════════════ -->
+        <details class="eje-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">cleaning_services</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Eje 4</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Aseo, Mantenimiento y Paisajismo</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full">SERVIGIA adjudicado</span>
+              <span class="material-symbols-outlined text-slate-400 eje-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="eje-body px-6 pb-6">
+            <p class="text-sm text-tertiary mb-6">Proceso de estabilización del servicio tras detectar irregularidades de fondo en la relación comercial anterior.</p>
+            <div class="grid md:grid-cols-3 gap-4">
+              <!-- Paso 1 -->
+              <div class="bg-red-50 border border-red-100 p-5 rounded-xl">
+                <div class="w-8 h-8 bg-error-container text-on-error-container rounded-full flex items-center justify-center mb-3">
+                  <span class="material-symbols-outlined text-sm">close</span>
+                </div>
+                <p class="font-bold text-sm mb-2">Terminación: Casa Limpia</p>
+                <p class="text-xs text-tertiary">Contrato finalizado por recomendación de la Revisoría Fiscal ante inconsistencias graves en el manejo de cuentas.</p>
+              </div>
+              <!-- Paso 2 -->
+              <div class="bg-orange-50 border border-orange-100 p-5 rounded-xl">
+                <div class="w-8 h-8 bg-orange-100 text-orange-700 rounded-full flex items-center justify-center mb-3">
+                  <span class="material-symbols-outlined text-sm">schedule</span>
+                </div>
+                <p class="font-bold text-sm mb-2">Contingencia: Ana Group</p>
+                <p class="text-xs text-tertiary">Contrato temporal de 2 meses para evitar la suspensión del servicio mientras se adelantaba el proceso de selección formal.</p>
+              </div>
+              <!-- Paso 3 -->
+              <div class="bg-green-50 border border-green-200 p-5 rounded-xl">
+                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center mb-3">
+                  <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                </div>
+                <p class="font-bold text-sm text-green-800 mb-2">Adjudicación: SERVIGIA ✓</p>
+                <p class="text-xs text-tertiary mb-3">Seleccionada sobre WGroup y Ana Group por mejor relación costo-beneficio. Valores agregados incluidos:</p>
+                <div class="flex flex-col gap-1.5">
+                  <span class="text-[10px] font-bold bg-white text-green-700 border border-green-200 px-2 py-1 rounded">Paisajismo de áreas verdes</span>
+                  <span class="text-[10px] font-bold bg-white text-green-700 border border-green-200 px-2 py-1 rounded">Todero 1 mes/año sin costo</span>
+                  <span class="text-[10px] font-bold bg-white text-green-700 border border-green-200 px-2 py-1 rounded">Gestión integral de residuos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ════════════════════════════════════════════════════════
+             EJE 5 — Relación con la Constructora y Comités
+             ════════════════════════════════════════════════════════ -->
+        <details class="eje-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">construction</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Eje 5</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Relación con la Constructora y Comités</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-primary bg-primary-fixed px-2.5 py-1 rounded-full">100% asistencia mesas</span>
+              <span class="material-symbols-outlined text-slate-400 eje-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="eje-body px-6 pb-6">
+            <p class="text-sm text-tertiary mb-6">6 sesiones clave con <span class="font-semibold text-on-surface">Constructora Capital</span>. Los Consejos participaron en el 100% de las mesas técnicas programadas.</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Timeline mesas -->
+              <div>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-base">calendar_month</span>
+                  Cronograma de Mesas Técnicas
+                </h3>
+                <div class="space-y-2">
+                  <div class="flex gap-3 items-start">
+                    <span class="text-[10px] font-bold text-slate-400 w-20 flex-shrink-0 pt-2">Jul 2025</span>
+                    <div class="flex-1 bg-surface-container-low p-3 rounded-lg">
+                      <p class="text-xs">Presentación de la Nueva Empresa de Administración y lineamientos operativos iniciales.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-start">
+                    <span class="text-[10px] font-bold text-slate-400 w-20 flex-shrink-0 pt-2">10 Sep 2025</span>
+                    <div class="flex-1 bg-surface-container-low p-3 rounded-lg">
+                      <p class="text-xs">Mesa presencial de obra y posventa. Juan Manuel Escandón + Sandra Galindo (Consejo General).</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-start">
+                    <span class="text-[10px] font-bold text-slate-400 w-20 flex-shrink-0 pt-2">22 Oct 2025</span>
+                    <div class="flex-1 bg-surface-container-low p-3 rounded-lg">
+                      <p class="text-xs">Mesa técnica de seguimiento operativo y avance de obra.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-start">
+                    <span class="text-[10px] font-bold text-slate-400 w-20 flex-shrink-0 pt-2">06 Nov 2025</span>
+                    <div class="flex-1 bg-surface-container-low p-3 rounded-lg">
+                      <p class="text-xs">Revisión e interpretación del Reglamento de Propiedad Horizontal (RPH). Consejo Sectorial como invitado principal.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-start">
+                    <span class="text-[10px] font-bold text-slate-400 w-20 flex-shrink-0 pt-2">09 Abr 2026</span>
+                    <div class="flex-1 bg-red-50 border border-red-200 p-3 rounded-lg">
+                      <p class="text-xs font-bold text-red-700 flex items-center gap-1 mb-1"><span class="material-symbols-outlined text-xs">bolt</span> Gestión de Crisis — Eléctrica</p>
+                      <p class="text-xs text-red-700">Fallas de energía, transformador y sobrecarga. Coordinación directa con ENEL-CODENSA.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-start">
+                    <span class="text-[10px] font-bold text-slate-400 w-20 flex-shrink-0 pt-2">Oct–Abr</span>
+                    <div class="flex-1 bg-surface-container-low p-3 rounded-lg">
+                      <p class="text-xs">Seguimiento continuo con Ing. Jeison: suministro de agua, motobombas, red contra incendios y ascensores.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reclamaciones e infraestructura -->
+              <div>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-base">build</span>
+                  Reclamaciones Activas a la Constructora
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="text-xs bg-surface-container-low border border-outline-variant/20 px-3 py-1.5 rounded-lg">Filtraciones en fachadas</span>
+                  <span class="text-xs bg-surface-container-low border border-outline-variant/20 px-3 py-1.5 rounded-lg">Canales perimetrales</span>
+                  <span class="text-xs bg-surface-container-low border border-outline-variant/20 px-3 py-1.5 rounded-lg">Juntas de dilatación</span>
+                  <span class="text-xs bg-surface-container-low border border-outline-variant/20 px-3 py-1.5 rounded-lg">Defectos de acabados</span>
+                  <span class="text-xs bg-surface-container-low border border-outline-variant/20 px-3 py-1.5 rounded-lg">Chapas de seguridad</span>
+                  <span class="text-xs bg-surface-container-low border border-outline-variant/20 px-3 py-1.5 rounded-lg">Materas y áreas comunes</span>
+                </div>
+
+                <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-base">groups</span>
+                  Estado de Comités
+                </h3>
+                <div class="space-y-2">
+                  <div class="bg-surface-container-low p-4 rounded-xl">
+                    <p class="font-bold text-sm">Comité de Recepción</p>
+                    <p class="text-xs text-tertiary mt-1">Participación limitada. Se destaca la labor de <span class="font-semibold">Carolina Álvarez (Apto 801)</span> como integrante regular en esta recta final.</p>
+                  </div>
+                  <div class="bg-surface-container-low p-4 rounded-xl">
+                    <p class="font-bold text-sm">Comité de Convivencia</p>
+                    <p class="text-xs text-tertiary mt-1">Asistencia mínima general. Se contó ocasionalmente con el apoyo de <span class="font-semibold">Erika Alvarado (Apto 905)</span>.</p>
+                  </div>
+                  <div class="bg-orange-50 border border-orange-100 p-4 rounded-xl">
+                    <p class="text-xs text-orange-700">Ante la acefalía de los comités, varios miembros de los Consejos asumieron directamente estas responsabilidades para no frenar el avance del conjunto.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ════════════════════════════════════════════════════════
+             EJE 6 (NUEVO) — Gestión de Seguridad Sectorial
+                             y Proyecto "Zona Segura"
+             ════════════════════════════════════════════════════════ -->
+        <details class="eje-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-white/40 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">local_police</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Eje 6</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Seguridad Sectorial y Proyecto "Zona Segura"</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-primary bg-primary-fixed px-2.5 py-1 rounded-full">Cód. SIPCI 36564</span>
+              <span class="material-symbols-outlined text-slate-400 eje-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="eje-body px-6 pb-6">
+            <p class="text-sm text-tertiary mb-6">
+              Un hito fundamental del año: la participación activa en la conformación y consolidación de la <span class="font-bold text-primary">Zona Segura</span>. Este proyecto busca blindar el entorno externo de la copropiedad mediante la integración con el sector.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Liderazgo -->
+              <div class="bg-white rounded-xl p-6 shadow-sm">
+                <h3 class="font-bold text-sm mb-1 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-base">person_pin</span>
+                  6.1 Liderazgo y Coordinación
+                </h3>
+                <p class="text-xs text-tertiary mb-4">El Consejero <span class="font-bold text-primary">Juan Manuel Escandón</span> fue designado <span class="font-semibold">Coordinador de Zona Segura</span> bajo el código <span class="font-bold">SIPCI - 36564</span>, liderando la integración estratégica del sector.</p>
+
+                <div class="space-y-2">
+                  <p class="text-xs font-bold text-on-surface uppercase tracking-wider mb-2">Conjuntos integrados:</p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div class="bg-primary-fixed/60 p-2.5 rounded-lg">
+                      <p class="text-xs font-bold text-primary">Boreal</p>
+                    </div>
+                    <div class="bg-primary-fixed/60 p-2.5 rounded-lg">
+                      <p class="text-xs font-bold text-primary">Meridiano</p>
+                    </div>
+                    <div class="bg-primary/10 p-2.5 rounded-lg col-span-2">
+                      <p class="text-xs font-bold text-primary">Iconik 68 ← nuestra copropiedad</p>
+                    </div>
+                    <div class="bg-primary-fixed/60 p-2.5 rounded-lg">
+                      <p class="text-xs font-bold text-primary">Portoaméricas</p>
+                    </div>
+                    <div class="bg-primary-fixed/60 p-2.5 rounded-lg">
+                      <p class="text-xs font-bold text-primary">Américas I</p>
+                    </div>
+                    <div class="bg-primary-fixed/60 p-2.5 rounded-lg">
+                      <p class="text-xs font-bold text-primary">Américas II</p>
+                    </div>
+                    <div class="bg-primary-fixed/60 p-2.5 rounded-lg">
+                      <p class="text-xs font-bold text-primary">Américas III</p>
+                    </div>
+                  </div>
+                  <p class="text-[10px] text-slate-400 italic mt-1">+ Comercio local del sector integrado a la red.</p>
+                </div>
+              </div>
+
+              <!-- Mesas y entidades -->
+              <div class="bg-white rounded-xl p-6 shadow-sm">
+                <h3 class="font-bold text-sm mb-1 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-base">account_balance</span>
+                  6.2 Articulación Institucional
+                </h3>
+                <p class="text-xs text-tertiary mb-4">Mesas de trabajo permanentes con la Policía Nacional y Policía Comunitaria, y trabajo colaborativo con entidades distritales.</p>
+
+                <div class="space-y-2">
+                  <div class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                    <span class="material-symbols-outlined text-blue-700 text-xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">local_police</span>
+                    <div>
+                      <p class="text-xs font-bold">Policía Nacional y Comunitaria</p>
+                      <p class="text-[10px] text-slate-500">Mesas de trabajo permanentes</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-xl flex-shrink-0">location_city</span>
+                    <div>
+                      <p class="text-xs font-bold">Alcaldía de Kennedy</p>
+                      <p class="text-[10px] text-slate-500">Secretaría de Seguridad, Convivencia y Justicia</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-xl flex-shrink-0">traffic</span>
+                    <div>
+                      <p class="text-xs font-bold">Secretaría de Movilidad</p>
+                      <p class="text-[10px] text-slate-500">+ UAESP (Servicios Públicos)</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-xl flex-shrink-0">volunteer_activism</span>
+                    <div>
+                      <p class="text-xs font-bold">Secretaría de Integración Social</p>
+                      <p class="text-[10px] text-slate-500">Trabajo colaborativo activo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ════════════════════════════════════════════════════════
+             EJE 7 — Tesorería y Auditoría Financiera
+             ════════════════════════════════════════════════════════ -->
+        <details class="eje-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">account_balance</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Eje 7</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Tesorería y Auditoría Financiera</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-orange-700 bg-orange-50 border border-orange-200 px-2.5 py-1 rounded-full">Oportunidades de mejora</span>
+              <span class="material-symbols-outlined text-slate-400 eje-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="eje-body px-6 pb-6">
+            <p class="text-sm text-tertiary mb-6">
+              Bajo la gestión de <span class="font-semibold text-on-surface">Adriana Ramírez</span>, se trabajó en la estabilización de pagos. El proceso reveló oportunidades de mejora que deben atenderse de inmediato.
+            </p>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <span class="material-symbols-outlined text-error mb-2">warning</span>
+                <p class="font-bold text-sm mb-2">Reto Identificado</p>
+                <p class="text-xs text-tertiary">Ausencia de cronograma estándar de pagos. Generó sobrecarga administrativa y dificultó la regularidad en el pago a proveedores.</p>
+              </div>
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <span class="material-symbols-outlined text-secondary mb-2">task_alt</span>
+                <p class="font-bold text-sm mb-2">Acción Tomada</p>
+                <p class="text-xs text-tertiary">El Consejero <span class="font-semibold">Juan Manuel Escandón</span> se vinculó activamente en revisión y seguimiento de tesorería bajo esquema de apoyo mutuo.</p>
+              </div>
+              <div class="bg-primary-fixed p-5 rounded-xl">
+                <p class="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-widest mb-3">Requerimientos — Revisoría Fiscal</p>
+                <div class="space-y-2">
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm flex-shrink-0 mt-0.5">radio_button_checked</span>
+                    <p class="text-xs">Calendario de pagos inamovible</p>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm flex-shrink-0 mt-0.5">radio_button_checked</span>
+                    <p class="text-xs">Trazabilidad documental por transacción</p>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm flex-shrink-0 mt-0.5">radio_button_checked</span>
+                    <p class="text-xs">Auditoría preventiva constante Consejo–Tesorería</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ════════════════════════════════════════════════════════
+             EJE 8 — Bienestar Comunitario y Acciones Sociales
+             ════════════════════════════════════════════════════════ -->
+        <details class="eje-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">volunteer_activism</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Eje 8</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Bienestar Comunitario y Acciones Sociales</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full">Sin presupuesto asignado</span>
+              <span class="material-symbols-outlined text-slate-400 eje-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="eje-body px-6 pb-6">
+
+            <!-- Contexto -->
+            <div class="bg-surface-container-low p-5 rounded-xl mb-6">
+              <p class="text-sm text-tertiary leading-relaxed">
+                A pesar de que para el año 2025 <strong class="text-on-surface">no se contaba con un presupuesto asignado</strong> para actividades de bienestar, la gestión del Consejo logró movilizar la solidaridad de los residentes para ejecutar acciones de alto impacto social. Estos logros son el resultado directo de la voluntad y los aportes de la propia comunidad.
+              </p>
+            </div>
+
+            <!-- 4 actividades -->
+            <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-base">emoji_events</span>
+              7.1 Acciones Ejecutadas — Gestión Basada en Colaboración
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-4">
+
+              <div class="flex gap-4 p-5 bg-surface-container-low rounded-xl">
+                <div class="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-red-500 text-xl" style="font-variation-settings:'FILL' 1;">celebration</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">Tradiciones y Convivencia</p>
+                  <p class="text-xs text-tertiary mt-1">Realización de las Novenas de Navidad, fomentando la unión entre vecinos y fortaleciendo el sentido de comunidad dentro del conjunto.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 p-5 bg-surface-container-low rounded-xl">
+                <div class="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-orange-500 text-xl" style="font-variation-settings:'FILL' 1;">shopping_basket</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">Responsabilidad Social Local</p>
+                  <p class="text-xs text-tertiary mt-1">Donación de mercados y juguetes para la Parroquia del sector, apoyando a familias vulnerables del entorno inmediato de Iconik 68.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 p-5 bg-surface-container-low rounded-xl">
+                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-blue-500 text-xl" style="font-variation-settings:'FILL' 1;">water</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">Solidaridad Nacional</p>
+                  <p class="text-xs text-tertiary mt-1">Recolección y entrega de donaciones para los damnificados por la Ola Invernal en el <strong class="text-on-surface">departamento de Córdoba</strong>.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 p-5 bg-surface-container-low rounded-xl">
+                <div class="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-emerald-500 text-xl" style="font-variation-settings:'FILL' 1;">pets</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">Convivencia: Tenencia Responsable</p>
+                  <p class="text-xs text-tertiary mt-1">Sesiones de sensibilización sobre la <strong class="text-on-surface">tenencia responsable de mascotas</strong>, un tema crítico para la armonía en la propiedad horizontal.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Nota sobre baja participación -->
+            <div class="mt-5 p-4 bg-orange-50 border border-orange-100 rounded-xl flex items-start gap-3">
+              <span class="material-symbols-outlined text-orange-500 flex-shrink-0 mt-0.5">info</span>
+              <p class="text-xs text-orange-800 leading-relaxed">
+                <span class="font-bold">Nota sobre participación:</span> La convocatoria a estas actividades contó con una respuesta limitada por parte de la comunidad. Una mayor participación ampliaría significativamente el impacto de estas iniciativas. Se invita a los copropietarios a involucrarse activamente en futuras ediciones.
+              </p>
+            </div>
+
+          </div>
+        </details>
+
+        <!-- ════════════════════════════════════════════════════════
+             ESCALA DE PARTICIPACIÓN
+             ════════════════════════════════════════════════════════ -->
+        <details class="eje-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">account_tree</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Estructura y Participación</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Composición de los Consejos y Registro de Participación</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <button onclick="event.stopPropagation(); showOrganigrama()"
+                class="hidden sm:inline-flex items-center gap-1.5 text-[10px] font-bold text-primary bg-primary-fixed px-3 py-1 rounded-full hover:bg-primary hover:text-white transition-all">
+                <span class="material-symbols-outlined text-xs">open_in_new</span>
+                Ver organigrama
+              </button>
+              <span class="material-symbols-outlined text-slate-400 eje-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="eje-body px-6 pb-6">
+
+            <!-- Intro -->
+            <p class="text-sm text-tertiary mb-6">
+              A continuación se presenta el registro de participación de los integrantes de ambos Consejos durante el período <strong class="text-on-surface">Abril 2025 – Marzo 2026</strong>. El reconocimiento de la participación activa y la transparencia sobre las ausencias es parte del compromiso de rendición de cuentas ante la Asamblea.
+              <button onclick="showOrganigrama()" class="inline-flex items-center gap-1 font-semibold text-primary ml-1 hover:underline">
+                Ver organigrama completo
+                <span class="material-symbols-outlined text-xs">account_tree</span>
+              </button>
+            </p>
+
+            <!-- Grid Consejo Sectorial + Consejo General -->
+            <div class="grid md:grid-cols-2 gap-6">
+
+              <!-- ─── CONSEJO SECTORIAL ─── -->
+              <div>
+                <div class="flex items-center gap-2 mb-4 pb-3 border-b border-outline-variant/20">
+                  <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                  <h3 class="font-bold text-base font-headline">Consejo Sectorial</h3>
+                  <span class="text-xs text-slate-400 ml-auto">6 miembros</span>
+                </div>
+
+                <!-- Activa -->
+                <div class="mb-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-500 flex-shrink-0"></span>
+                    <p class="text-xs font-bold text-green-700 uppercase tracking-wider">Participación Activa</p>
+                  </div>
+                  <div class="space-y-1.5 pl-4">
+                    <div class="flex items-center gap-2 bg-green-50 border border-green-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-green-600 text-sm" style="font-variation-settings:'FILL' 1;">verified</span>
+                      <p class="text-sm font-medium text-on-surface">Juan Manuel Escandón</p>
+                      <span class="ml-auto text-[10px] text-green-600 font-bold">Principal</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-green-50 border border-green-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-green-600 text-sm" style="font-variation-settings:'FILL' 1;">verified</span>
+                      <p class="text-sm font-medium text-on-surface">Adriana Arias</p>
+                      <span class="ml-auto text-[10px] text-green-600 font-bold">Principal</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Esporádica -->
+                <div class="mb-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400 flex-shrink-0"></span>
+                    <p class="text-xs font-bold text-amber-700 uppercase tracking-wider">Participación Esporádica</p>
+                  </div>
+                  <div class="space-y-1.5 pl-4">
+                    <div class="flex items-center gap-2 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-amber-500 text-sm">radio_button_checked</span>
+                      <p class="text-sm font-medium text-on-surface">Jorge Arias</p>
+                    </div>
+                    <div class="flex items-center gap-2 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-amber-500 text-sm">radio_button_checked</span>
+                      <p class="text-sm font-medium text-on-surface">Viviana Guarnizo</p>
+                    </div>
+                    <div class="flex items-center gap-2 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-amber-500 text-sm">radio_button_checked</span>
+                      <p class="text-sm font-medium text-on-surface">Vanessa Bermúdez</p>
+                      <span class="ml-auto text-[10px] text-amber-600 font-bold">Principal</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mínima -->
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-300 flex-shrink-0"></span>
+                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Participación Mínima o No Registrada</p>
+                  </div>
+                  <div class="space-y-1.5 pl-4">
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-slate-300 text-sm">radio_button_unchecked</span>
+                      <p class="text-sm font-medium text-tertiary">Julio Alberto Prieto</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ─── CONSEJO GENERAL ─── -->
+              <div>
+                <div class="flex items-center gap-2 mb-4 pb-3 border-b border-outline-variant/20">
+                  <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+                  <h3 class="font-bold text-base font-headline">Consejo General</h3>
+                  <span class="text-xs text-slate-400 ml-auto">10 miembros</span>
+                </div>
+
+                <!-- Activa -->
+                <div class="mb-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-500 flex-shrink-0"></span>
+                    <p class="text-xs font-bold text-green-700 uppercase tracking-wider">Participación Activa</p>
+                  </div>
+                  <div class="space-y-1.5 pl-4">
+                    <div class="flex items-center gap-2 bg-green-50 border border-green-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-green-600 text-sm" style="font-variation-settings:'FILL' 1;">verified</span>
+                      <p class="text-sm font-medium text-on-surface">Sandra Galindo</p>
+                      <span class="ml-auto text-[10px] text-green-600 font-bold">Principal</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-green-50 border border-green-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-green-600 text-sm" style="font-variation-settings:'FILL' 1;">verified</span>
+                      <p class="text-sm font-medium text-on-surface">Camila Montes</p>
+                      <span class="ml-auto text-[10px] text-green-600 font-bold">Principal</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-green-50 border border-green-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-green-600 text-sm" style="font-variation-settings:'FILL' 1;">verified</span>
+                      <p class="text-sm font-medium text-on-surface">Maira Picón</p>
+                      <span class="ml-auto text-[10px] text-green-600 font-bold">Principal</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-green-50 border border-green-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-green-600 text-sm" style="font-variation-settings:'FILL' 1;">verified</span>
+                      <p class="text-sm font-medium text-on-surface">Ximena Orjuela</p>
+                      <span class="ml-auto text-[10px] text-green-600 font-bold">Principal</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-green-50 border border-green-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-green-600 text-sm" style="font-variation-settings:'FILL' 1;">verified</span>
+                      <p class="text-sm font-medium text-on-surface">Juan Carlos Gamba</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Esporádica -->
+                <div class="mb-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400 flex-shrink-0"></span>
+                    <p class="text-xs font-bold text-amber-700 uppercase tracking-wider">Participación Esporádica</p>
+                  </div>
+                  <div class="space-y-1.5 pl-4">
+                    <div class="flex items-center gap-2 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-amber-500 text-sm">radio_button_checked</span>
+                      <p class="text-sm font-medium text-on-surface">María Dolly Becerra</p>
+                    </div>
+                    <div class="flex items-center gap-2 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-amber-500 text-sm">radio_button_checked</span>
+                      <p class="text-sm font-medium text-on-surface">Sandra Guaical</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mínima -->
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-300 flex-shrink-0"></span>
+                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Participación Mínima o No Registrada</p>
+                  </div>
+                  <div class="space-y-1.5 pl-4">
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-slate-300 text-sm">radio_button_unchecked</span>
+                      <p class="text-sm font-medium text-tertiary">Javier Quevedo</p>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-slate-300 text-sm">radio_button_unchecked</span>
+                      <p class="text-sm font-medium text-tertiary">Catalina Hernández</p>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">
+                      <span class="material-symbols-outlined text-slate-300 text-sm">radio_button_unchecked</span>
+                      <p class="text-sm font-medium text-tertiary">Madeline García</p>
+                      <span class="ml-auto text-[10px] text-slate-400 font-medium">Comercio · Principal</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /grid -->
+
+            <!-- Nota aclaratoria -->
+            <div class="mt-6 p-4 bg-surface-container-low rounded-xl ghost-border">
+              <p class="text-xs text-tertiary leading-relaxed">
+                <span class="font-semibold text-on-surface">Nota:</span> Este registro refleja la asistencia observada y documentada durante el período de gestión. La escala no tiene carácter punitivo; es un ejercicio de transparencia ante la Asamblea. Los Consejos invitan a que el próximo período elija integrantes con disponibilidad real de tiempo y compromiso efectivo con la copropiedad.
+              </p>
+            </div>
+
+          </div>
+        </details>
+
+        <!-- ════════════════════════════════════════════════════════
+             RECOMENDACIONES A LA ASAMBLEA (siempre visible)
+             ════════════════════════════════════════════════════════ -->
+        <div class="bg-primary rounded-2xl p-8 text-white relative overflow-hidden shadow-xl">
+          <div class="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+              <circle cx="80" cy="20" r="60" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings:'FILL' 1;">campaign</span>
+              <div>
+                <p class="text-xs font-bold text-on-primary/60 uppercase tracking-widest">Firma: Consejo General y Sectorial · Abril 2026</p>
+                <h2 class="text-xl font-bold font-headline">Recomendaciones a la Asamblea</h2>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-5">
+              <!-- Rec 1 -->
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/15">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                  <p class="font-bold">Compromiso en Comités</p>
+                </div>
+                <p class="text-sm text-on-primary/80">Evaluar disponibilidad real antes de postularse. Los Comités de Recepción y Convivencia son vitales para la protección del patrimonio. Son roles de responsabilidad, no honoríficos.</p>
+              </div>
+
+              <!-- Rec 2 -->
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/15">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                  <p class="font-bold">Unificación de Consejos</p>
+                </div>
+                <p class="text-sm text-on-primary/80">Se recomienda la unificación legal del Consejo General y Sectorial en un solo órgano para optimizar procesos y costos. Como medida de transición, el 6.º miembro del Consejo Sectorial debe participar en la mesa de unificación.</p>
+              </div>
+
+              <!-- Rec 3 -->
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/15">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                  <p class="font-bold">Involucramiento en la Zona Segura</p>
+                </div>
+                <p class="text-sm text-on-primary/80 mb-2">Se recomienda la participación activa de los copropietarios en las actividades de la Zona Segura. El trabajo de la PONAL es insuficiente frente a los retos del sector:</p>
+                <div class="flex flex-wrap gap-1.5 mt-2">
+                  <span class="text-[10px] bg-white/20 px-2 py-1 rounded font-medium">Obras en vía pública</span>
+                  <span class="text-[10px] bg-white/20 px-2 py-1 rounded font-medium">Habitantes de calle</span>
+                  <span class="text-[10px] bg-white/20 px-2 py-1 rounded font-medium">Consumo</span>
+                  <span class="text-[10px] bg-white/20 px-2 py-1 rounded font-medium">Hurto</span>
+                  <span class="text-[10px] bg-white/20 px-2 py-1 rounded font-medium">Movilidad</span>
+                </div>
+              </div>
+
+              <!-- Rec 4 -->
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/15">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+                  <p class="font-bold">Apoyo Económico a Proyectos de Seguridad</p>
+                </div>
+                <p class="text-sm text-on-primary/80 mb-3">Es imperativo financiar proyectos comunitarios focalizados en el entorno inmediato:</p>
+                <div class="space-y-2">
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary-container text-sm flex-shrink-0 mt-0.5">sensors</span>
+                    <p class="text-xs text-on-primary/80">Alarmas comunitarias zonales</p>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary-container text-sm flex-shrink-0 mt-0.5">videocam</span>
+                    <p class="text-xs text-on-primary/80">Cámaras conectadas directamente al C4 de la Policía Nacional</p>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary-container text-sm flex-shrink-0 mt-0.5">health_and_safety</span>
+                    <p class="text-xs text-on-primary/80">Actividades de prevención y mitigación de riesgos en el entorno inmediato</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rec 5 -->
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/15 md:col-span-2">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">5</div>
+                  <p class="font-bold">Participación Activa en Bienestar Comunitario</p>
+                </div>
+                <p class="text-sm text-on-primary/80">
+                  Se invita a la comunidad a involucrarse más decididamente en las actividades de bienestar. La baja participación registrada limita el alcance de iniciativas que buscan mejorar nuestra calidad de vida y convivencia. Estas acciones no requieren presupuesto institucional — requieren tiempo y voluntad. Su impacto en la cohesión social del conjunto es directo e invaluable.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /acordeón ejes -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-slate-50 border-t border-slate-200/40 py-8 px-8 mt-8">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">© 2026 Portal Informativo — Asamblea Residencial Iconik 68</p>
+        <div class="flex gap-8">
+          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Política de Datos</a>
+          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Canal de Transparencia</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/nav.js"></script>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       MODAL — ORGANIGRAMA DE LOS CONSEJOS
+       ══════════════════════════════════════════════════════════════ -->
+  <div id="organigrama-modal"
+       class="hidden fixed inset-0 z-[200] flex items-center justify-center p-4"
+       role="dialog" aria-modal="true" aria-label="Organigrama de los Consejos">
+
+    <!-- Backdrop -->
+    <div id="organigrama-backdrop"
+         class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+         onclick="hideOrganigrama()"></div>
+
+    <!-- Panel -->
+    <div class="relative bg-white w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl shadow-2xl border border-slate-100"
+         style="animation: modalIn 0.25s ease">
+
+      <!-- Botón cerrar -->
+      <button onclick="hideOrganigrama()"
+              class="absolute top-4 right-4 z-10 w-10 h-10 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center transition-colors"
+              aria-label="Cerrar">
+        <span class="material-symbols-outlined text-slate-600">close</span>
+      </button>
+
+      <div class="p-8 md:p-12 relative overflow-hidden">
+
+        <!-- Blobs decorativos del diseño original -->
+        <div class="absolute top-0 right-0 w-72 h-72 opacity-60 pointer-events-none"
+             style="background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 opacity-60 pointer-events-none"
+             style="background: radial-gradient(circle, rgba(0,99,152,0.06) 0%, transparent 70%); border-radius: 50%;"></div>
+
+        <!-- Encabezado -->
+        <div class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold font-headline text-on-background tracking-tight">
+            Estructura Organizacional
+          </h2>
+          <p class="text-tertiary mt-1 text-sm uppercase tracking-widest font-medium">Edificio Iconik 68 · Asamblea 2026</p>
+        </div>
+
+        <!-- Asamblea de Copropietarios -->
+        <div class="flex justify-center mb-2">
+          <div class="bg-on-surface text-white px-8 py-4 rounded-2xl shadow-lg text-center">
+            <h3 class="text-lg font-bold font-headline">Asamblea de Copropietarios</h3>
+            <p class="text-white/70 text-xs mt-1">Máximo Órgano de Decisión</p>
+          </div>
+        </div>
+
+        <!-- Conector vertical -->
+        <div class="w-px h-6 bg-slate-300 mx-auto"></div>
+        <!-- Conector horizontal -->
+        <div class="relative h-px bg-slate-300 w-1/2 mx-auto mb-2">
+          <div class="absolute left-0 top-0 w-px h-6 bg-slate-300"></div>
+          <div class="absolute right-0 top-0 w-px h-6 bg-slate-300"></div>
+        </div>
+
+        <!-- Los dos Consejos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Consejo General -->
+          <div class="rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+            <div class="bg-blue-600 px-6 py-4 text-white">
+              <div class="flex justify-between items-center">
+                <h3 class="font-bold text-lg font-headline">Consejo General</h3>
+                <span class="bg-white/20 text-white text-xs px-3 py-1 rounded-full font-semibold">10 Miembros</span>
+              </div>
+              <p class="text-blue-100 text-xs mt-1">Con representación del comercio (5 Principales, 5 Suplentes)</p>
+            </div>
+            <div class="p-5 bg-white">
+              <ul class="grid grid-cols-2 gap-2">
+                <li class="text-xs font-medium text-slate-700 bg-green-50 border border-green-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>Sandra Galindo (P)
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-green-50 border border-green-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>Camila Montes (P)
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-green-50 border border-green-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>Maira Picón (P)
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-green-50 border border-green-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>Ximena Orjuela (P)
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-green-50 border border-green-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>Juan C. Gamba
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0"></span>María D. Becerra
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0"></span>Sandra Guaical
+                </li>
+                <li class="text-xs font-medium text-slate-400 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 flex-shrink-0"></span>Javier Quevedo
+                </li>
+                <li class="text-xs font-medium text-slate-400 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 flex-shrink-0"></span>Catalina Hernández
+                </li>
+                <li class="text-xs font-medium text-slate-400 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 flex-shrink-0"></span>Madeline García (P)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Consejo Sectorial -->
+          <div class="rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+            <div class="bg-emerald-600 px-6 py-4 text-white">
+              <div class="flex justify-between items-center">
+                <h3 class="font-bold text-lg font-headline">Consejo Sectorial</h3>
+                <span class="bg-white/20 text-white text-xs px-3 py-1 rounded-full font-semibold">6 Miembros</span>
+              </div>
+              <p class="text-emerald-100 text-xs mt-1">Conforme al RPH (3 Principales, 3 Suplentes)</p>
+            </div>
+            <div class="p-5 bg-white">
+              <ul class="grid grid-cols-1 gap-2">
+                <li class="text-xs font-medium text-slate-700 bg-green-50 border border-green-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>Juan Manuel Escandón (P)
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-green-50 border border-green-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>Adriana Arias (P)
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0"></span>Jorge Arias
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0"></span>Viviana Guarnizo
+                </li>
+                <li class="text-xs font-medium text-slate-700 bg-amber-50 border border-amber-100 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0"></span>Vanessa Bermúdez (P)
+                </li>
+                <li class="text-xs font-medium text-slate-400 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 flex-shrink-0"></span>Julio Alberto Prieto
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Leyenda de participación -->
+        <div class="mt-6 flex flex-wrap justify-center gap-4 text-xs">
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-green-500"></span> Participación Activa</span>
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-amber-400"></span> Participación Esporádica</span>
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-slate-300"></span> Participación Mínima o No Registrada</span>
+        </div>
+
+        <!-- Nota RPH -->
+        <div class="mt-5 text-center">
+          <p class="text-xs text-slate-500 bg-slate-50 inline-block px-5 py-3 rounded-xl border border-slate-200 leading-relaxed">
+            <span class="font-semibold text-slate-700">Nota RPH:</span> El Reglamento de Propiedad Horizontal está conformado por el
+            <span class="font-medium text-emerald-700">Consejo Sectorial (6 personas)</span> y el
+            <span class="font-medium text-blue-700">Consejo General (10 personas)</span>. (P) = Miembro Principal.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.96) translateY(12px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+  </style>
+
+  <script>
+    function showOrganigrama() {
+      const modal = document.getElementById('organigrama-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function hideOrganigrama() {
+      const modal = document.getElementById('organigrama-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') hideOrganigrama();
+    });
+  </script>
+</body>
+</html>

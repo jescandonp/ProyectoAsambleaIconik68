@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presupuesto Ordinario 2026 — Iconik 68</title>
+  <meta name="description" content="Proyecciones financieras y asignación de recursos del conjunto residencial Iconik 68 para 2026." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="assets/iconik-core.css" />
+</head>
+
+<body data-page="presupuesto" class="bg-surface text-on-surface font-body">
+
+  <div id="app-topnav"></div>
+  <div id="app-sidenav"></div>
+
+  <div class="lg:pl-64 pt-16 min-h-screen flex flex-col">
+    <main class="flex-1 px-6 py-10 md:px-12 bg-surface max-w-7xl mx-auto w-full">
+
+      <!-- Header -->
+      <section class="mb-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <span class="text-secondary font-semibold tracking-wider text-sm uppercase mb-2 block">Finanzas Residenciales</span>
+            <h1 class="text-4xl md:text-5xl font-bold font-headline text-primary tracking-tight mb-4">
+              Presupuesto Ordinario 2026
+            </h1>
+            <p class="text-tertiary max-w-2xl text-lg leading-relaxed">
+              Presentación detallada de la proyección financiera para el próximo periodo fiscal. Nuestra prioridad es la transparencia institucional y el mantenimiento de la plusvalía de Iconik 68.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <button class="flex items-center gap-2 px-5 py-2.5 bg-white border border-outline-variant rounded-lg text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors shadow-sm">
+              <span class="material-symbols-outlined text-lg">download</span>
+              Descargar PDF
+            </button>
+            <button class="flex items-center gap-2 px-5 py-2.5 bg-white border border-outline-variant rounded-lg text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors shadow-sm">
+              <span class="material-symbols-outlined text-lg">table_view</span>
+              Anexo Excel
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tarjetas resumen -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm ghost-border">
+          <div class="flex justify-between items-start mb-4">
+            <span class="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">account_balance_wallet</span>
+            <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">+4.2% vs 2025</span>
+          </div>
+          <h3 class="text-slate-500 text-sm font-medium mb-1">Total Proyectado</h3>
+          <!-- TODO: Actualizar con cifra real cuando la administración entregue datos -->
+          <p class="text-3xl font-bold font-headline text-on-surface">$1,450,200.00</p>
+        </div>
+
+        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm ghost-border">
+          <div class="flex justify-between items-start mb-4">
+            <span class="material-symbols-outlined text-secondary p-2 bg-secondary-fixed rounded-lg">engineering</span>
+            <span class="text-xs font-medium text-slate-400">Gasto Operativo</span>
+          </div>
+          <h3 class="text-slate-500 text-sm font-medium mb-1">Inversión en Mantenimiento</h3>
+          <!-- TODO: Actualizar con cifra real -->
+          <p class="text-3xl font-bold font-headline text-on-surface">$580,080.00</p>
+        </div>
+
+        <div class="monolith-gradient p-8 rounded-xl shadow-lg relative overflow-hidden group">
+          <div class="relative z-10">
+            <h3 class="text-primary-fixed/80 text-sm font-medium mb-1">Nueva Cuota Admin</h3>
+            <!-- TODO: Actualizar con valor real aprobado -->
+            <p class="text-3xl font-bold font-headline text-white mb-4">
+              $425.00 <span class="text-sm font-normal text-white/70">/ promedio</span>
+            </p>
+            <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform shadow-md">
+              Simular mi cuota
+              <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
+          </div>
+          <div class="absolute -right-4 -bottom-4 opacity-20 transform rotate-12 group-hover:rotate-6 transition-transform">
+            <span class="material-symbols-outlined text-9xl text-white" style="font-variation-settings: 'FILL' 1;">calculate</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desglose de Gastos -->
+      <div class="bg-surface-container-low rounded-xl overflow-hidden mb-12">
+        <div class="p-8 border-b border-outline-variant/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <h2 class="text-2xl font-bold font-headline text-primary">Desglose de Gastos</h2>
+            <p class="text-sm text-tertiary">Distribución porcentual por categorías de servicio.</p>
+          </div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="bg-white px-3 py-1 rounded-full text-xs font-medium border border-outline-variant/20 flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-blue-600"></span> Operativo
+            </span>
+            <span class="bg-white px-3 py-1 rounded-full text-xs font-medium border border-outline-variant/20 flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-cyan-500"></span> Seguridad
+            </span>
+            <span class="bg-white px-3 py-1 rounded-full text-xs font-medium border border-outline-variant/20 flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-slate-400"></span> Reserva
+            </span>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+              <!-- TODO: Actualizar porcentajes con datos reales -->
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-between text-sm">
+                  <span class="font-medium">Mantenimiento y Áreas Comunes</span>
+                  <span class="font-bold text-primary">40%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                  <div class="bg-primary h-full rounded-full" style="width: 40%"></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-between text-sm">
+                  <span class="font-medium">Seguridad Privada 24/7</span>
+                  <span class="font-bold text-secondary">35%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                  <div class="bg-secondary h-full rounded-full" style="width: 35%"></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-between text-sm">
+                  <span class="font-medium">Servicios Públicos y Administración</span>
+                  <span class="font-bold text-tertiary">15%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                  <div class="bg-tertiary h-full rounded-full" style="width: 15%"></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-between text-sm">
+                  <span class="font-medium">Fondo de Reserva Estructural</span>
+                  <span class="font-bold text-slate-400">10%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                  <div class="bg-slate-400 h-full rounded-full" style="width: 10%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Donut chart decorativo -->
+            <div class="flex justify-center relative">
+              <div class="w-64 h-64 rounded-full border-[16px] border-surface-container-high relative flex items-center justify-center">
+                <div class="text-center">
+                  <span class="text-4xl font-bold font-headline text-primary block">100%</span>
+                  <span class="text-[10px] uppercase tracking-widest text-tertiary">Eficiencia Fiscal</span>
+                </div>
+                <svg class="absolute inset-0 w-full h-full -rotate-90">
+                  <circle class="opacity-80" cx="128" cy="128" fill="transparent" r="112"
+                    stroke="#003b93" stroke-dasharray="703.7" stroke-dashoffset="422" stroke-width="16" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabla comparativa anual -->
+      <div class="bg-white rounded-xl shadow-sm ghost-border mb-12">
+        <div class="p-8">
+          <h2 class="text-xl font-bold font-headline text-primary mb-6">Comparativa Anual Proyectada</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="text-tertiary text-xs uppercase tracking-widest border-b border-outline-variant/10">
+                  <th class="pb-4 font-bold">Categoría</th>
+                  <th class="pb-4 font-bold">Ejecutado 2025</th>
+                  <th class="pb-4 font-bold">Presupuesto 2026</th>
+                  <th class="pb-4 font-bold">Variación %</th>
+                  <th class="pb-4 font-bold text-right">Estado</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm">
+                <!-- TODO: Reemplazar con datos reales de la administración -->
+                <tr class="border-b border-outline-variant/5">
+                  <td class="py-5 font-semibold text-on-surface">Mantenimiento Ascensores</td>
+                  <td class="py-5 text-tertiary">$45,000</td>
+                  <td class="py-5 text-on-surface">$48,500</td>
+                  <td class="py-5 text-green-600 font-medium">+7.7%</td>
+                  <td class="py-5 text-right"><span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold">Crítico</span></td>
+                </tr>
+                <tr class="border-b border-outline-variant/5">
+                  <td class="py-5 font-semibold text-on-surface">Personal de Conserjería</td>
+                  <td class="py-5 text-tertiary">$120,000</td>
+                  <td class="py-5 text-on-surface">$132,000</td>
+                  <td class="py-5 text-green-600 font-medium">+10%</td>
+                  <td class="py-5 text-right"><span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-bold">Nómina</span></td>
+                </tr>
+                <tr class="border-b border-outline-variant/5">
+                  <td class="py-5 font-semibold text-on-surface">Jardinería y Paisajismo</td>
+                  <td class="py-5 text-tertiary">$22,000</td>
+                  <td class="py-5 text-on-surface">$20,500</td>
+                  <td class="py-5 text-red-600 font-medium">-6.8%</td>
+                  <td class="py-5 text-right"><span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-bold">Optimizado</span></td>
+                </tr>
+                <tr>
+                  <td class="py-5 font-semibold text-on-surface">Seguro Multi-Riesgo</td>
+                  <td class="py-5 text-tertiary">$58,000</td>
+                  <td class="py-5 text-on-surface">$61,000</td>
+                  <td class="py-5 text-green-600 font-medium">+5.1%</td>
+                  <td class="py-5 text-right"><span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold">Legal</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Simulador -->
+      <section class="bg-surface-container-high rounded-xl p-10 flex flex-col md:flex-row items-center justify-between gap-8 ghost-border">
+        <div class="max-w-xl">
+          <h2 class="text-2xl font-bold font-headline text-primary mb-2">Simulador de Cuota Dinámica</h2>
+          <p class="text-tertiary leading-relaxed">
+            Utilice nuestra herramienta de simulación para entender cómo impacta el nuevo presupuesto en su unidad específica basándose en su coeficiente de copropiedad.
+          </p>
+        </div>
+        <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" rel="noopener"
+           class="monolith-gradient text-white font-bold py-4 px-10 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex items-center gap-3 flex-shrink-0">
+          Acceder al Simulador
+          <span class="material-symbols-outlined">analytics</span>
+        </a>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-slate-50 border-t border-slate-200/40 py-8 px-8 mt-8">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">© 2026 Asamblea Residencial Iconik 68 — Gestión Financiera</p>
+        <div class="flex gap-8">
+          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Política de Privacidad</a>
+          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Transparencia</a>
+          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Contactar Admin</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/nav.js"></script>
+</body>
+</html>

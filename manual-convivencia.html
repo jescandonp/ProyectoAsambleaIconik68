@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manual de Convivencia 2026 — Iconik 68</title>
+  <meta name="description" content="Reformas al Manual de Convivencia 2026: zonas comunes, régimen sancionatorio, parqueaderos, Club House y cargadores eléctricos." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="assets/iconik-core.css" />
+
+  <style>
+    .seccion-card > summary { list-style: none; }
+    .seccion-card > summary::-webkit-details-marker { display: none; }
+    .seccion-chevron { transition: transform 0.25s ease; }
+    .seccion-card[open] .seccion-chevron { transform: rotate(180deg); }
+    .seccion-card > summary { cursor: pointer; }
+    .seccion-card > summary:focus-visible { outline: 2px solid #003b93; outline-offset: 2px; border-radius: 0.75rem; }
+    .seccion-body { animation: ejeOpen 0.25s ease; }
+    @keyframes ejeOpen {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    /* Tabla de tarifas */
+    .tarifa-table th { background-color: #003b93; color: #ffffff; }
+    .tarifa-table tr:nth-child(even) { background-color: #f6f3f2; }
+    .tarifa-total td { background-color: #003b93; color: #ffffff; font-weight: 700; }
+  </style>
+</head>
+
+<body data-page="convivencia" class="bg-surface font-body text-on-surface antialiased">
+
+  <div id="app-topnav"></div>
+  <div id="app-sidenav"></div>
+
+  <div class="lg:pl-64 pt-16 min-h-screen flex flex-col">
+    <main class="flex-1 px-6 py-10 md:px-10 max-w-5xl mx-auto w-full">
+
+      <!-- ── HEADER ─────────────────────────────────────────────────── -->
+      <header class="mb-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-5">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">edit_document</span>
+                Propuesta de Reforma — Asamblea 2026
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm">pending</span>
+                Pendiente de Aprobación
+              </span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold font-headline text-on-background tracking-tight mt-1">
+              Propuesta: Manual de Convivencia 2026
+            </h1>
+            <p class="text-tertiary mt-3 max-w-2xl text-base leading-relaxed">
+              Presentación de las principales novedades y ajustes identificados a lo largo del año, construidas con base en múltiples espacios de retroalimentación con la comunidad. Esta propuesta <span class="font-semibold text-on-surface">debe ser aprobada por la Asamblea General</span> para entrar en vigencia.
+            </p>
+          </div>
+          <div class="flex-shrink-0">
+            <button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-semibold shadow-lg flex items-center gap-2 hover:shadow-xl transition-all active:scale-95">
+              <span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+              Descargar Manual PDF
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- ── CONTEXTO DE LA PROPUESTA ──────────────────────────────── -->
+      <div class="mb-6 p-5 bg-secondary-fixed rounded-2xl ghost-border">
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-on-secondary-fixed-variant flex-shrink-0 mt-0.5 text-2xl" style="font-variation-settings:'FILL' 1;">campaign</span>
+          <div>
+            <p class="font-bold text-on-secondary-fixed-variant text-sm mb-2">¿Qué es este documento?</p>
+            <p class="text-on-secondary-fixed-variant/90 text-sm leading-relaxed">
+              Esta es una <strong>propuesta de reforma al Manual de Convivencia</strong>, construida a lo largo de un año de gestión. Recoge las principales novedades y situaciones identificadas en la operación diaria del conjunto, y ha sido estructurada teniendo en cuenta múltiples espacios de retroalimentación e información con la comunidad de Iconik 68.
+            </p>
+            <p class="text-on-secondary-fixed-variant/90 text-sm leading-relaxed mt-2">
+              Su contenido <strong>entrará en vigencia únicamente si es aprobado por la Asamblea General</strong>. Te invitamos a revisarlo con atención y a participar activamente en la votación.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── DOCUMENTOS DE REFERENCIA ───────────────────────────────── -->
+      <div class="mb-8 grid md:grid-cols-2 gap-4">
+        <a href="#"
+           class="group flex items-center gap-4 p-5 bg-surface-container-lowest rounded-2xl ghost-border shadow-sm hover:shadow-md hover:bg-primary-fixed/40 transition-all">
+          <div class="w-11 h-11 bg-primary-fixed rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" style="font-variation-settings:'FILL' 1;">menu_book</span>
+          </div>
+          <div>
+            <p class="font-bold text-sm text-on-surface">Manual de Convivencia 2025</p>
+            <p class="text-xs text-tertiary mt-0.5">Versión vigente — documento oficial actual</p>
+            <span class="inline-flex items-center gap-1 text-[10px] font-bold text-primary mt-1.5">
+              Ver documento <span class="material-symbols-outlined text-xs">open_in_new</span>
+            </span>
+          </div>
+        </a>
+
+        <a href="#"
+           class="group flex items-center gap-4 p-5 bg-surface-container-lowest rounded-2xl ghost-border shadow-sm hover:shadow-md hover:bg-secondary-fixed/60 transition-all">
+          <div class="w-11 h-11 bg-secondary-fixed rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-secondary transition-colors">
+            <span class="material-symbols-outlined text-on-secondary-fixed-variant group-hover:text-white transition-colors" style="font-variation-settings:'FILL' 1;">edit_note</span>
+          </div>
+          <div>
+            <p class="font-bold text-sm text-on-surface">Propuestas de Modificación 2026</p>
+            <p class="text-xs text-tertiary mt-0.5">Documento completo con todos los artículos propuestos</p>
+            <span class="inline-flex items-center gap-1 text-[10px] font-bold text-secondary mt-1.5">
+              Ver propuesta completa <span class="material-symbols-outlined text-xs">open_in_new</span>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- ── ACORDEÓN DE SECCIONES ─────────────────────────────────── -->
+      <div class="space-y-4">
+
+        <!-- ══════════════════════════════════════════════════════
+             SECCIÓN 1 — Zonas Comunes: Reservas y Tarifas
+             ══════════════════════════════════════════════════════ -->
+        <details class="seccion-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border" open>
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">event_available</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">§ 5.5.1.1</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Salones Sociales y Zonas BBQ — Reservas y Tarifas</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-primary bg-primary-fixed px-2.5 py-1 rounded-full">Reserva vía APP</span>
+              <span class="material-symbols-outlined text-slate-400 seccion-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="seccion-body px-6 pb-6">
+            <!-- Cómo reservar -->
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+              <div class="bg-primary-fixed/70 p-5 rounded-xl">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">smartphone</span>
+                  <h3 class="font-bold text-sm">Paso 1 — Reservar</h3>
+                </div>
+                <p class="text-sm text-tertiary">El propietario o residente debe realizar la reserva a través de la <span class="font-bold text-on-surface">APP Iconik68</span>. Los valores de alquiler aumentan anualmente según el <span class="font-semibold">índice IPC</span>.</p>
+              </div>
+              <div class="bg-primary-fixed/70 p-5 rounded-xl">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">payments</span>
+                  <h3 class="font-bold text-sm">Paso 2 — Pagar y Confirmar</h3>
+                </div>
+                <p class="text-sm text-tertiary">Consignar el total a la cuenta de administración con referencia <span class="font-bold text-on-surface">8 + número de apartamento</span> (Ej: 8423). El pago incluye alquiler + aseo + depósito.</p>
+              </div>
+            </div>
+
+            <!-- Tabla de tarifas -->
+            <h3 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined text-base text-secondary">table_chart</span>
+              Tarifas vigentes 2026
+            </h3>
+            <div class="overflow-x-auto rounded-xl shadow-sm ghost-border mb-2">
+              <table class="tarifa-table w-full text-sm border-collapse">
+                <thead>
+                  <tr>
+                    <th class="px-5 py-3 text-left text-xs font-bold uppercase tracking-wider rounded-tl-xl">Espacio</th>
+                    <th class="px-5 py-3 text-left text-xs font-bold uppercase tracking-wider">Concepto</th>
+                    <th class="px-5 py-3 text-right text-xs font-bold uppercase tracking-wider rounded-tr-xl">Valor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Salón social 1,2 -->
+                  <tr><td class="px-5 py-2.5 font-medium" rowspan="3">Salón Social 1 ó 2</td><td class="px-5 py-2.5 text-tertiary">Alquiler</td><td class="px-5 py-2.5 text-right">$143.000</td></tr>
+                  <tr><td class="px-5 py-2.5 text-tertiary">Aseo</td><td class="px-5 py-2.5 text-right">$50.000</td></tr>
+                  <tr><td class="px-5 py-2.5 text-tertiary">Depósito</td><td class="px-5 py-2.5 text-right">$150.000</td></tr>
+                  <tr class="tarifa-total"><td class="px-5 py-3" colspan="2">TOTAL A CONSIGNAR — Salón Social 1 ó 2</td><td class="px-5 py-3 text-right">$343.000</td></tr>
+                  <!-- BBQ -->
+                  <tr><td class="px-5 py-2.5 font-medium" rowspan="3">Zona BBQ 1, 2 ó 3</td><td class="px-5 py-2.5 text-tertiary">Alquiler</td><td class="px-5 py-2.5 text-right">$143.000</td></tr>
+                  <tr><td class="px-5 py-2.5 text-tertiary">Aseo</td><td class="px-5 py-2.5 text-right">$60.000</td></tr>
+                  <tr><td class="px-5 py-2.5 text-tertiary">Depósito</td><td class="px-5 py-2.5 text-right">$150.000</td></tr>
+                  <tr class="tarifa-total"><td class="px-5 py-3" colspan="2">TOTAL A CONSIGNAR — Zona BBQ</td><td class="px-5 py-3 text-right">$353.000</td></tr>
+                  <!-- Salón + BBQ -->
+                  <tr><td class="px-5 py-2.5 font-medium" rowspan="3">Salón Social + BBQ</td><td class="px-5 py-2.5 text-tertiary">Alquiler</td><td class="px-5 py-2.5 text-right">$286.000</td></tr>
+                  <tr><td class="px-5 py-2.5 text-tertiary">Aseo</td><td class="px-5 py-2.5 text-right">$75.000</td></tr>
+                  <tr><td class="px-5 py-2.5 text-tertiary">Depósito</td><td class="px-5 py-2.5 text-right">$150.000</td></tr>
+                  <tr class="tarifa-total"><td class="px-5 py-3" colspan="2">TOTAL A CONSIGNAR — Salón + BBQ</td><td class="px-5 py-3 text-right">$511.000</td></tr>
+                  <!-- 2 salones -->
+                  <tr><td class="px-5 py-2.5 font-medium" rowspan="3">2 Salones Sociales</td><td class="px-5 py-2.5 text-tertiary">Alquiler</td><td class="px-5 py-2.5 text-right">$213.000</td></tr>
+                  <tr><td class="px-5 py-2.5 text-tertiary">Aseo</td><td class="px-5 py-2.5 text-right">$80.000</td></tr>
+                  <tr><td class="px-5 py-2.5 text-tertiary">Depósito</td><td class="px-5 py-2.5 text-right">$150.000</td></tr>
+                  <tr class="tarifa-total rounded-bl-xl"><td class="px-5 py-3 rounded-bl-xl" colspan="2">TOTAL A CONSIGNAR — 2 Salones</td><td class="px-5 py-3 text-right rounded-br-xl">$443.000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-xs text-slate-400 italic mt-2">* El depósito es reembolsable si no hay daños. Los valores aumentan anualmente con el IPC.</p>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             SECCIÓN 2 — Régimen Sancionatorio (Multas Inmediatas)
+             ══════════════════════════════════════════════════════ -->
+        <details class="seccion-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-gradient-to-br from-error to-red-700 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">gavel</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-error uppercase tracking-widest">§ 7.2.1 — Art. 98 RPH</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Régimen Sancionatorio — Propuesta de Multas</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-orange-700 bg-orange-50 border border-orange-200 px-2.5 py-1 rounded-full">10 infracciones propuestas</span>
+              <span class="material-symbols-outlined text-slate-400 seccion-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="seccion-body px-6 pb-6">
+            <!-- Cómo funciona -->
+            <div class="bg-surface-container-low p-5 rounded-xl mb-6">
+              <h3 class="font-bold text-sm mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary text-base">info</span>
+                ¿Cómo funcionaría la sanción si se aprueba?
+              </h3>
+              <div class="grid md:grid-cols-3 gap-3 text-xs text-tertiary">
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base flex-shrink-0">camera_alt</span><span>La infracción se verificará con evidencia: fotos, videos, informes de seguridad o reportes de residentes.</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base flex-shrink-0">receipt_long</span><span>La multa se reflejaría directamente en la <strong class="text-on-surface">siguiente factura de administración</strong>.</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base flex-shrink-0">balance</span><span>Se garantiza el <strong class="text-on-surface">debido proceso</strong>: notificación al infractor y posibilidad de presentar descargos.</span></div>
+              </div>
+            </div>
+
+            <!-- Tabla de valores -->
+            <div class="mb-6 p-5 bg-red-50 rounded-xl border border-red-200">
+              <h3 class="font-bold text-sm text-error mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">monetization_on</span>
+                Clasificación y Valores de Multas — 2026
+              </h3>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="bg-white p-3 rounded-lg text-center border border-yellow-200">
+                  <span class="inline-block w-7 h-7 bg-yellow-400 text-white rounded-full text-xs font-bold flex items-center justify-center mx-auto mb-2">1</span>
+                  <p class="text-xs font-bold text-on-surface">Leve</p>
+                  <p class="text-[10px] text-slate-500">3 días SMDLV</p>
+                  <p class="text-base font-bold text-yellow-600 mt-1">$175.092</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg text-center border border-orange-200">
+                  <span class="inline-block w-7 h-7 bg-orange-400 text-white rounded-full text-xs font-bold flex items-center justify-center mx-auto mb-2">2</span>
+                  <p class="text-xs font-bold text-on-surface">Medio</p>
+                  <p class="text-[10px] text-slate-500">4 días SMDLV</p>
+                  <p class="text-base font-bold text-orange-600 mt-1">$233.456</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg text-center border border-red-300">
+                  <span class="inline-block w-7 h-7 bg-red-500 text-white rounded-full text-xs font-bold flex items-center justify-center mx-auto mb-2">3</span>
+                  <p class="text-xs font-bold text-on-surface">Grave</p>
+                  <p class="text-[10px] text-slate-500">5 días SMDLV</p>
+                  <p class="text-base font-bold text-red-600 mt-1">$291.820</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg text-center border border-red-500">
+                  <span class="inline-block w-7 h-7 bg-red-800 text-white rounded-full text-xs font-bold flex items-center justify-center mx-auto mb-2">4</span>
+                  <p class="text-xs font-bold text-on-surface">Muy grave</p>
+                  <p class="text-[10px] text-slate-500">6 días SMDLV</p>
+                  <p class="text-base font-bold text-red-800 mt-1">$350.184</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Las 10 infracciones -->
+            <h3 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined text-base text-error">report</span>
+              Infracciones con Multa de Aplicación Inmediata
+            </h3>
+            <div class="space-y-3">
+
+              <!-- Ayuda visual: badge helper -->
+              <div class="flex gap-3 text-[10px] mb-1">
+                <span class="flex items-center gap-1"><span class="w-4 h-4 bg-yellow-400 rounded-full inline-block"></span> Multa Tipo 1 = $175.092</span>
+                <span class="flex items-center gap-1"><span class="w-4 h-4 bg-orange-400 rounded-full inline-block"></span> Multa Tipo 2 = $233.456</span>
+              </div>
+
+              <!-- 1. Inasistencia a Asambleas -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-yellow-400">
+                <div class="flex-shrink-0 text-center">
+                  <span class="w-8 h-8 bg-yellow-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T1</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">1. Inasistencia a Asambleas</p>
+                  <p class="text-xs text-tertiary mt-1">Propietarios que, sin causa justificada, no asistan a Asambleas Generales (ordinarias o extraordinarias). La multa corresponde a <span class="font-semibold text-on-surface">media expensa de administración</span> (cuota mensual vigente).</p>
+                </div>
+              </div>
+
+              <!-- 2. Mascotas -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-orange-400">
+                <div class="flex-shrink-0">
+                  <span class="w-8 h-8 bg-orange-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T2</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">2. No recolección de excrementos de mascotas</p>
+                  <p class="text-xs text-tertiary mt-1">Propietarios, residentes o tenedores de mascotas que no recojan inmediatamente los excrementos en zonas comunes: senderos, jardines, pasillos y cualquier espacio compartido.</p>
+                </div>
+              </div>
+
+              <!-- 3. Shut -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-orange-400">
+                <div class="flex-shrink-0">
+                  <span class="w-8 h-8 bg-orange-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T2</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">3. Uso inadecuado del shut de residuos</p>
+                  <p class="text-xs text-tertiary mt-1">Quienes depositen residuos no permitidos: bolsas mal selladas o elementos de gran tamaño. Genera taponamientos, malos olores y proliferación de plagas.</p>
+                </div>
+              </div>
+
+              <!-- 4. Cuartos de aseo -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-orange-400">
+                <div class="flex-shrink-0">
+                  <span class="w-8 h-8 bg-orange-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T2</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">4. Depósito indebido de residuos en cuartos de aseo</p>
+                  <p class="text-xs text-tertiary mt-1">Quienes depositen residuos sólidos, orgánicos o reciclables en cuartos de aseo o zonas no autorizadas de cada piso o torre. Estos espacios no son depósitos de residuos.</p>
+                </div>
+              </div>
+
+              <!-- 5. Clasificación residuos -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-orange-400">
+                <div class="flex-shrink-0">
+                  <span class="w-8 h-8 bg-orange-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T2</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">5. Manejo inadecuado de residuos</p>
+                  <p class="text-xs text-tertiary mt-1">Incumplimiento de normas para clasificación, separación y disposición de residuos (reciclables, orgánicos, no aprovechables), incluyendo horarios de disposición.</p>
+                </div>
+              </div>
+
+              <!-- 6. Balcones -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-yellow-400">
+                <div class="flex-shrink-0">
+                  <span class="w-8 h-8 bg-yellow-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T1</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">6. Uso indebido de balcones</p>
+                  <p class="text-xs text-tertiary mt-1">Prácticas que afecten la estética, seguridad o tranquilidad del conjunto: almacenamiento de objetos no permitidos, instalación de elementos sin autorización.</p>
+                </div>
+              </div>
+
+              <!-- 7. Arrojo residuos -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-yellow-400">
+                <div class="flex-shrink-0">
+                  <span class="w-8 h-8 bg-yellow-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T1</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">7. Arrojo de residuos en zonas comunes</p>
+                  <p class="text-xs text-tertiary mt-1">Quienes arrojen basuras, colillas, botellas, papeles, excrementos de mascotas u otros desechos en pasillos, jardines, halls, escaleras, parqueaderos o cualquier zona común.</p>
+                </div>
+              </div>
+
+              <!-- 8. Parqueaderos -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-orange-400">
+                <div class="flex-shrink-0">
+                  <span class="w-8 h-8 bg-orange-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T2</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">8. Uso indebido de parqueaderos</p>
+                  <p class="text-xs text-tertiary mt-1">Utilizar parqueaderos de visitantes o de otros propietarios sin autorización, o destinarlos para el estacionamiento de vehículos propios o de residentes permanentes de la copropiedad.</p>
+                </div>
+              </div>
+
+              <!-- 9. Faltas de respeto -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-orange-400">
+                <div class="flex-shrink-0">
+                  <span class="w-8 h-8 bg-orange-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T2</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">9. Faltas de respeto y obstrucción de funciones</p>
+                  <p class="text-xs text-tertiary mt-1">Conductas irrespetuosas hacia residentes, visitantes o personal del conjunto (seguridad, administración): lenguaje ofensivo, amenazas, agresiones verbales o cualquier comportamiento que obstaculice sus funciones.</p>
+                </div>
+              </div>
+
+              <!-- 10. Ruidos -->
+              <div class="flex gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-orange-400">
+                <div class="flex-shrink-0">
+                  <span class="w-8 h-8 bg-orange-400 text-white rounded-full text-xs font-bold flex items-center justify-center">T2</span>
+                </div>
+                <div>
+                  <p class="font-bold text-sm">10. Ruidos y perturbación a la convivencia</p>
+                  <p class="text-xs text-tertiary mt-1">Quienes generen ruidos excesivos, escándalos o música a alto volumen que perturbe la tranquilidad de los demás residentes, especialmente en horarios de descanso.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             SECCIÓN 3 — Manejo de Basuras y Shut
+             ══════════════════════════════════════════════════════ -->
+        <details class="seccion-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">delete</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">§ 5.5.2</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Manejo de Basuras y Shut de Residuos</h2>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-slate-400 seccion-chevron">expand_more</span>
+          </summary>
+
+          <div class="seccion-body px-6 pb-6">
+            <div class="grid md:grid-cols-2 gap-5">
+              <!-- Normas shut -->
+              <div>
+                <h3 class="font-bold text-sm mb-4 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-base">rule</span>
+                  Normas del Shut de Basuras
+                </h3>
+                <div class="space-y-2">
+                  <div class="flex items-start gap-3 p-3 bg-green-50 rounded-lg border border-green-100">
+                    <span class="material-symbols-outlined text-green-600 text-base flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                    <p class="text-xs text-tertiary">Mantener el shut <strong class="text-on-surface">limpio y despejado</strong> en todo momento.</p>
+                  </div>
+                  <div class="flex items-start gap-3 p-3 bg-red-50 rounded-lg border border-red-100">
+                    <span class="material-symbols-outlined text-error text-base flex-shrink-0" style="font-variation-settings:'FILL' 1;">cancel</span>
+                    <p class="text-xs text-tertiary"><strong class="text-on-surface">Prohibido:</strong> escombros, muebles, sustancias químicas y residuos peligrosos.</p>
+                  </div>
+                  <div class="flex items-start gap-3 p-3 bg-red-50 rounded-lg border border-red-100">
+                    <span class="material-symbols-outlined text-error text-base flex-shrink-0" style="font-variation-settings:'FILL' 1;">cancel</span>
+                    <p class="text-xs text-tertiary"><strong class="text-on-surface">No arrojar</strong> elementos que superen los <strong>50 cm de largo y 60 cm de ancho</strong>.</p>
+                  </div>
+                  <div class="flex items-start gap-3 p-3 bg-primary-fixed/60 rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-base flex-shrink-0">report</span>
+                    <p class="text-xs text-tertiary">Es <strong class="text-on-surface">obligación</strong> de los propietarios reportar cualquier obstrucción a la Administración.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Control por piso -->
+              <div>
+                <h3 class="font-bold text-sm mb-4 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-base">domain</span>
+                  Control del Shut por Piso
+                </h3>
+                <div class="bg-orange-50 border border-orange-200 p-5 rounded-xl">
+                  <p class="text-sm text-tertiary mb-4">La <strong class="text-on-surface">Administración y el Consejo Sectorial</strong> están facultados para:</p>
+                  <div class="space-y-2">
+                    <div class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-orange-600 text-sm flex-shrink-0 mt-0.5">warning</span>
+                      <p class="text-xs text-tertiary">Ordenar el <strong class="text-on-surface">cierre temporal del shut</strong> en torres o pisos con manejo inadecuado de residuos.</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-orange-600 text-sm flex-shrink-0 mt-0.5">schedule</span>
+                      <p class="text-xs text-tertiary">Definir los <strong class="text-on-surface">días, horarios y condiciones</strong> de cierre del shut.</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-orange-600 text-sm flex-shrink-0 mt-0.5">build</span>
+                      <p class="text-xs text-tertiary">Implementar las <strong class="text-on-surface">medidas correctivas necesarias</strong> para garantizar el adecuado uso y prevenir futuras afectaciones.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             SECCIÓN 4 — Parqueaderos
+             ══════════════════════════════════════════════════════ -->
+        <details class="seccion-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">local_parking</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">§ 5.5.1.2 + Art. 1-3</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Parqueaderos — Normas y Tarifas</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-secondary bg-secondary-fixed px-2.5 py-1 rounded-full">4 hrs gratis visitantes</span>
+              <span class="material-symbols-outlined text-slate-400 seccion-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="seccion-body px-6 pb-6">
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+
+              <!-- Visitantes -->
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">directions_car</span>
+                  <h3 class="font-bold text-sm">Parqueaderos de Visitantes</h3>
+                </div>
+                <div class="space-y-2 text-xs text-tertiary">
+                  <p>· Hasta <strong class="text-on-surface">3 parqueaderos simultáneos</strong> por inmueble (según disponibilidad).</p>
+                  <p>· Primeras <strong class="text-green-700">4 horas: sin costo</strong>.</p>
+                  <div class="bg-orange-50 border border-orange-200 p-2.5 rounded-lg">
+                    <p>· Superadas 4 horas: <strong class="text-orange-700">$5.000 por hora o fracción</strong>.</p>
+                  </div>
+                  <p>· El <strong class="text-on-surface">residente que autoriza el ingreso</strong> es responsable del uso del parqueadero.</p>
+                  <p>· No pago → cobro al apartamento (previa validación del registro de ingreso).</p>
+                </div>
+              </div>
+
+              <!-- Privados -->
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">garage</span>
+                  <h3 class="font-bold text-sm">Parqueaderos Privados</h3>
+                </div>
+                <div class="space-y-2 text-xs text-tertiary">
+                  <p>· Uso <strong class="text-on-surface">exclusivo para estacionamiento</strong> de vehículos. No depósito, no taller.</p>
+                  <p>· Se permite más de un vehículo dentro del área asignada, <strong class="text-on-surface">sin sobrepasar los límites demarcados</strong>.</p>
+                  <div class="bg-primary-fixed/70 p-2.5 rounded-lg">
+                    <p>· <strong>Pick-ups:</strong> permitidos si las llantas están dentro de líneas, no afectan vecinos y no obstruyen zonas comunes.</p>
+                  </div>
+                  <p>· No invadir espacios contiguos ni zonas de circulación.</p>
+                </div>
+              </div>
+
+              <!-- Motos y bicis -->
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">pedal_bike</span>
+                  <h3 class="font-bold text-sm">Motos y Bicicletas</h3>
+                </div>
+                <div class="space-y-2 text-xs text-tertiary">
+                  <p>· Las motos deben estacionarse <strong class="text-on-surface">únicamente en espacios asignados</strong> o dentro del parqueadero privado propio.</p>
+                  <div class="bg-red-50 border border-red-100 p-2.5 rounded-lg">
+                    <p>· <strong class="text-error">Prohibido</strong> estacionar motos, bicicletas u otros elementos en zonas comunes, circulaciones o pasillos.</p>
+                  </div>
+                  <p>· Los bicicleteros son <strong class="text-on-surface">exclusivos para bicicletas</strong>, bajo responsabilidad del usuario.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Depósitos -->
+            <div class="bg-primary-fixed/60 p-5 rounded-xl">
+              <h3 class="font-bold text-sm mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-base">inventory_2</span>
+                Uso adecuado de los Depósitos
+              </h3>
+              <div class="grid md:grid-cols-2 gap-3 text-xs text-tertiary">
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-green-600 text-sm flex-shrink-0">check_circle</span><span>Uso <strong class="text-on-surface">exclusivo para almacenamiento de bienes</strong> personales.</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-sm flex-shrink-0">cancel</span><span><strong class="text-on-surface">Prohibidas</strong> instalaciones eléctricas adicionales, tomas de corriente o conexiones de servicios públicos.</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-sm flex-shrink-0">cancel</span><span>Conexiones no autorizadas desde depósitos o parqueaderos = <strong class="text-error">suspensión inmediata del servicio y sanción</strong>.</span></div>
+                <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm flex-shrink-0">lightbulb</span><span>Cada depósito tiene un <strong class="text-on-surface">punto de iluminación comunal</strong> (bombillo). La energía es comunal, no privada.</span></div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             SECCIÓN 5 — Club House y Normas de Convivencia
+             ══════════════════════════════════════════════════════ -->
+        <details class="seccion-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">pool</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">§ 5.5.2.1</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Club House — Normas Generales de Uso</h2>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-slate-400 seccion-chevron">expand_more</span>
+          </summary>
+
+          <div class="seccion-body px-6 pb-6">
+            <!-- Normas clave en cards visuales -->
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+
+              <div class="space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-2">Normas de acceso y uso</h3>
+                <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                  <span class="material-symbols-outlined text-secondary text-base flex-shrink-0">person</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Invitados:</strong> máximo 2 veces al mes. Deben registrarse previamente en la Administración.</p>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                  <span class="material-symbols-outlined text-secondary text-base flex-shrink-0">child_care</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Menores de 12 años:</strong> deben estar SIEMPRE acompañados por un padre o adulto responsable. La APP registra beneficiarios y edades.</p>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                  <span class="material-symbols-outlined text-error text-base flex-shrink-0">pets</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Mascotas:</strong> <span class="text-error font-semibold">prohibidas</span> en todas las áreas sociales, deportivas, húmedas y demás espacios del Club House.</p>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                  <span class="material-symbols-outlined text-error text-base flex-shrink-0">no_drinks</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Alcohol:</strong> prohibido en áreas comunes generales. Permitido solo en salones y BBQ durante eventos autorizados. <span class="font-semibold text-error">Nunca para menores de edad.</span></p>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-red-50 rounded-lg border border-red-100">
+                  <span class="material-symbols-outlined text-error text-base flex-shrink-0">dangerous</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Sustancias psicoactivas:</strong> <span class="text-error font-bold">terminantemente prohibidas</span> en cualquier zona común del conjunto.</p>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-2">Normas de comportamiento</h3>
+                <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                  <span class="material-symbols-outlined text-secondary text-base flex-shrink-0">electric_scooter</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Carros eléctricos (juguete), patinetas, patines y bicicletas:</strong> prohibidos en el interior del Club House. Se registran en recepción para control de ingreso.</p>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                  <span class="material-symbols-outlined text-secondary text-base flex-shrink-0">no_photography</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Fotografías y videos comerciales:</strong> prohibidos. Para uso comercial, solicitar banco de imágenes en la APP. Cada propietario debe aceptar la política antes de hacer una reserva.</p>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                  <span class="material-symbols-outlined text-secondary text-base flex-shrink-0">park</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Adecuaciones:</strong> no se puede sembrar, realizar decoraciones o adecuaciones en zonas comunes sin autorización previa de la Administración.</p>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-orange-50 border border-orange-100 rounded-lg">
+                  <span class="material-symbols-outlined text-orange-600 text-base flex-shrink-0">money_off</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Residentes en mora:</strong> no pueden hacer uso de espacios que requieren reserva mientras tengan deudas con la copropiedad.</p>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                  <span class="material-symbols-outlined text-secondary text-base flex-shrink-0">warning</span>
+                  <p class="text-xs text-tertiary"><strong class="text-on-surface">Responsabilidad:</strong> la copropiedad no responde por objetos abandonados, ni por lesiones o accidentes derivados del incumplimiento de normas.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Servicios Complementarios -->
+            <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined text-base">storefront</span>
+              Servicios Complementarios — Estado Actual
+            </h3>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary">coffee</span>
+                    <h4 class="font-bold text-sm">Cafetería</h4>
+                  </div>
+                  <span class="text-[10px] font-bold text-orange-700 bg-orange-50 border border-orange-200 px-2 py-0.5 rounded-full">No disponible aún</span>
+                </div>
+                <p class="text-xs text-tertiary mb-3">Será seleccionada, licitada y contratada únicamente por la Administración + Consejo Sectorial. Normas cuando esté operando: mesas en orden, no dejar residuos, no ruidos, uso de audífonos en llamadas.</p>
+                <p class="text-xs font-bold text-orange-600 italic">Por el momento no está en operación.</p>
+              </div>
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary">local_laundry_service</span>
+                    <h4 class="font-bold text-sm">Lavandería</h4>
+                  </div>
+                  <span class="text-[10px] font-bold text-orange-700 bg-orange-50 border border-orange-200 px-2 py-0.5 rounded-full">No disponible aún</span>
+                </div>
+                <p class="text-xs text-tertiary mb-2">Funciona como <strong class="text-on-surface">AUTOGESTIÓN</strong>. Normas cuando esté operando:</p>
+                <div class="text-xs text-tertiary space-y-1">
+                  <p>· Revisar etiquetas · Vaciar bolsillos antes de lavar</p>
+                  <p>· No mezclar ropa blanca con de color</p>
+                  <p>· No lavar cobijas, alfombras ni elementos muy pesados</p>
+                  <p>· Pago por aplicación del proveedor</p>
+                  <p>· Canecas de basura: pendientes de instalar (solicitud enviada a constructora)</p>
+                </div>
+                <p class="text-xs font-bold text-orange-600 italic mt-2">Por el momento no está en operación.</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             SECCIÓN 6 — Cargadores Eléctricos
+             ══════════════════════════════════════════════════════ -->
+        <details class="seccion-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">ev_station</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">§ 5.5.1.1</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Cargadores Eléctricos para Vehículos</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-primary bg-primary-fixed px-2.5 py-1 rounded-full">Proceso obligatorio</span>
+              <span class="material-symbols-outlined text-slate-400 seccion-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="seccion-body px-6 pb-6">
+            <div class="bg-surface-container-low p-5 rounded-xl mb-5">
+              <p class="text-sm text-tertiary">
+                Todos los propietarios que deseen instalar un cargador eléctrico <strong class="text-on-surface">están obligados a cumplir el proceso previo</strong> que se detalla a continuación. Los costos y responsabilidades son del propietario.
+              </p>
+            </div>
+
+            <!-- Proceso paso a paso -->
+            <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 flex items-center gap-2">
+              <span class="material-symbols-outlined text-base">checklist</span>
+              Proceso de Instalación — Pasos Obligatorios
+            </h3>
+            <div class="grid md:grid-cols-2 gap-3 mb-5">
+              <div class="flex gap-3 p-4 bg-primary-fixed/60 rounded-xl">
+                <span class="w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+                <div>
+                  <p class="font-bold text-xs text-on-surface">Certificación ENEL-CODENSA</p>
+                  <p class="text-xs text-tertiary mt-1">Presentar certificación que acredite la capacidad de carga del medidor del apartamento.</p>
+                </div>
+              </div>
+              <div class="flex gap-3 p-4 bg-primary-fixed/60 rounded-xl">
+                <span class="w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+                <div>
+                  <p class="font-bold text-xs text-on-surface">Diseño de conexión</p>
+                  <p class="text-xs text-tertiary mt-1">Presentar diseño según la norma colombiana para instalaciones eléctricas.</p>
+                </div>
+              </div>
+              <div class="flex gap-3 p-4 bg-primary-fixed/60 rounded-xl">
+                <span class="w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+                <div>
+                  <p class="font-bold text-xs text-on-surface">Técnico certificado</p>
+                  <p class="text-xs text-tertiary mt-1">La instalación debe ser realizada por un técnico certificado.</p>
+                </div>
+              </div>
+              <div class="flex gap-3 p-4 bg-primary-fixed/60 rounded-xl">
+                <span class="w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">4</span>
+                <div>
+                  <p class="font-bold text-xs text-on-surface">Horarios de la Administración</p>
+                  <p class="text-xs text-tertiary mt-1">Las instalaciones se realizarán únicamente en los horarios estipulados por la Administración.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Responsabilidades y restricciones -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-orange-50 border border-orange-200 p-5 rounded-xl">
+                <h3 class="font-bold text-sm text-orange-800 mb-3 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-orange-600 text-base">person</span>
+                  Responsabilidad del Propietario
+                </h3>
+                <div class="space-y-2 text-xs text-tertiary">
+                  <p>· Los <strong class="text-on-surface">costos de instalación</strong> son exclusivamente del propietario.</p>
+                  <p>· Los <strong class="text-on-surface">daños en zonas comunes</strong> generados por la instalación son responsabilidad y costo del propietario.</p>
+                  <p>· <strong class="text-on-surface">Prohibido</strong> dejar tubos, cables, taladros u otros elementos en el parqueadero como resultado del proceso.</p>
+                </div>
+              </div>
+              <div class="bg-primary-fixed/60 p-5 rounded-xl">
+                <h3 class="font-bold text-sm mb-3 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-base">info</span>
+                  Si la Asamblea lo Aprueba
+                </h3>
+                <div class="space-y-2 text-xs text-tertiary">
+                  <p>Si la Asamblea General aprueba la implementación de cargadores, estos tendrán <strong class="text-on-surface">carácter comunal y compartido</strong>.</p>
+                  <p>Los lineamientos, turnos, tarifas y condiciones serán definidos por la <strong class="text-on-surface">Administración + Consejo Sectorial</strong>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+      </div><!-- /acordeón -->
+
+      <!-- ── NOTA FINAL ─────────────────────────────────────────────── -->
+      <!-- Nota final -->
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <div class="p-5 bg-surface-container-low rounded-2xl flex items-start gap-4 ghost-border">
+          <span class="material-symbols-outlined text-secondary flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">menu_book</span>
+          <div>
+            <p class="font-bold text-sm text-on-surface mb-1">Sobre este resumen</p>
+            <p class="text-xs text-tertiary">Este portal presenta los puntos más relevantes de la propuesta. Para el texto completo con todos los artículos, descarga el documento de propuestas desde los enlaces de referencia en la parte superior.</p>
+          </div>
+        </div>
+        <div class="p-5 bg-secondary-fixed rounded-2xl flex items-start gap-4">
+          <span class="material-symbols-outlined text-on-secondary-fixed-variant flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">how_to_vote</span>
+          <div>
+            <p class="font-bold text-sm text-on-secondary-fixed-variant mb-1">Tu voto importa</p>
+            <p class="text-xs text-on-secondary-fixed-variant/80">Este manual solo entra en vigor con la aprobación de la Asamblea. Infórmate, consulta el documento completo y participa activamente en la votación.</p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-slate-50 border-t border-slate-200/40 py-8 px-8 mt-8">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">© 2026 Portal Informativo — Asamblea Residencial Iconik 68</p>
+        <div class="flex gap-8">
+          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Política de Privacidad</a>
+          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Contactar Admin</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/nav.js"></script>
+</body>
+</html>

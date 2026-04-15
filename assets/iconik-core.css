@@ -1,0 +1,96 @@
+/*
+ * Iconik 68 — Core Styles
+ * Estilos compartidos para todas las páginas del portal.
+ * Complementa el design system "Architectural Monolith" definido en DESIGN.md
+ */
+
+/* === Material Symbols === */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* === Transiciones globales === */
+.tonal-shift {
+  transition: background-color 0.3s ease;
+}
+
+/* === Glassmorphism (NavBar flotante) === */
+.glass-nav {
+  background: rgba(251, 249, 248, 0.70);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* === Gradiente institucional "Monolith" === */
+.monolith-gradient {
+  background: linear-gradient(135deg, #003b93 0%, #0051c3 100%);
+}
+
+/* === Ghost border — accesibilidad sin romper estética === */
+.ghost-border {
+  border: 1px solid rgba(195, 198, 214, 0.15);
+}
+
+/* === Sombra ambiente tintada con el primary === */
+.ambient-shadow {
+  box-shadow: 0 8px 32px rgba(0, 59, 147, 0.06);
+}
+
+/* === Animación entrada de secciones === */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+/* === Scroll suave global === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Selección de texto con el brand color === */
+::selection {
+  background-color: #dae2ff;
+  color: #001947;
+}
+
+/* === Scrollbar minimalista (Chrome/Edge) === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf9f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3c6d6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #003b93;
+}
+
+/* === Tipografía para details/summary (Manual de Convivencia) === */
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* === Utilidad: texto con gradiente === */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #003b93, #0051c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === Print básico — por si alguien imprime === */
+@media print {
+  #app-topnav, #app-sidenav { display: none !important; }
+  main { padding-left: 0 !important; padding-top: 0 !important; }
+}

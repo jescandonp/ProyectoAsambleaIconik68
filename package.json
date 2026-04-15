@@ -1,0 +1,20 @@
+{
+  "name": "portal-iconik68",
+  "version": "1.0.0",
+  "description": "Portal informativo Asamblea General 2026 — Iconik 68",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/tailwind-source.css -o ./assets/tailwind.css --minify",
+    "watch": "tailwindcss -i ./assets/tailwind-source.css -o ./assets/tailwind.css --watch",
+    "serve": "python3 -m http.server 8080"
+  },
+  "keywords": [],
+  "author": "Juan Manuel Escandón",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.11"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

@@ -1,0 +1,80 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: "class",
+
+  // Archivos a escanear para purging de clases
+  content: [
+    "./*.html",
+    "./assets/*.js",
+  ],
+
+  theme: {
+    extend: {
+      colors: {
+        // ── Design System "Architectural Monolith" ──────────────────
+        "surface-container-low":      "#f6f3f2",
+        "primary-container":          "#0051c3",
+        "tertiary":                   "#414141",
+        "surface-container-lowest":   "#ffffff",
+        "on-secondary":               "#ffffff",
+        "inverse-on-surface":         "#f3f0f0",
+        "on-tertiary-fixed-variant":  "#474747",
+        "surface-container":          "#f0eded",
+        "on-background":              "#1b1c1c",
+        "background":                 "#fbf9f8",
+        "surface-bright":             "#fbf9f8",
+        "error":                      "#ba1a1a",
+        "on-tertiary-fixed":          "#1b1c1c",
+        "outline-variant":            "#c3c6d6",
+        "on-tertiary-container":      "#d1cfce",
+        "tertiary-fixed":             "#e4e2e1",
+        "primary-fixed":              "#dae2ff",
+        "surface-container-high":     "#eae8e7",
+        "inverse-primary":            "#b1c5ff",
+        "surface-dim":                "#dcd9d9",
+        "tertiary-fixed-dim":         "#c8c6c6",
+        "outline":                    "#737785",
+        "on-error-container":         "#93000a",
+        "on-primary":                 "#ffffff",
+        "on-surface-variant":         "#434653",
+        "on-primary-fixed-variant":   "#00419f",
+        "surface-variant":            "#e4e2e1",
+        "on-secondary-fixed-variant": "#004b74",
+        "tertiary-container":         "#595858",
+        "surface":                    "#fbf9f8",
+        "error-container":            "#ffdad6",
+        "inverse-surface":            "#303030",
+        "on-primary-container":       "#beceff",
+        "primary":                    "#003b93",
+        "on-secondary-fixed":         "#001d32",
+        "on-error":                   "#ffffff",
+        "secondary-fixed-dim":        "#94ccff",
+        "secondary-container":        "#6cbdfe",
+        "on-primary-fixed":           "#001947",
+        "secondary-fixed":            "#cde5ff",
+        "primary-fixed-dim":          "#b1c5ff",
+        "on-secondary-container":     "#004b75",
+        "surface-container-highest":  "#e4e2e1",
+        "surface-tint":               "#1357c9",
+        "secondary":                  "#006398",
+        "on-tertiary":                "#ffffff",
+        "on-surface":                 "#1b1c1c",
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg:      "0.5rem",
+        xl:      "0.75rem",
+        full:    "9999px",
+      },
+      fontFamily: {
+        headline: ["Outfit", "sans-serif"],
+        body:     ["Inter",  "sans-serif"],
+        label:    ["Inter",  "sans-serif"],
+      },
+    },
+  },
+
+  plugins: [
+    require("@tailwindcss/forms"),
+  ],
+};
