@@ -46,6 +46,14 @@ const ICONIK_NAV = {
       label: 'Convivencia',
       icon:  'menu_book',
       desc:  'Normativa y zonas comunes'
+    },
+    {
+      id:    'documentos',
+      href:  'documentos.html',
+      label: 'Documentos',
+      icon:  'folder_open',
+      desc:  'Revisoría Fiscal y Estados Financieros',
+      divider: true
     }
   ],
 
@@ -94,14 +102,16 @@ const ICONIK_NAV = {
         <!-- Mobile menu -->
         <div id="iconik-mobile-menu" class="hidden md:hidden bg-white/98 backdrop-blur-xl border-t border-blue-900/10 px-6 py-2 shadow-lg">
           ${this.pages.map(p => `
+            ${p.divider ? '<div class="border-t border-slate-100 my-1"></div>' : ''}
             <a href="${p.href}" class="flex items-center gap-3 py-3 ${current === p.id
               ? 'text-blue-900 font-semibold'
               : 'text-slate-600 hover:text-blue-900'} transition-colors border-b border-slate-100 last:border-0">
               <span class="material-symbols-outlined text-base">${p.icon}</span>
-              <div>
+              <div class="flex-1">
                 <div class="text-sm">${p.label}</div>
                 <div class="text-xs text-slate-400">${p.desc}</div>
               </div>
+              ${p.divider ? '<span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>' : ''}
             </a>
           `).join('')}
         </div>
@@ -119,11 +129,13 @@ const ICONIK_NAV = {
 
         <nav class="flex flex-col gap-1 flex-1">
           ${this.pages.map(p => `
+            ${p.divider ? '<div class="my-2 border-t border-slate-200/60"></div>' : ''}
             <a href="${p.href}" class="flex items-center gap-3 p-3 rounded-l-xl transition-all duration-200 ${current === p.id
               ? 'bg-white text-blue-900 font-bold shadow-sm border-r-4 border-blue-900 translate-x-1'
               : 'text-slate-500 hover:bg-white hover:text-blue-900 hover:translate-x-1 hover:shadow-sm'}">
               <span class="material-symbols-outlined text-xl" ${current === p.id ? 'style="font-variation-settings: \'FILL\' 1;"' : ''}>${p.icon}</span>
               <span class="text-sm">${p.label}</span>
+              ${p.divider && current !== p.id ? '<span class="ml-auto w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>' : ''}
             </a>
           `).join('')}
         </nav>
