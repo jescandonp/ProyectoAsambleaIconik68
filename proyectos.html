@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyectos Cuota Extraordinaria — Iconik 68</title>
-  <meta name="description" content="Proyectos de inversión con cuota extraordinaria para la modernización y seguridad de Iconik 68." />
+  <title>Proyectos Cuota Extraordinaria 2026 — Iconik 68</title>
+  <meta name="description" content="Propuesta de cuota extraordinaria 2026: 7 proyectos de modernización por $626,395,057. Tecnología, gimnasio, puertas cortafuego, interventoría, piscina, amenidades y cargadores EV." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +13,20 @@
 
   <link rel="stylesheet" href="assets/tailwind.css" />
   <link rel="stylesheet" href="assets/iconik-core.css" />
+
+  <style>
+    .proy-card > summary { list-style: none; }
+    .proy-card > summary::-webkit-details-marker { display: none; }
+    .proy-chevron { transition: transform 0.25s ease; }
+    .proy-card[open] .proy-chevron { transform: rotate(180deg); }
+    .proy-card > summary { cursor: pointer; }
+    .proy-card > summary:focus-visible { outline: 2px solid #003b93; outline-offset: 2px; border-radius: 0.75rem; }
+    .proy-body { animation: proyOpen 0.25s ease; }
+    @keyframes proyOpen {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 
 <body data-page="proyectos" class="bg-surface text-on-surface font-body">
@@ -21,214 +35,684 @@
   <div id="app-sidenav"></div>
 
   <div class="lg:pl-64 pt-16 min-h-screen flex flex-col">
-    <main class="flex-1 p-8 lg:p-12 max-w-7xl mx-auto w-full">
+    <main class="flex-1 px-6 py-10 md:px-10 max-w-5xl mx-auto w-full">
 
-      <!-- Hero / Context -->
-      <section class="mb-12">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div class="max-w-2xl">
-            <span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-bold mb-4 uppercase">Propuesta Financiera</span>
-            <h1 class="text-4xl md:text-5xl font-bold font-headline tracking-tight text-primary mb-4 leading-tight">
-              Cuota Extraordinaria:<br />Modernizando Iconik 68
-            </h1>
-            <p class="text-lg text-tertiary leading-relaxed">
-              Para garantizar el valor y la seguridad a largo plazo, presentamos los Proyectos de Cuota Extraordinaria. Estas inversiones estratégicas se centran en la resiliencia tecnológica y la integridad estructural.
-            </p>
-          </div>
-          <div class="bg-surface-container-lowest p-6 rounded-xl ghost-border shadow-sm flex items-center gap-4 flex-shrink-0">
-            <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
-              <span class="material-symbols-outlined">analytics</span>
-            </div>
-            <div>
-              <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Impacto Total Est.</p>
-              <!-- TODO: Actualizar con dato real -->
-              <p class="text-2xl font-bold text-primary font-headline">+18% Valor Prop.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Project Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-
-        <!-- Eje 2: Tecnología y Seguridad -->
-        <div class="md:col-span-8 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm ghost-border flex flex-col md:flex-row">
-          <div class="md:w-2/5 relative min-h-[200px]">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn4HGd7aMuVDGc8EtA33cH0N-MTwk6343Wi9kipwyti7ggQk7Iex-msNekEp1dEZoqZhQa6VqNXCtt_4WEh6d85KsP_fbns-B1CwxY9g9hso1chq01IXPir3C2Dy0PGgiC_RnCRSOwywynUq4iMd0plx4nln0p1DJ1Vhd1rAzzyRffxs3f7lMhgs31H9PH43HwGqMuDJVuOarGZn7j72VRNz7Q8X3xvMvM_PkindYOwtouEVlZsRftbVA"
-              alt="Consola de seguridad moderna"
-              class="h-full w-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 text-white">
-              <p class="text-xs font-bold opacity-80 mb-1">EJE 2</p>
-              <h3 class="text-2xl font-bold font-headline">Tecnología y Seguridad</h3>
-            </div>
-          </div>
-          <div class="md:w-3/5 p-8 bg-white">
-            <h4 class="text-xl font-bold text-primary font-headline mb-2">Acceso Inteligente Integrado</h4>
-            <p class="text-sm text-tertiary mb-6">Sustitución de citófonos analógicos por sistemas encriptados integrados con biometría y smartphones.</p>
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-secondary mt-0.5">check_circle</span>
-                <div class="text-sm">
-                  <span class="font-bold block">Control Perimetral Biométrico</span>
-                  <span class="text-slate-500 italic">Seguridad mejorada para todos los puntos de entrada.</span>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-secondary mt-0.5">check_circle</span>
-                <div class="text-sm">
-                  <span class="font-bold block">Red de Citofonía Inteligente</span>
-                  <span class="text-slate-500 italic">Conexión de video directa a smartphones para visitantes.</span>
-                </div>
-              </li>
-            </ul>
-            <div class="p-4 bg-surface-container-low rounded-lg flex justify-between items-center">
-              <div>
-                <p class="text-xs font-medium text-slate-500">Inversión Estimada</p>
-                <!-- TODO: Actualizar cifra -->
-                <p class="text-lg font-bold text-primary">$42,500.00</p>
-              </div>
-              <button class="px-6 py-2 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-bold text-sm shadow-md hover:scale-95 transition-transform">
-                Descargar Detalles
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Eje 3: Infraestructura Crítica -->
-        <div class="md:col-span-4">
-          <div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm ghost-border relative overflow-hidden h-full">
-            <div class="absolute -right-12 -top-12 w-32 h-32 bg-secondary/5 rounded-full"></div>
-            <div class="mb-6">
-              <span class="text-xs font-bold text-secondary uppercase tracking-widest mb-1 block">EJE 3</span>
-              <h3 class="text-2xl font-bold font-headline text-primary">Infraestructura Crítica</h3>
-            </div>
-            <div class="space-y-6 mb-8">
-              <div>
-                <h4 class="font-bold text-on-surface flex items-center gap-2">
-                  <span class="material-symbols-outlined text-secondary">plumbing</span>
-                  Reparación Mayor de Bombas
-                </h4>
-                <p class="text-sm text-slate-500 mt-1">Actualización completa de la estación hidráulica a variadores de frecuencia de alta eficiencia.</p>
-              </div>
-              <div>
-                <h4 class="font-bold text-on-surface flex items-center gap-2">
-                  <span class="material-symbols-outlined text-secondary">roofing</span>
-                  Impermeabilización de Cubiertas
-                </h4>
-                <p class="text-sm text-slate-500 mt-1">Aplicación de aislamiento térmico con nanotecnología en la Torre Norte.</p>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between text-sm font-bold mb-2">
-                <span>Plan de Recaudación</span>
-                <span class="text-secondary">65% de Proyección</span>
-              </div>
-              <div class="w-full bg-slate-100 rounded-full h-2 mb-6">
-                <div class="bg-secondary h-2 rounded-full" style="width: 65%"></div>
-              </div>
-              <!-- TODO: Actualizar cifra -->
-              <p class="text-xs text-slate-400 mb-3 text-center italic">Inversión Est.: $28,700.00</p>
-              <button class="w-full py-3 bg-white border border-outline-variant/20 rounded-xl text-primary font-bold hover:bg-slate-50 transition-colors">
-                Ver Informe Técnico
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Parqueadero EV Ready -->
-        <div class="md:col-span-5 bg-surface-container-low rounded-xl p-6 flex items-center gap-6">
-          <div class="w-20 h-20 rounded-xl bg-white shadow-sm flex items-center justify-center flex-shrink-0">
-            <span class="material-symbols-outlined text-3xl text-secondary">electric_car</span>
-          </div>
+      <!-- ── HEADER ─────────────────────────────────────────────────── -->
+      <header class="mb-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-5">
           <div>
-            <h4 class="font-bold text-primary font-headline">Parqueadero EV Ready</h4>
-            <p class="text-sm text-tertiary">Preinstalación de gestión de carga para vehículos eléctricos en todos los niveles de sótano.</p>
-            <div class="mt-2 flex items-center gap-4">
-              <!-- TODO: Actualizar cifra -->
-              <span class="text-xs font-bold text-slate-400">$8,200.00</span>
-              <span class="text-xs text-secondary font-bold flex items-center gap-1">
-                <span class="material-symbols-outlined text-xs">trending_up</span> Alto Retorno
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">construction</span>
+                Propuesta Cuota Extraordinaria 2026
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm">pending</span>
+                Pendiente de Aprobación
               </span>
             </div>
+            <h1 class="text-4xl md:text-5xl font-bold font-headline text-on-background tracking-tight mt-1">
+              Proyectos de Modernización
+            </h1>
+            <p class="text-tertiary mt-3 max-w-2xl text-base leading-relaxed">
+              Propuesta de inversión para actualizar infraestructuras críticas, mejorar la seguridad y potenciar las zonas comunes de Iconik 68. Siete proyectos que requieren <span class="font-semibold text-on-surface">aprobación de la Asamblea General</span> para su ejecución.
+            </p>
+          </div>
+          <div class="flex-shrink-0">
+            <button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-semibold shadow-lg flex items-center gap-2 hover:shadow-xl transition-all active:scale-95">
+              <span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+              Descargar Resumen
+            </button>
           </div>
         </div>
+      </header>
 
-        <!-- Eficiencia Energética LED -->
-        <div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 ghost-border shadow-sm">
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center text-primary">
-              <span class="material-symbols-outlined">lightbulb</span>
-            </div>
-            <div>
-              <h4 class="font-bold font-headline text-on-surface">Iluminación LED Inteligente</h4>
-              <p class="text-xs text-slate-500">Reducción proyectada del 34% en facturas mensuales de servicios públicos.</p>
-            </div>
+      <!-- ── KPIs DE IMPACTO ─────────────────────────────────────────── -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="monolith-gradient p-6 rounded-2xl text-white relative overflow-hidden shadow-lg">
+          <div class="relative z-10">
+            <p class="text-xs font-bold uppercase tracking-widest text-white/60 mb-1">Total Inversión Proyectada</p>
+            <p class="text-3xl font-bold font-headline">$626,395,057</p>
+            <p class="text-xs text-white/70 mt-1">7 proyectos de modernización</p>
           </div>
-          <a href="#" class="px-4 py-2 text-xs font-bold text-primary hover:bg-primary/5 rounded-lg transition-colors flex items-center gap-2 flex-shrink-0">
-            Descargar Reporte
-            <span class="material-symbols-outlined text-sm">download</span>
-          </a>
+          <span class="material-symbols-outlined text-white/10 text-8xl absolute -bottom-3 -right-3" style="font-variation-settings:'FILL' 1;">paid</span>
         </div>
 
-        <!-- Cronograma de Implementación -->
-        <section class="md:col-span-12 bg-primary rounded-xl p-10 text-white relative overflow-hidden shadow-2xl">
-          <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-            <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-              <path d="M0 100 L100 0 L100 100 Z" fill="currentColor" />
-            </svg>
-          </div>
-          <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 class="text-3xl font-bold font-headline mb-4">Cronograma de Implementación</h2>
-              <p class="text-primary-fixed/80 leading-relaxed mb-6">
-                La ejecución inicia su fase de licitación en el cuarto trimestre de 2025, asegurando que todas las mejoras tecnológicas y de infraestructura se completen antes de la temporada de lluvias de 2026.
-              </p>
-              <div class="flex gap-8">
-                <div>
-                  <p class="text-4xl font-bold font-headline">180</p>
-                  <p class="text-xs opacity-70 uppercase font-bold tracking-tighter">Días de Ejecución</p>
-                </div>
-                <div>
-                  <p class="text-4xl font-bold font-headline">0%</p>
-                  <p class="text-xs opacity-70 uppercase font-bold tracking-tighter">Interés de Financiación</p>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
-              <h4 class="font-bold mb-4 flex items-center gap-2">
-                <span class="material-symbols-outlined">info</span>
-                Información de Inversión
-              </h4>
-              <p class="text-sm opacity-90 mb-6">
-                <!-- TODO: Confirmar cifra con administración -->
-                La inversión total se recauda en una cuota mensual por unidad de $85.00 durante un periodo de 12 meses.
-              </p>
-              <div class="flex flex-col gap-3">
-                <button class="w-full py-4 bg-white text-primary rounded-xl font-bold text-lg hover:bg-primary-fixed transition-colors flex items-center justify-center gap-2">
-                  <span class="material-symbols-outlined">download_for_offline</span>
-                  Descargar Proyecto Completo
-                </button>
-                <a href="#" class="text-center text-sm font-medium text-white/80 underline hover:text-white transition-colors">
-                  Ver Especificaciones Técnicas (PDF)
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div class="bg-surface-container-lowest p-6 rounded-2xl ghost-border shadow-sm">
+          <p class="text-xs font-bold uppercase tracking-widest text-tertiary mb-1">Inmuebles</p>
+          <p class="text-3xl font-bold font-headline text-primary">620</p>
+          <p class="text-xs text-slate-400 mt-1">Unidades habitacionales del conjunto</p>
+        </div>
 
+        <div class="bg-surface-container-lowest p-6 rounded-2xl ghost-border shadow-sm">
+          <p class="text-xs font-bold uppercase tracking-widest text-tertiary mb-1">Cuota Promedio por Inmueble</p>
+          <p class="text-3xl font-bold font-headline text-primary">$1,010,315</p>
+          <p class="text-xs text-slate-400 mt-1">Se recomienda plan 3 a 6 cuotas</p>
+        </div>
       </div>
+
+      <!-- ── DISTRIBUCIÓN VISUAL DEL PORTAFOLIO ────────────────────── -->
+      <div class="bg-surface-container-lowest rounded-2xl p-6 ghost-border shadow-sm mb-8">
+        <h2 class="text-sm font-bold uppercase tracking-wider text-on-surface mb-5 flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-base">donut_large</span>
+          Distribución de la Inversión por Proyecto
+        </h2>
+
+        <!-- Barra proporcional -->
+        <div class="flex rounded-full overflow-hidden h-6 mb-5 w-full">
+          <div class="bg-primary flex items-center justify-center text-white text-[9px] font-bold" style="width:63.1%" title="Tecnología y Cámaras — 63.1%">63%</div>
+          <div class="bg-secondary flex items-center justify-center text-white text-[9px] font-bold" style="width:10.8%" title="Gimnasio — 10.8%">11%</div>
+          <div class="bg-teal-600 flex items-center justify-center text-white text-[9px] font-bold" style="width:7.6%" title="Cargadores EV — 7.6%">8%</div>
+          <div class="bg-indigo-500 flex items-center justify-center text-white text-[9px] font-bold" style="width:7.0%" title="Interventoría — 7%">7%</div>
+          <div class="bg-orange-500 flex items-center justify-center text-white text-[9px] font-bold" style="width:6.5%" title="Puertas Cortafuego — 6.5%">7%</div>
+          <div class="bg-cyan-500 flex items-center justify-center text-white text-[9px] font-bold" style="width:3.8%" title="Manta Térmica — 3.8%">4%</div>
+          <div class="bg-slate-400 flex items-center justify-center text-white text-[9px] font-bold" style="width:1.3%" title="Sonido y TV — 1.3%"></div>
+        </div>
+
+        <!-- Leyenda -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 text-xs">
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-primary flex-shrink-0"></span>Tecnología — 63.1%</span>
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-secondary flex-shrink-0"></span>Gimnasio — 10.8%</span>
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-teal-600 flex-shrink-0"></span>Cargadores EV — 7.6%</span>
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-indigo-500 flex-shrink-0"></span>Interventoría — 7.0%</span>
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-orange-500 flex-shrink-0"></span>Puertas Cortafuego — 6.5%</span>
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-cyan-500 flex-shrink-0"></span>Manta Térmica — 3.8%</span>
+          <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-slate-400 flex-shrink-0"></span>Sonido y TV — 1.3%</span>
+        </div>
+      </div>
+
+      <!-- ── ACORDEÓN DE PROYECTOS ──────────────────────────────────── -->
+      <div class="space-y-4">
+
+        <!-- ══════════════════════════════════════════════════════
+             PROYECTO A — Tecnología y Cámaras (Rubro Mayoritario)
+             ══════════════════════════════════════════════════════ -->
+        <details class="proy-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border" open>
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">security</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest" style="color:#003b93">Proyecto A · Rubro Mayoritario</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Tecnología, CCTV y Seguridad Integral</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-primary bg-primary-fixed px-2.5 py-1 rounded-full">63.1% del total</span>
+              <span class="material-symbols-outlined text-slate-400 proy-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="proy-body px-6 pb-6">
+            <div class="grid md:grid-cols-3 gap-4 mb-5">
+              <div class="bg-primary-fixed/60 p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Valor Total</p>
+                <p class="text-xl font-bold font-headline text-primary">$394,987,031</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Proveedor</p>
+                <p class="text-sm font-bold text-on-surface">Seguridad Gestión Ltda.</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Estado contrato</p>
+                <p class="text-sm font-bold text-green-700">Vigente hasta feb. 2027</p>
+              </div>
+            </div>
+
+            <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-base">checklist</span>
+              Alcance del Proyecto
+            </h3>
+            <div class="grid md:grid-cols-2 gap-3 mb-5">
+              <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">videocam</span>
+                <div>
+                  <p class="text-xs font-bold">Central de Monitoreo y CCTV</p>
+                  <p class="text-xs text-tertiary mt-0.5">Sótanos 1 y 2, plazoleta piso 1, áreas comunes y pasillos por pisos.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">electric_bolt</span>
+                <div>
+                  <p class="text-xs font-bold">Cerca Eléctrica Perimetral</p>
+                  <p class="text-xs text-tertiary mt-0.5">Protección del perímetro exterior del conjunto.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">shield</span>
+                <div>
+                  <p class="text-xs font-bold">Frente de Seguridad Sectorial</p>
+                  <p class="text-xs text-tertiary mt-0.5">Integrado al proyecto Zona Segura del sector. Valor: $6,600,000.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">sensors</span>
+                <div>
+                  <p class="text-xs font-bold">Alarma Comunitaria del Sector</p>
+                  <p class="text-xs text-tertiary mt-0.5">Sistema integrado con los conjuntos vecinos de la Zona Segura.</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-primary-fixed/40 p-4 rounded-xl text-xs text-tertiary">
+              <span class="font-bold text-on-surface">Nota:</span> Este proyecto consolida la inversión ya iniciada en el Eje 2 del Informe de Gestión (biométrico ZKTeco, antenas UHF, DVR 4TB). La cuota extraordinaria financiará la expansión completa del sistema.
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             PROYECTO B — Elementos Gimnasio (Zona Fitness)
+             ══════════════════════════════════════════════════════ -->
+        <details class="proy-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">fitness_center</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Proyecto B</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Equipamiento Zona Fitness</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-secondary bg-secondary-fixed px-2.5 py-1 rounded-full">10.8% del total</span>
+              <span class="material-symbols-outlined text-slate-400 proy-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="proy-body px-6 pb-6">
+            <div class="grid md:grid-cols-3 gap-4 mb-5">
+              <div class="bg-secondary-fixed p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Valor Total</p>
+                <p class="text-xl font-bold font-headline text-secondary">$67,624,924</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Proveedor</p>
+                <p class="text-sm font-bold text-on-surface">ING FIT</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Entrega / Garantía</p>
+                <p class="text-sm font-bold text-on-surface">15 días · 1 año</p>
+              </div>
+            </div>
+
+            <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3">Equipamiento Detallado</h3>
+            <div class="grid md:grid-cols-2 gap-2 mb-4">
+              <!-- Lista de equipos con valores -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Discos olímpicos encorchados (28 ud)</span>
+                  <span class="font-bold text-primary">$4,827,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Multiestación SMITH</span>
+                  <span class="font-bold text-primary">$9,900,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Prensa piernas inclinadas 45°</span>
+                  <span class="font-bold text-primary">$7,500,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Flexión de pierna sentado</span>
+                  <span class="font-bold text-primary">$5,100,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Tapetes rompe cabeza (320 ud)</span>
+                  <span class="font-bold text-primary">$5,440,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Tapetes con chispas de color (320 ud)</span>
+                  <span class="font-bold text-primary">$6,080,000</span>
+                </div>
+              </div>
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Banco multiposición (×2)</span>
+                  <span class="font-bold text-primary">$6,150,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Juegos de barras olímpicas (4 ud)</span>
+                  <span class="font-bold text-primary">$2,000,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Rack sentadilla + soportes</span>
+                  <span class="font-bold text-primary">$3,490,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Bolas fitball (10 ud)</span>
+                  <span class="font-bold text-primary">$5,500,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>TRX bandas suspensión (10 ud)</span>
+                  <span class="font-bold text-primary">$1,350,000</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 bg-surface-container-low rounded-lg text-xs">
+                  <span>Mancuernas hex + otros accesorios</span>
+                  <span class="font-bold text-primary">$10,287,924</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between items-center p-3 bg-primary-fixed rounded-xl">
+              <span class="text-sm font-bold text-primary">Total equipamiento gimnasio</span>
+              <span class="text-lg font-bold font-headline text-primary">$67,624,924</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2 italic">Forma de pago: 80% al inicio / 20% contra entrega.</p>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             PROYECTO C — Cargadores Vehículos Eléctricos
+             ══════════════════════════════════════════════════════ -->
+        <details class="proy-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-teal-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">ev_station</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-teal-700 uppercase tracking-widest">Proyecto C</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Cargadores para Vehículos Eléctricos</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-teal-700 bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full">7.6% del total</span>
+              <span class="material-symbols-outlined text-slate-400 proy-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="proy-body px-6 pb-6">
+            <div class="grid md:grid-cols-2 gap-4 mb-5">
+              <div class="bg-teal-50 border border-teal-200 p-5 rounded-xl">
+                <p class="text-xs text-tertiary mb-1">Valor Proyectado</p>
+                <p class="text-2xl font-bold font-headline text-teal-700">$47,600,000</p>
+              </div>
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <p class="text-xs text-tertiary mb-1">Condición</p>
+                <p class="text-sm text-tertiary">La implementación está sujeta al <strong class="text-on-surface">estudio de factibilidad eléctrica</strong> de la copropiedad. Si la Asamblea lo aprueba, los cargadores tendrán carácter <strong class="text-on-surface">comunal y compartido</strong>.</p>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-teal-600 text-base flex-shrink-0">description</span>
+                <p class="text-xs text-tertiary"><strong class="text-on-surface">Certificación ENEL-CODENSA</strong> requerida para validar capacidad del medidor de cada apartamento interesado.</p>
+              </div>
+              <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-teal-600 text-base flex-shrink-0">build</span>
+                <p class="text-xs text-tertiary">Lineamientos de <strong class="text-on-surface">turnos, tarifas y condiciones</strong> definidos por Administración + Consejo Sectorial.</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             PROYECTO D — Fase 2 Interventoría (Construccity)
+             ══════════════════════════════════════════════════════ -->
+        <details class="proy-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">engineering</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-indigo-700 uppercase tracking-widest">Proyecto D · Estratégico</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Fase 2 — Interventoría Técnica (Construccity)</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-full">7.0% del total</span>
+              <span class="material-symbols-outlined text-slate-400 proy-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="proy-body px-6 pb-6">
+            <div class="grid md:grid-cols-2 gap-4 mb-5">
+              <div class="bg-indigo-50 border border-indigo-200 p-5 rounded-xl">
+                <p class="text-xs text-tertiary mb-1">Valor Total</p>
+                <p class="text-2xl font-bold font-headline text-indigo-700">$43,827,000</p>
+                <p class="text-xs text-tertiary mt-1">Proveedor: Construccity</p>
+              </div>
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <p class="text-xs text-tertiary mb-2">¿Por qué es crítico?</p>
+                <p class="text-xs text-tertiary leading-relaxed">Garantiza que la constructora entregue las zonas comunes en condiciones óptimas, evitando gastos futuros por <strong class="text-on-surface">vicios ocultos</strong> que serían responsabilidad de la copropiedad.</p>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <h3 class="font-bold text-sm mb-3 text-indigo-700">Bienes Esenciales (RPH)</h3>
+                <div class="grid grid-cols-2 gap-1.5 text-xs text-tertiary">
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Estructura y losas</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Ascensores</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Fachadas</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Redes eléctricas</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Red contra incendios</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Equipo de bombeo</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Subestación eléctrica</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Tanques elevados</span>
+                </div>
+              </div>
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <h3 class="font-bold text-sm mb-3 text-indigo-700">Bienes No Esenciales (Club House)</h3>
+                <div class="grid grid-cols-2 gap-1.5 text-xs text-tertiary">
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Piscinas climatizadas</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Spa, sauna y turco</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Gimnasio / Crossfit</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Salones sociales</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Sala lounge</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Lavandería</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Cancha múltiple</span>
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-indigo-400">check</span>Terrazas BBQ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             PROYECTO E — Puertas Cortafuego
+             ══════════════════════════════════════════════════════ -->
+        <details class="proy-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">door_front</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-orange-700 uppercase tracking-widest">Proyecto E</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Puertas Cortafuego (80 unidades)</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-orange-700 bg-orange-50 border border-orange-200 px-2.5 py-1 rounded-full">6.5% del total</span>
+              <span class="material-symbols-outlined text-slate-400 proy-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="proy-body px-6 pb-6">
+            <div class="bg-orange-50 border border-orange-200 p-4 rounded-xl mb-5 flex items-start gap-3">
+              <span class="material-symbols-outlined text-orange-600 flex-shrink-0 mt-0.5">info</span>
+              <p class="text-xs text-orange-800">El valor en el presupuesto de cuota ($40,727,503) corresponde a una <strong>fase inicial</strong>. El costo total de ejecución asciende a $80,727,503. Se revisará el alcance definitivo con la Asamblea.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <p class="text-xs text-tertiary mb-1">Suministro — 80 puertas</p>
+                <p class="text-xl font-bold font-headline text-on-surface">$73,727,503</p>
+                <p class="text-xs text-tertiary mt-1">Proveedor: Soluciona Su Proyecto SAS</p>
+              </div>
+              <div class="bg-surface-container-low p-5 rounded-xl">
+                <p class="text-xs text-tertiary mb-1">Instalación</p>
+                <p class="text-xl font-bold font-headline text-on-surface">$7,000,000</p>
+                <p class="text-xs text-tertiary mt-1">Proveedor: Construinstalaciones y Acabados YM SAS</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center p-3 bg-primary-fixed rounded-xl">
+              <span class="text-sm font-bold text-primary">Costo total de ejecución</span>
+              <span class="text-lg font-bold font-headline text-primary">$80,727,503</span>
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             PROYECTO F — Manta Térmica Piscina
+             ══════════════════════════════════════════════════════ -->
+        <details class="proy-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-cyan-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">pool</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-cyan-700 uppercase tracking-widest">Proyecto F</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Manta Térmica — Piscina 22×7.10m</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-cyan-700 bg-cyan-50 border border-cyan-200 px-2.5 py-1 rounded-full">3.8% del total</span>
+              <span class="material-symbols-outlined text-slate-400 proy-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="proy-body px-6 pb-6">
+            <div class="grid md:grid-cols-3 gap-4 mb-5">
+              <div class="bg-cyan-50 border border-cyan-200 p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Valor Total</p>
+                <p class="text-xl font-bold font-headline text-cyan-700">$23,728,800</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Proveedor</p>
+                <p class="text-sm font-bold text-on-surface">Visioners S.A.S</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Forma de Pago</p>
+                <p class="text-sm font-bold text-on-surface">60% anticipo / 40% entrega</p>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-3">
+              <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-cyan-600 text-base flex-shrink-0">water</span>
+                <div>
+                  <p class="text-xs font-bold">Manta Geobubble™ Azul Claro</p>
+                  <p class="text-xs text-tertiary mt-0.5">500 micras — tecnología de última generación para retención de calor.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-cyan-600 text-base flex-shrink-0">settings</span>
+                <div>
+                  <p class="text-xs font-bold">Enrollador VS-M</p>
+                  <p class="text-xs text-tertiary mt-0.5">Acero inoxidable. Garantía 12 meses.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-cyan-600 text-base flex-shrink-0">shield</span>
+                <div>
+                  <p class="text-xs font-bold">Cubierta Reflectiva</p>
+                  <p class="text-xs text-tertiary mt-0.5">Almacenamiento. Garantía manta: 18 meses.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             PROYECTO G — Sonido y TV Amenidades
+             ══════════════════════════════════════════════════════ -->
+        <details class="proy-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-slate-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">speaker</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-600 uppercase tracking-widest">Proyecto G</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Sonido y TV — Amenidades Club House</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-slate-600 bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-full">1.3% del total</span>
+              <span class="material-symbols-outlined text-slate-400 proy-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="proy-body px-6 pb-6">
+            <div class="grid md:grid-cols-3 gap-4 mb-4">
+              <div class="bg-slate-100 p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Valor Total</p>
+                <p class="text-xl font-bold font-headline text-on-surface">$7,899,799</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Proveedor</p>
+                <p class="text-sm font-bold text-on-surface">Ktronix</p>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-xs text-tertiary">Equipos</p>
+                <p class="text-sm font-bold text-on-surface">1 TV + 2 Torres</p>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-slate-500 text-xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">tv</span>
+                <div>
+                  <p class="text-xs font-bold">TV Samsung 55" QLED 4K</p>
+                  <p class="text-xs text-tertiary">$3,899,999</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-slate-500 text-xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">speaker</span>
+                <div>
+                  <p class="text-xs font-bold">2× Torres LG XBoom 1800W</p>
+                  <p class="text-xs text-tertiary">$1,999,900 c/u</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             EQUIPAMIENTO COMPLEMENTARIO (no en cuota principal)
+             ══════════════════════════════════════════════════════ -->
+        <details class="proy-card bg-surface-container-lowest rounded-2xl shadow-sm ghost-border">
+          <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                <span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-secondary uppercase tracking-widest">Necesidades Adicionales</p>
+                <h2 class="text-lg font-bold font-headline text-on-surface">Equipamiento Complementario Club House</h2>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden sm:inline text-[10px] font-bold text-tertiary bg-surface-container-high border border-outline-variant/20 px-2.5 py-1 rounded-full">A validar en caja</span>
+              <span class="material-symbols-outlined text-slate-400 proy-chevron">expand_more</span>
+            </div>
+          </summary>
+
+          <div class="proy-body px-6 pb-6">
+            <p class="text-sm text-tertiary mb-5">Necesidades adicionales identificadas para el Club House. Deben validarse dentro del flujo de caja antes de su ejecución.</p>
+            <div class="grid md:grid-cols-2 gap-3">
+
+              <div class="flex items-start gap-3 p-4 bg-surface-container-low rounded-xl">
+                <span class="material-symbols-outlined text-primary text-xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">fingerprint</span>
+                <div>
+                  <p class="text-sm font-bold">Biométrico Club House</p>
+                  <p class="text-xs text-tertiary mt-0.5">SpeedFace V3L — Control de acceso. Proveedor: Electrocam / Solo Soluciones BG.</p>
+                  <p class="text-xs font-bold text-primary mt-1">$3,000,000 – $3,040,000</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-4 bg-surface-container-low rounded-xl">
+                <span class="material-symbols-outlined text-primary text-xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">health_and_safety</span>
+                <div>
+                  <p class="text-sm font-bold">SG-SST (12 meses)</p>
+                  <p class="text-xs text-tertiary mt-0.5">Acompañamiento técnico permanente. Proveedor: Strategic Systems S.A.S.</p>
+                  <p class="text-xs font-bold text-primary mt-1">$4,800,000 + IVA · $400,000/mes</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-4 bg-surface-container-low rounded-xl">
+                <span class="material-symbols-outlined text-primary text-xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">chair</span>
+                <div>
+                  <p class="text-sm font-bold">Mobiliario Vestier</p>
+                  <p class="text-xs text-tertiary mt-0.5">8 bancas vestier en madera y metal. Proveedor: Industrias Cruz.</p>
+                  <p class="text-xs font-bold text-primary mt-1">~$5,408,000</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-4 bg-surface-container-low rounded-xl">
+                <span class="material-symbols-outlined text-primary text-xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">qr_code</span>
+                <div>
+                  <p class="text-sm font-bold">Señalética QR por Amenidad</p>
+                  <p class="text-xs text-tertiary mt-0.5">15 piezas acrílico 15×15cm con código QR para encuestas. Proveedor: Acriya SAS. <span class="text-green-700 font-semibold">(Aprobado)</span></p>
+                  <p class="text-xs font-bold text-primary mt-1">$321,300</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-4 bg-surface-container-low rounded-xl md:col-span-2">
+                <span class="material-symbols-outlined text-primary text-xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">fire_extinguisher</span>
+                <div>
+                  <p class="text-sm font-bold">Extintores Club House</p>
+                  <p class="text-xs text-tertiary mt-0.5">2× CO2 5LBS (clase BC) + 3× Multipropósito 10LBS (clase ABC). Proveedor: Camell Extintores Ltda.</p>
+                  <p class="text-xs font-bold text-primary mt-1">$696,150</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </details>
+
+        <!-- ══════════════════════════════════════════════════════
+             PLAN DE FINANCIAMIENTO Y RECOMENDACIONES
+             ══════════════════════════════════════════════════════ -->
+        <div class="bg-primary rounded-2xl p-8 text-white relative overflow-hidden shadow-xl">
+          <div class="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none">
+            <svg viewBox="0 0 100 100" class="w-full h-full"><circle cx="80" cy="20" r="60" fill="currentColor" /></svg>
+          </div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings:'FILL' 1;">payments</span>
+              <div>
+                <p class="text-xs font-bold text-on-primary/60 uppercase tracking-widest">Propuesta de Financiamiento</p>
+                <h2 class="text-xl font-bold font-headline">Plan de Cuota Extraordinaria</h2>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+              <div class="bg-white/10 rounded-xl p-5 border border-white/15">
+                <p class="text-xs text-on-primary/60 mb-1">Inversión total</p>
+                <p class="text-2xl font-bold font-headline">$626,395,057</p>
+              </div>
+              <div class="bg-white/10 rounded-xl p-5 border border-white/15">
+                <p class="text-xs text-on-primary/60 mb-1">Cuota promedio por inmueble</p>
+                <p class="text-2xl font-bold font-headline">$1,010,315</p>
+              </div>
+              <div class="bg-white/10 rounded-xl p-5 border border-white/15">
+                <p class="text-xs text-on-primary/60 mb-1">Plan recomendado</p>
+                <p class="text-2xl font-bold font-headline">3 a 6 cuotas</p>
+                <p class="text-xs text-on-primary/70">Sin afectar liquidez</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/15">
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                  <p class="font-bold">Tecnología como eje central</p>
+                </div>
+                <p class="text-sm text-on-primary/80">El 63.1% de la inversión ($394,987,031) corresponde al proyecto de Tecnología y Cámaras. Su aprobación es la más prioritaria para la seguridad del conjunto.</p>
+              </div>
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/15">
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                  <p class="font-bold">Distribución en cuotas</p>
+                </div>
+                <p class="text-sm text-on-primary/80">Con un promedio de $1,010,315 por inmueble, se recomienda un plan de pago de 3 a 6 cuotas mensuales para facilitar el recaudo sin afectar drásticamente la liquidez de los copropietarios.</p>
+              </div>
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/15">
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                  <p class="font-bold">Interventoría como garantía</p>
+                </div>
+                <p class="text-sm text-on-primary/80">La Fase 2 de Interventoría con Construccity es crítica: garantiza que la constructora entregue en condiciones óptimas, evitando gastos correctivos futuros por vicios ocultos.</p>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-white/20">
+              <p class="text-xs text-on-primary/50 italic">Estado del documento: Borrador para revisión de Consejo y Administración — Abril 2026.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /acordeón -->
     </main>
 
-    <!-- Footer -->
     <footer class="w-full bg-slate-50 border-t border-slate-200/40 py-8 px-8 mt-8">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-xs text-slate-500">© 2026 Asamblea Residencial Iconik 68</p>
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">© 2026 Portal Informativo — Asamblea Residencial Iconik 68</p>
         <div class="flex gap-8">
           <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Política de Privacidad</a>
-          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Centro de Ayuda</a>
-          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Contactar Administración</a>
+          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Contactar Admin</a>
         </div>
       </div>
     </footer>
