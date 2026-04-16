@@ -7,7 +7,7 @@
  *   2. Poner <div id="app-topnav"></div> y <div id="app-sidenav"></div>
  *   3. Incluir <script src="assets/nav.js"></script>
  *
- * IDs de página válidos: intro | gestion | presupuesto | proyectos | convivencia
+ * IDs de página válidos: intro | gestion | presupuesto | proyectos | convivencia | galeria
  */
 
 const ICONIK_NAV = {
@@ -54,6 +54,13 @@ const ICONIK_NAV = {
       icon:  'folder_open',
       desc:  'Revisoría Fiscal y Estados Financieros',
       divider: true
+    },
+    {
+      id:    'galeria',
+      href:  'galeria.html',
+      label: 'Galería',
+      icon:  'photo_library',
+      desc:  'Fotos y actividades del conjunto'
     }
   ],
 
