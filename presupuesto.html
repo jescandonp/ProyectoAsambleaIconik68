@@ -172,68 +172,28 @@
         </div>
       </section>
 
-      <!-- ── ¿CUÁNTO PAGO YO? — Tabla de cuotas ────────────────────── -->
+      <!-- ── ¿CUÁNTO PAGO YO? — Link al simulador ─────────────────── -->
       <section class="mb-8">
-        <div class="bg-surface-container-lowest rounded-2xl ghost-border shadow-sm overflow-hidden">
-          <div class="p-6 border-b border-outline-variant/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+        <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" rel="noopener"
+           class="group flex flex-col md:flex-row items-center justify-between gap-5 p-6 bg-surface-container-lowest rounded-2xl ghost-border shadow-sm hover:shadow-md hover:bg-primary-fixed/30 transition-all">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 monolith-gradient rounded-2xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform shadow-md">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings:'FILL' 1;">calculate</span>
+            </div>
             <div>
-              <h2 class="text-lg font-bold font-headline text-on-surface flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary">calculate</span>
+              <h2 class="text-lg font-bold font-headline text-on-surface group-hover:text-primary transition-colors">
                 ¿Cuánto pagaría mi apartamento?
               </h2>
-              <p class="text-xs text-tertiary mt-1">Cuota mensual según coeficiente de copropiedad (solo vivienda). Los locales comerciales tienen coeficiente diferente.</p>
+              <p class="text-sm text-tertiary mt-0.5">
+                Accede al simulador de cuota para calcular el valor mensual exacto según el coeficiente de copropiedad de tu unidad y las dos opciones de presupuesto.
+              </p>
             </div>
-            <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-4 py-2 rounded-xl font-bold text-xs shadow hover:shadow-md transition-all active:scale-95 flex-shrink-0">
-              <span class="material-symbols-outlined text-xs">open_in_new</span>
-              Simular mi cuota exacta
-            </a>
           </div>
-          <div class="overflow-x-auto">
-            <table class="w-full text-sm">
-              <thead>
-                <tr class="bg-surface-container-low">
-                  <th class="px-5 py-3 text-left text-xs font-bold text-tertiary uppercase tracking-wider">Coeficiente</th>
-                  <th class="px-5 py-3 text-right text-xs font-bold text-primary uppercase tracking-wider">Opción 1 (61.2%)</th>
-                  <th class="px-5 py-3 text-right text-xs font-bold text-tertiary uppercase tracking-wider">Opción 2 (52.3%)</th>
-                  <th class="px-5 py-3 text-right text-xs font-bold text-orange-700 uppercase tracking-wider">Diferencia</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-outline-variant/10">
-                <tr class="hover:bg-surface-container-low/50 transition-colors">
-                  <td class="px-5 py-4 font-bold text-on-surface">0.075 <span class="text-xs font-normal text-tertiary ml-1">(apto tipo pequeño)</span></td>
-                  <td class="px-5 py-4 text-right font-bold text-primary">$228,000</td>
-                  <td class="px-5 py-4 text-right text-tertiary">$215,400</td>
-                  <td class="px-5 py-4 text-right font-medium text-orange-700">$12,600</td>
-                </tr>
-                <tr class="hover:bg-surface-container-low/50 transition-colors">
-                  <td class="px-5 py-4 font-bold text-on-surface">0.089 <span class="text-xs font-normal text-tertiary ml-1">(apto tipo medio)</span></td>
-                  <td class="px-5 py-4 text-right font-bold text-primary">$270,600</td>
-                  <td class="px-5 py-4 text-right text-tertiary">$255,600</td>
-                  <td class="px-5 py-4 text-right font-medium text-orange-700">$15,000</td>
-                </tr>
-                <tr class="hover:bg-surface-container-low/50 transition-colors">
-                  <td class="px-5 py-4 font-bold text-on-surface">0.112 <span class="text-xs font-normal text-tertiary ml-1">(apto tipo grande)</span></td>
-                  <td class="px-5 py-4 text-right font-bold text-primary">$340,500</td>
-                  <td class="px-5 py-4 text-right text-tertiary">$321,700</td>
-                  <td class="px-5 py-4 text-right font-medium text-orange-700">$18,800</td>
-                </tr>
-                <tr class="hover:bg-surface-container-low/50 transition-colors">
-                  <td class="px-5 py-4 font-bold text-on-surface">0.120 <span class="text-xs font-normal text-tertiary ml-1">(apto tipo penthouse)</span></td>
-                  <td class="px-5 py-4 text-right font-bold text-primary">$364,800</td>
-                  <td class="px-5 py-4 text-right text-tertiary">$344,700</td>
-                  <td class="px-5 py-4 text-right font-medium text-orange-700">$20,100</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3 rounded-xl font-bold text-sm shadow hover:shadow-lg transition-all flex-shrink-0 group-hover:-translate-y-0.5">
+            <span class="material-symbols-outlined text-sm">open_in_new</span>
+            Ir al Simulador
           </div>
-          <div class="p-4 bg-primary-fixed/30 flex items-start gap-3">
-            <span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5">info</span>
-            <p class="text-xs text-tertiary">
-              El coeficiente de copropiedad de tu apartamento está en la escritura pública o puedes consultarlo en la Administración. Para conocer tu cuota exacta, usa el <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" class="font-bold text-primary hover:underline">Simulador de Cuota</a>.
-            </p>
-          </div>
-        </div>
+        </a>
       </section>
 
       <!-- ── ¿A DÓNDE VA EL DINERO? ─────────────────────────────────── -->
@@ -427,8 +387,8 @@
         </div>
         <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <h2 class="text-xl font-bold font-headline mb-2">Conoce tu cuota exacta</h2>
-            <p class="text-on-primary/80 text-sm max-w-md">Ingresa el coeficiente de copropiedad de tu apartamento para calcular el valor mensual exacto según cada opción de presupuesto.</p>
+            <h2 class="text-xl font-bold font-headline mb-2">Simulador de Cuota Dinámica</h2>
+            <p class="text-on-primary/80 text-sm max-w-md">Consulta el escenario detallado con el valor mensual de tu apartamento para cada opción de presupuesto, basado en tu coeficiente de copropiedad.</p>
             <p class="text-on-primary/50 text-xs mt-2 italic">Los valores finales serán definidos por votación en la Asamblea General.</p>
           </div>
           <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" rel="noopener"
