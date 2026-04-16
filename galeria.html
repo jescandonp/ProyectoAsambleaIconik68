@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html class="light" lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galería de Actividades — Iconik 68</title>
-  <meta name="description" content="Galería fotográfica de actividades, eventos y obras del conjunto residencial Iconik 68." />
+  <meta name="description"
+    content="Galería fotográfica de actividades, eventos y obras del conjunto residencial Iconik 68." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/tailwind.css" />
   <link rel="stylesheet" href="assets/iconik-core.css" />
@@ -40,7 +45,8 @@
               Actividades del Conjunto
             </h1>
             <p class="text-slate-500 mt-2 max-w-xl">
-              Registro fotográfico de eventos, obras, asambleas y momentos que hacen parte de la vida en comunidad de Iconik 68.
+              Registro fotográfico de eventos, obras, asambleas y momentos que hacen parte de la vida en comunidad de
+              Iconik 68.
             </p>
           </div>
           <!-- Contador de fotos -->
@@ -57,13 +63,16 @@
 
           <!-- Los slides se inyectan por JS -->
           <!-- Si no hay fotos, se muestra el placeholder -->
-          <div id="slideshow-placeholder" class="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
-            <div class="w-24 h-24 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-6">
+          <div id="slideshow-placeholder"
+            class="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
+            <div
+              class="w-24 h-24 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-6">
               <span class="material-symbols-outlined text-white/60 text-5xl">add_photo_alternate</span>
             </div>
             <p class="text-white/80 font-semibold text-lg">Aquí aparecerá tu slideshow</p>
             <p class="text-white/50 text-sm mt-1 max-w-xs">
-              Sube imágenes a <code class="bg-white/10 px-2 py-0.5 rounded-md text-xs">assets/gallery/</code> y el slideshow se activa automáticamente.
+              Sube imágenes a <code class="bg-white/10 px-2 py-0.5 rounded-md text-xs">assets/gallery/</code> y el
+              slideshow se activa automáticamente.
             </p>
           </div>
 
@@ -120,9 +129,12 @@
       </section>
 
       <!-- FOOTER -->
-      <footer class="mt-6 pt-12 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-6">
+      <footer
+        class="mt-6 pt-12 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-4">
-          <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold font-headline">I</div>
+          <div
+            class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold font-headline">
+            I</div>
           <p class="text-sm text-slate-500">© 2026 Iconik 68 · Portal Informativo de la Asamblea</p>
         </div>
         <div class="flex gap-8">
@@ -140,11 +152,11 @@
       <span class="material-symbols-outlined">close</span>
     </button>
     <button class="gallery-btn gallery-btn--prev" id="lb-prev" aria-label="Anterior"
-            style="left:1.5rem;top:50%;transform:translateY(-50%);">
+      style="left:1.5rem;top:50%;transform:translateY(-50%);">
       <span class="material-symbols-outlined">chevron_left</span>
     </button>
     <button class="gallery-btn gallery-btn--next" id="lb-next" aria-label="Siguiente"
-            style="right:1.5rem;top:50%;transform:translateY(-50%);">
+      style="right:1.5rem;top:50%;transform:translateY(-50%);">
       <span class="material-symbols-outlined">chevron_right</span>
     </button>
     <div class="text-center max-w-5xl mx-auto px-16">
@@ -169,105 +181,105 @@
       // ── EJEMPLOS con imágenes públicas de demostración ──────────
       // Reemplaza estos registros con tus propias fotos.
       {
-        src:       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80",
-        titulo:    "Asamblea General 2026",
-        desc:      "Apertura oficial de la Asamblea General 2026 del conjunto Iconik 68.",
+        src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80",
+        titulo: "Asamblea General 2026",
+        desc: "Apertura oficial de la Asamblea General 2026 del conjunto Iconik 68.",
         categoria: "asamblea",
-        slide:     true
+        slide: true
       },
       {
-        src:       "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80",
-        titulo:    "Obras de Remodelación",
-        desc:      "Avance de las obras de remodelación de zonas comunes aprobadas en la Asamblea.",
+        src: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80",
+        titulo: "Obras de Remodelación",
+        desc: "Avance de las obras de remodelación de zonas comunes aprobadas en la Asamblea.",
         categoria: "obras",
-        slide:     true
+        slide: true
       },
       {
-        src:       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80",
-        titulo:    "Vista del Conjunto",
-        desc:      "Panorámica de las torres y zonas verdes del conjunto residencial Iconik 68.",
+        src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80",
+        titulo: "Vista del Conjunto",
+        desc: "Panorámica de las torres y zonas verdes del conjunto residencial Iconik 68.",
         categoria: "zonas",
-        slide:     true
+        slide: true
       },
       {
-        src:       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=75",
-        titulo:    "Jornada Comunitaria",
-        desc:      "Encuentro entre residentes en las áreas comunes del conjunto.",
+        src: "assets/gallery/ponal_evento_1.jpg",
+        titulo: "Jornada Policia Comunitaria",
+        desc: "Jornada con Policia Comunitaria organizada por el la Zona Segura en Tenencia responsable de Mascotas",
         categoria: "eventos",
-        slide:     false
+        slide: false
       },
       {
-        src:       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=75",
-        titulo:    "Mantenimiento Fachada",
-        desc:      "Trabajos de mantenimiento y pintura de fachadas principales.",
+        src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=75",
+        titulo: "Mantenimiento Fachada",
+        desc: "Trabajos de mantenimiento y pintura de fachadas principales.",
         categoria: "obras",
-        slide:     false
+        slide: false
       },
       {
-        src:       "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800&q=75",
-        titulo:    "Salón Comunal",
-        desc:      "Renovación del salón comunal disponible para todos los residentes.",
+        src: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800&q=75",
+        titulo: "Salón Comunal",
+        desc: "Renovación del salón comunal disponible para todos los residentes.",
         categoria: "zonas",
-        slide:     false
+        slide: false
       },
       {
-        src:       "https://images.unsplash.com/photo-1554502078-ef0fc409efce?w=800&q=75",
-        titulo:    "Reunión del Consejo",
-        desc:      "Sesión de trabajo del Consejo de Administración Seccional.",
+        src: "https://images.unsplash.com/photo-1554502078-ef0fc409efce?w=800&q=75",
+        titulo: "Reunión del Consejo",
+        desc: "Sesión de trabajo del Consejo de Administración Seccional.",
         categoria: "asamblea",
-        slide:     false
+        slide: false
       },
       {
-        src:       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=75",
-        titulo:    "Zona de BBQ",
-        desc:      "Zona de parrilla y esparcimiento de uso común para los residentes.",
+        src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=75",
+        titulo: "Zona de BBQ",
+        desc: "Zona de parrilla y esparcimiento de uso común para los residentes.",
         categoria: "zonas",
-        slide:     false
+        slide: false
       },
       {
-        src:       "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=75",
-        titulo:    "Evento de Integración",
-        desc:      "Tarde de integración vecinal con actividades para todas las edades.",
+        src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=75",
+        titulo: "Evento de Integración",
+        desc: "Tarde de integración vecinal con actividades para todas las edades.",
         categoria: "eventos",
-        slide:     false
+        slide: false
       }
     ];
   </script>
 
   <!-- ── Galería Engine ────────────────────────────────────────── -->
   <script>
-  (function () {
+    (function () {
 
-    /* ── Utils ──────────────────────────────────────────── */
-    const $  = id => document.getElementById(id);
-    const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+      /* ── Utils ──────────────────────────────────────────── */
+      const $ = id => document.getElementById(id);
+      const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-    let currentSlide  = 0;
-    let slideInterval = null;
-    let lbIndex       = 0;
-    let filteredPhotos = [...GALERIA_PHOTOS];
-    let activeFilter   = 'all';
+      let currentSlide = 0;
+      let slideInterval = null;
+      let lbIndex = 0;
+      let filteredPhotos = [...GALERIA_PHOTOS];
+      let activeFilter = 'all';
 
-    /* ── Slideshow ────────────────────────────────────── */
-    function buildSlideshow () {
-      const slidePhotos = GALERIA_PHOTOS.filter(p => p.slide);
-      const container   = $('main-slideshow');
-      const dotsEl      = $('slide-dots');
-      const placeholder = $('slideshow-placeholder');
+      /* ── Slideshow ────────────────────────────────────── */
+      function buildSlideshow() {
+        const slidePhotos = GALERIA_PHOTOS.filter(p => p.slide);
+        const container = $('main-slideshow');
+        const dotsEl = $('slide-dots');
+        const placeholder = $('slideshow-placeholder');
 
-      if (!slidePhotos.length) return;
+        if (!slidePhotos.length) return;
 
-      // Ocultar placeholder
-      placeholder.style.display = 'none';
-      $('slide-prev').style.display = '';
-      $('slide-next').style.display = '';
+        // Ocultar placeholder
+        placeholder.style.display = 'none';
+        $('slide-prev').style.display = '';
+        $('slide-next').style.display = '';
 
-      // Crear slides
-      slidePhotos.forEach((photo, i) => {
-        const slide = document.createElement('div');
-        slide.className = 'gallery-slide' + (i === 0 ? ' active' : '');
-        slide.dataset.index = i;
-        slide.innerHTML = `
+        // Crear slides
+        slidePhotos.forEach((photo, i) => {
+          const slide = document.createElement('div');
+          slide.className = 'gallery-slide' + (i === 0 ? ' active' : '');
+          slide.dataset.index = i;
+          slide.innerHTML = `
           <img src="${photo.src}" alt="${photo.titulo}" loading="${i === 0 ? 'eager' : 'lazy'}" />
           <div class="gallery-slide-overlay"></div>
           <div class="gallery-slide-caption">
@@ -275,175 +287,163 @@
             <p class="text-white/70 text-sm mt-1 max-w-lg">${photo.desc}</p>
           </div>
         `;
-        container.insertBefore(slide, $('slide-prev'));
+          container.insertBefore(slide, $('slide-prev'));
 
-        // Dot
-        const dot = document.createElement('button');
-        dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', `Ir a imagen ${i + 1}`);
-        dot.addEventListener('click', () => goToSlide(i));
-        dotsEl.appendChild(dot);
-      });
+          // Dot
+          const dot = document.createElement('button');
+          dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', `Ir a imagen ${i + 1}`);
+          dot.addEventListener('click', () => goToSlide(i));
+          dotsEl.appendChild(dot);
+        });
 
-      // Controles
-      $('slide-prev').addEventListener('click', () => changeSlide(-1));
-      $('slide-next').addEventListener('click', () => changeSlide(+1));
+        // Controles
+        $('slide-prev').addEventListener('click', () => changeSlide(-1));
+        $('slide-next').addEventListener('click', () => changeSlide(+1));
 
-      // Auto-play 5 s
-      startAutoPlay(slidePhotos.length);
+        // Auto-play 5 s
+        startAutoPlay(slidePhotos.length);
 
-      // Pausar al pasar el mouse
-      container.addEventListener('mouseenter', stopAutoPlay);
-      container.addEventListener('mouseleave', () => startAutoPlay(slidePhotos.length));
+        // Pausar al pasar el mouse
+        container.addEventListener('mouseenter', stopAutoPlay);
+        container.addEventListener('mouseleave', () => startAutoPlay(slidePhotos.length));
 
-      // Teclado
-      document.addEventListener('keydown', e => {
-        if ($('lightbox').classList.contains('open')) return;
-        if (e.key === 'ArrowLeft')  changeSlide(-1);
-        if (e.key === 'ArrowRight') changeSlide(+1);
-      });
-    }
+        // Teclado
+        document.addEventListener('keydown', e => {
+          if ($('lightbox').classList.contains('open')) return;
+          if (e.key === 'ArrowLeft') changeSlide(-1);
+          if (e.key === 'ArrowRight') changeSlide(+1);
+        });
+      }
 
-    function goToSlide (n) {
-      const slides = $$('.gallery-slide');
-      const dots   = $$('.gallery-dot');
-      slides[currentSlide].classList.remove('active');
-      dots[currentSlide]?.classList.remove('active');
-      currentSlide = (n + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide]?.classList.add('active');
-    }
+      function goToSlide(n) {
+        const slides = $$('.gallery-slide');
+        const dots = $$('.gallery-dot');
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide]?.classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide]?.classList.add('active');
+      }
 
-    function changeSlide (dir) {
-      goToSlide(currentSlide + dir);
-    }
+      function changeSlide(dir) {
+        goToSlide(currentSlide + dir);
+      }
 
-    function startAutoPlay (total) {
-      stopAutoPlay();
-      if (total < 2) return;
-      slideInterval = setInterval(() => changeSlide(+1), 5000);
-    }
+      function startAutoPlay(total) {
+        stopAutoPlay();
+        if (total < 2) return;
+        slideInterval = setInterval(() => changeSlide(+1), 5000);
+      }
 
-    function stopAutoPlay () {
-      clearInterval(slideInterval);
-    }
+      function stopAutoPlay() {
+        clearInterval(slideInterval);
+      }
 
-    /* ── Grid de miniaturas ──────────────────────────── */
-    function buildGrid (photos) {
-      const grid  = $('gallery-grid');
-      const label = $('grid-count-label');
-      grid.innerHTML = '';
+      /* ── Grid de miniaturas ──────────────────────────── */
+      function buildGrid(photos) {
+        const grid = $('gallery-grid');
+        const label = $('grid-count-label');
+        grid.innerHTML = '';
 
-      if (!photos.length) {
-        grid.innerHTML = `
+        if (!photos.length) {
+          grid.innerHTML = `
           <div class="gallery-empty-slot col-span-full min-h-[200px]">
             <span class="material-symbols-outlined text-3xl text-blue-200">image_search</span>
             <p>No hay fotos en esta categoría todavía.</p>
           </div>`;
-        label.textContent = '0 fotos';
-        return;
-      }
+          label.textContent = '0 fotos';
+          return;
+        }
 
-      label.textContent = `${photos.length} foto${photos.length !== 1 ? 's' : ''}`;
+        label.textContent = `${photos.length} foto${photos.length !== 1 ? 's' : ''}`;
 
-      photos.forEach((photo, idx) => {
-        const div = document.createElement('div');
-        div.className = 'gallery-thumb';
-        div.setAttribute('tabindex', '0');
-        div.setAttribute('role', 'button');
-        div.setAttribute('aria-label', photo.titulo);
-        div.innerHTML = `
+        photos.forEach((photo, idx) => {
+          const div = document.createElement('div');
+          div.className = 'gallery-thumb';
+          div.setAttribute('tabindex', '0');
+          div.setAttribute('role', 'button');
+          div.setAttribute('aria-label', photo.titulo);
+          div.innerHTML = `
           <img src="${photo.src}" alt="${photo.titulo}" loading="lazy" />
           <div class="gallery-thumb-overlay">
             <span class="text-white text-xs font-semibold truncate w-full">${photo.titulo}</span>
           </div>
         `;
-        div.addEventListener('click', () => openLightbox(idx, photos));
-        div.addEventListener('keydown', e => { if (e.key === 'Enter') openLightbox(idx, photos); });
-        grid.appendChild(div);
-      });
-    }
-
-    /* ── Filtros ─────────────────────────────────────── */
-    function initFilters () {
-      $$('[data-filter]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          activeFilter = btn.dataset.filter;
-          $$('[data-filter]').forEach(b => b.classList.remove('active', 'bg-primary', 'text-white'));
-          $$('[data-filter]').forEach(b => {
-            b.classList.add('bg-surface-container-low', 'text-slate-600');
-          });
-          btn.classList.add('active', 'bg-primary', 'text-white');
-          btn.classList.remove('bg-surface-container-low', 'text-slate-600');
-
-          filteredPhotos = activeFilter === 'all'
-            ? [...GALERIA_PHOTOS]
-            : GALERIA_PHOTOS.filter(p => p.categoria === activeFilter);
-
-          buildGrid(filteredPhotos);
+          div.addEventListener('click', () => openLightbox(idx, photos));
+          div.addEventListener('keydown', e => { if (e.key === 'Enter') openLightbox(idx, photos); });
+          grid.appendChild(div);
         });
-      });
-    }
+      }
 
-    /* ── Lightbox ────────────────────────────────────── */
-    function openLightbox (idx, photos) {
-      lbIndex = idx;
-      updateLightbox(photos);
-      $('lightbox').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
+      /* ── Filtros ─────────────────────────────────────── */
+      function initFilters() {
+        $$('[data-filter]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            activeFilter = btn.dataset.filter;
+            $$('[data-filter]').forEach(b => b.classList.remove('active', 'bg-primary', 'text-white'));
+            $$('[data-filter]').forEach(b => {
+              b.classList.add('bg-surface-container-low', 'text-slate-600');
+            });
+            btn.classList.add('active', 'bg-primary', 'text-white');
+            btn.classList.remove('bg-surface-container-low', 'text-slate-600');
 
-    function closeLightbox () {
-      $('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    }
+            filteredPhotos = activeFilter === 'all'
+              ? [...GALERIA_PHOTOS]
+              : GALERIA_PHOTOS.filter(p => p.categoria === activeFilter);
 
-    function updateLightbox (photos) {
-      const p = photos[lbIndex];
-      $('lightbox-img').src = p.src;
-      $('lightbox-img').alt = p.titulo;
-      $('lightbox-caption').textContent = p.desc || p.titulo;
-    }
+            buildGrid(filteredPhotos);
+          });
+        });
+      }
 
-    function initLightbox () {
-      $('lightbox-close').addEventListener('click', closeLightbox);
-      $('lightbox').addEventListener('click', e => { if (e.target === $('lightbox')) closeLightbox(); });
+      /* ── Lightbox ────────────────────────────────────── */
+      function openLightbox(idx, photos) {
+        lbIndex = idx;
+        updateLightbox(photos);
+        $('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
 
-      $('lb-prev').addEventListener('click', () => {
-        lbIndex = (lbIndex - 1 + filteredPhotos.length) % filteredPhotos.length;
-        updateLightbox(filteredPhotos);
-      });
-      $('lb-next').addEventListener('click', () => {
-        lbIndex = (lbIndex + 1) % filteredPhotos.length;
-        updateLightbox(filteredPhotos);
-      });
+      function closeLightbox() {
+        $('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
 
-      document.addEventListener('keydown', e => {
-        if (!$('lightbox').classList.contains('open')) return;
-        if (e.key === 'Escape')      closeLightbox();
-        if (e.key === 'ArrowLeft')  { lbIndex = (lbIndex - 1 + filteredPhotos.length) % filteredPhotos.length; updateLightbox(filteredPhotos); }
-        if (e.key === 'ArrowRight') { lbIndex = (lbIndex + 1) % filteredPhotos.length; updateLightbox(filteredPhotos); }
-      });
-    }
+      function updateLightbox(photos) {
+        const p = photos[lbIndex];
+        $('lightbox-img').src = p.src;
+        $('lightbox-img').alt = p.titulo;
+        $('lightbox-caption').textContent = p.desc || p.titulo;
+      }
 
-    /* ── Contador de fotos en el header ─────────────── */
-    function updatePhotoCount () {
-      $('photo-count').textContent = GALERIA_PHOTOS.length;
-    }
+      function initLightbox() {
+        $('lightbox-close').addEventListener('click', closeLightbox);
+        $('lightbox').addEventListener('click', e => { if (e.target === $('lightbox')) closeLightbox(); });
 
-    /* ── Init ────────────────────────────────────────── */
-    document.addEventListener('DOMContentLoaded', () => {
-      updatePhotoCount();
-      buildSlideshow();
-      buildGrid(filteredPhotos);
-      initFilters();
-      initLightbox();
-    });
+        $('lb-prev').addEventListener('click', () => {
+          lbIndex = (lbIndex - 1 + filteredPhotos.length) % filteredPhotos.length;
+          updateLightbox(filteredPhotos);
+        });
+        $('lb-next').addEventListener('click', () => {
+          lbIndex = (lbIndex + 1) % filteredPhotos.length;
+          updateLightbox(filteredPhotos);
+        });
 
-  })();
-  </script>
+        document.addEventListener('keydown', e => {
+          if (!$('lightbox').classList.contains('open')) return;
+          if (e.key === 'Escape') closeLightbox();
+          if (e.key === 'ArrowLeft') { lbIndex = (lbIndex - 1 + filteredPhotos.length) % filteredPhotos.length; updateLightbox(filteredPhotos); }
+          if (e.key === 'ArrowRight') { lbIndex = (lbIndex + 1) % filteredPhotos.length; updateLightbox(filteredPhotos); }
+        });
+      }
 
-  <!-- Navegación compartida -->
-  <script src="assets/nav.js"></script>
-</body>
-</html>
+      /* ── Contador de fotos en el header ─────────────── */
+      function updatePhotoCount() {
+        $('photo-count').textContent = GALERIA_PHOTOS.length;
+      }
+
+      /* ── Init ────────────────────────────────────────── */
+      document.addEventListener('DOMContentLoaded', () => {
+        updatePhotoCount();
+        buildSlid
