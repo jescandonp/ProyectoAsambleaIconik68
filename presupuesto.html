@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Presupuesto Ordinario 2026 — Iconik 68</title>
-  <meta name="description" content="Proyecciones financieras y asignación de recursos del conjunto residencial Iconik 68 para 2026." />
+  <meta name="description" content="Proyecto de presupuesto ordinario 2026 para la Asamblea General: dos opciones de incremento, cuotas por coeficiente y desglose de gastos." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +13,21 @@
 
   <link rel="stylesheet" href="assets/tailwind.css" />
   <link rel="stylesheet" href="assets/iconik-core.css" />
+
+  <style>
+    .pto-card > summary { list-style: none; cursor: pointer; }
+    .pto-card > summary::-webkit-details-marker { display: none; }
+    .pto-chevron { transition: transform 0.25s ease; }
+    .pto-card[open] .pto-chevron { transform: rotate(180deg); }
+    .pto-card > summary:focus-visible { outline: 2px solid #003b93; outline-offset: 2px; border-radius: 0.75rem; }
+    .pto-body { animation: ejeOpen 0.25s ease; }
+    @keyframes ejeOpen {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .option-1 { border: 2px solid #003b93; }
+    .option-1-selected { background: linear-gradient(135deg, #003b93 0%, #0051c3 100%); }
+  </style>
 </head>
 
 <body data-page="presupuesto" class="bg-surface text-on-surface font-body">
@@ -21,228 +36,416 @@
   <div id="app-sidenav"></div>
 
   <div class="lg:pl-64 pt-16 min-h-screen flex flex-col">
-    <main class="flex-1 px-6 py-10 md:px-12 bg-surface max-w-7xl mx-auto w-full">
+    <main class="flex-1 px-6 py-10 md:px-10 max-w-5xl mx-auto w-full">
 
-      <!-- Header -->
-      <section class="mb-12">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <!-- ── HEADER ─────────────────────────────────────────────────── -->
+      <header class="mb-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-5">
           <div>
-            <span class="text-secondary font-semibold tracking-wider text-sm uppercase mb-2 block">Finanzas Residenciales</span>
-            <h1 class="text-4xl md:text-5xl font-bold font-headline text-primary tracking-tight mb-4">
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">edit_document</span>
+                Borrador para Asamblea 2026
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm">pending</span>
+                Pendiente de Aprobación
+              </span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold font-headline text-on-background tracking-tight mt-1">
               Presupuesto Ordinario 2026
             </h1>
-            <p class="text-tertiary max-w-2xl text-lg leading-relaxed">
-              Presentación detallada de la proyección financiera para el próximo periodo fiscal. Nuestra prioridad es la transparencia institucional y el mantenimiento de la plusvalía de Iconik 68.
+            <p class="text-tertiary mt-3 max-w-2xl text-base leading-relaxed">
+              Estructura financiera proyectada para el <strong class="text-on-surface">primer año de operación plena</strong> del conjunto. La Asamblea General deberá aprobar una de las dos opciones presentadas.
             </p>
           </div>
-          <div class="flex flex-wrap gap-3">
-            <button class="flex items-center gap-2 px-5 py-2.5 bg-white border border-outline-variant rounded-lg text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors shadow-sm">
-              <span class="material-symbols-outlined text-lg">download</span>
-              Descargar PDF
-            </button>
-            <button class="flex items-center gap-2 px-5 py-2.5 bg-white border border-outline-variant rounded-lg text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors shadow-sm">
-              <span class="material-symbols-outlined text-lg">table_view</span>
-              Anexo Excel
-            </button>
+          <div class="flex flex-wrap gap-3 flex-shrink-0">
+            <a href="docs/resumen-ejecutivo-presupuesto-2026.pdf" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 bg-surface-container-lowest text-primary border border-primary/20 px-5 py-2.5 rounded-xl font-semibold text-sm shadow-sm hover:bg-primary-fixed transition-all active:scale-95">
+              <span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+              Resumen PDF
+            </a>
+            <a href="docs/presupuesto-2026-borrador.xls" download
+               class="inline-flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">
+              <span class="material-symbols-outlined text-sm">table_view</span>
+              Detalle Excel
+            </a>
           </div>
+        </div>
+      </header>
+
+      <!-- ── CONTEXTO: POR QUÉ AUMENTA ─────────────────────────────── -->
+      <div class="mb-8 p-5 bg-primary-fixed/60 rounded-2xl ghost-border">
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary flex-shrink-0 text-2xl mt-0.5" style="font-variation-settings:'FILL' 1;">info</span>
+          <div>
+            <p class="font-bold text-primary mb-2">¿Por qué el presupuesto es significativamente mayor al de 2025?</p>
+            <p class="text-sm text-tertiary leading-relaxed">
+              El 2025 fue un <strong class="text-on-surface">año parcial de operación</strong> (inicio gradual de zonas). El 2026 es el <strong class="text-on-surface">primer año de funcionamiento completo</strong> del conjunto: Club House, zonas húmedas, gimnasio, piscinas, Torre 4 y todas las zonas comunes operando en paralelo. Esto implica nuevos servicios de personal, utilidades y mantenimiento que antes no existían.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── LAS DOS OPCIONES (decisión clave de la Asamblea) ───────── -->
+      <section class="mb-8">
+        <h2 class="text-xl font-bold font-headline text-on-surface mb-2">La Asamblea debe elegir una opción</h2>
+        <p class="text-sm text-tertiary mb-5">La diferencia mensual entre ambas opciones es de aproximadamente <strong class="text-on-surface">$15,000</strong> para un apartamento promedio. La decisión define si se constituye un fondo de reserva para obras mayores.</p>
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+          <!-- OPCIÓN 1 -->
+          <div class="option-1 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md">
+            <div class="option-1-selected p-6 text-white">
+              <div class="flex items-center justify-between mb-1">
+                <p class="text-xs font-bold uppercase tracking-widest text-white/70">Opción 1</p>
+                <span class="bg-white/20 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">Recomendada</span>
+              </div>
+              <h3 class="text-xl font-bold font-headline mb-1">Protección Patrimonial</h3>
+              <p class="text-white/70 text-xs">Incluye reservas para obras mayores</p>
+            </div>
+            <div class="p-6">
+              <div class="grid grid-cols-2 gap-3 mb-5">
+                <div class="bg-primary-fixed/60 p-4 rounded-xl">
+                  <p class="text-xs text-tertiary">Incremento</p>
+                  <p class="text-2xl font-bold font-headline text-primary">61.2%</p>
+                </div>
+                <div class="bg-primary-fixed/60 p-4 rounded-xl">
+                  <p class="text-xs text-tertiary">Total Anual</p>
+                  <p class="text-lg font-bold font-headline text-primary">$3,647,885,149</p>
+                </div>
+              </div>
+              <div class="space-y-2 text-sm">
+                <div class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                  <span class="text-tertiary">Cubre <strong class="text-on-surface">todos los gastos operativos</strong> del año</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                  <span class="text-tertiary">Incluye <strong class="text-on-surface">$200,000,000 en reservas</strong> para fachadas y cubiertas</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-green-600 text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                  <span class="text-tertiary">Evita cuotas extraordinarias a mediano plazo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OPCIÓN 2 -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm ghost-border">
+            <div class="bg-surface-container-high p-6">
+              <div class="flex items-center justify-between mb-1">
+                <p class="text-xs font-bold text-tertiary uppercase tracking-widest">Opción 2</p>
+              </div>
+              <h3 class="text-xl font-bold font-headline text-on-surface mb-1">Operativo Básico</h3>
+              <p class="text-tertiary text-xs">Sin reservas para obras mayores</p>
+            </div>
+            <div class="p-6">
+              <div class="grid grid-cols-2 gap-3 mb-5">
+                <div class="bg-surface-container-low p-4 rounded-xl">
+                  <p class="text-xs text-tertiary">Incremento</p>
+                  <p class="text-2xl font-bold font-headline text-on-surface">52.3%</p>
+                </div>
+                <div class="bg-surface-container-low p-4 rounded-xl">
+                  <p class="text-xs text-tertiary">Total Anual</p>
+                  <p class="text-lg font-bold font-headline text-on-surface">$3,446,501,149</p>
+                </div>
+              </div>
+              <div class="space-y-2 text-sm">
+                <div class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                  <span class="text-tertiary">Cubre todos los gastos operativos del año</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-error text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">cancel</span>
+                  <span class="text-tertiary"><strong class="text-error">No incluye</strong> reservas para fachadas ni cubiertas</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-orange-500 text-base flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">warning</span>
+                  <span class="text-tertiary">Prioriza ajuste del canon mensual actual</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <!-- Tarjetas resumen -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm ghost-border">
-          <div class="flex justify-between items-start mb-4">
-            <span class="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">account_balance_wallet</span>
-            <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">+4.2% vs 2025</span>
-          </div>
-          <h3 class="text-slate-500 text-sm font-medium mb-1">Total Proyectado</h3>
-          <!-- TODO: Actualizar con cifra real cuando la administración entregue datos -->
-          <p class="text-3xl font-bold font-headline text-on-surface">$1,450,200.00</p>
-        </div>
-
-        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm ghost-border">
-          <div class="flex justify-between items-start mb-4">
-            <span class="material-symbols-outlined text-secondary p-2 bg-secondary-fixed rounded-lg">engineering</span>
-            <span class="text-xs font-medium text-slate-400">Gasto Operativo</span>
-          </div>
-          <h3 class="text-slate-500 text-sm font-medium mb-1">Inversión en Mantenimiento</h3>
-          <!-- TODO: Actualizar con cifra real -->
-          <p class="text-3xl font-bold font-headline text-on-surface">$580,080.00</p>
-        </div>
-
-        <div class="monolith-gradient p-8 rounded-xl shadow-lg relative overflow-hidden group">
-          <div class="relative z-10">
-            <h3 class="text-primary-fixed/80 text-sm font-medium mb-1">Nueva Cuota Admin</h3>
-            <!-- TODO: Actualizar con valor real aprobado -->
-            <p class="text-3xl font-bold font-headline text-white mb-4">
-              $425.00 <span class="text-sm font-normal text-white/70">/ promedio</span>
-            </p>
+      <!-- ── ¿CUÁNTO PAGO YO? — Tabla de cuotas ────────────────────── -->
+      <section class="mb-8">
+        <div class="bg-surface-container-lowest rounded-2xl ghost-border shadow-sm overflow-hidden">
+          <div class="p-6 border-b border-outline-variant/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+            <div>
+              <h2 class="text-lg font-bold font-headline text-on-surface flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">calculate</span>
+                ¿Cuánto pagaría mi apartamento?
+              </h2>
+              <p class="text-xs text-tertiary mt-1">Cuota mensual según coeficiente de copropiedad (solo vivienda). Los locales comerciales tienen coeficiente diferente.</p>
+            </div>
             <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform shadow-md">
-              Simular mi cuota
-              <span class="material-symbols-outlined text-sm">open_in_new</span>
+               class="inline-flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-4 py-2 rounded-xl font-bold text-xs shadow hover:shadow-md transition-all active:scale-95 flex-shrink-0">
+              <span class="material-symbols-outlined text-xs">open_in_new</span>
+              Simular mi cuota exacta
             </a>
           </div>
-          <div class="absolute -right-4 -bottom-4 opacity-20 transform rotate-12 group-hover:rotate-6 transition-transform">
-            <span class="material-symbols-outlined text-9xl text-white" style="font-variation-settings: 'FILL' 1;">calculate</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desglose de Gastos -->
-      <div class="bg-surface-container-low rounded-xl overflow-hidden mb-12">
-        <div class="p-8 border-b border-outline-variant/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div>
-            <h2 class="text-2xl font-bold font-headline text-primary">Desglose de Gastos</h2>
-            <p class="text-sm text-tertiary">Distribución porcentual por categorías de servicio.</p>
-          </div>
-          <div class="flex gap-2 flex-wrap">
-            <span class="bg-white px-3 py-1 rounded-full text-xs font-medium border border-outline-variant/20 flex items-center gap-1">
-              <span class="w-2 h-2 rounded-full bg-blue-600"></span> Operativo
-            </span>
-            <span class="bg-white px-3 py-1 rounded-full text-xs font-medium border border-outline-variant/20 flex items-center gap-1">
-              <span class="w-2 h-2 rounded-full bg-cyan-500"></span> Seguridad
-            </span>
-            <span class="bg-white px-3 py-1 rounded-full text-xs font-medium border border-outline-variant/20 flex items-center gap-1">
-              <span class="w-2 h-2 rounded-full bg-slate-400"></span> Reserva
-            </span>
-          </div>
-        </div>
-
-        <div class="p-8">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-              <!-- TODO: Actualizar porcentajes con datos reales -->
-              <div class="flex flex-col gap-2">
-                <div class="flex justify-between text-sm">
-                  <span class="font-medium">Mantenimiento y Áreas Comunes</span>
-                  <span class="font-bold text-primary">40%</span>
-                </div>
-                <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
-                  <div class="bg-primary h-full rounded-full" style="width: 40%"></div>
-                </div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <div class="flex justify-between text-sm">
-                  <span class="font-medium">Seguridad Privada 24/7</span>
-                  <span class="font-bold text-secondary">35%</span>
-                </div>
-                <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
-                  <div class="bg-secondary h-full rounded-full" style="width: 35%"></div>
-                </div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <div class="flex justify-between text-sm">
-                  <span class="font-medium">Servicios Públicos y Administración</span>
-                  <span class="font-bold text-tertiary">15%</span>
-                </div>
-                <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
-                  <div class="bg-tertiary h-full rounded-full" style="width: 15%"></div>
-                </div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <div class="flex justify-between text-sm">
-                  <span class="font-medium">Fondo de Reserva Estructural</span>
-                  <span class="font-bold text-slate-400">10%</span>
-                </div>
-                <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
-                  <div class="bg-slate-400 h-full rounded-full" style="width: 10%"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Donut chart decorativo -->
-            <div class="flex justify-center relative">
-              <div class="w-64 h-64 rounded-full border-[16px] border-surface-container-high relative flex items-center justify-center">
-                <div class="text-center">
-                  <span class="text-4xl font-bold font-headline text-primary block">100%</span>
-                  <span class="text-[10px] uppercase tracking-widest text-tertiary">Eficiencia Fiscal</span>
-                </div>
-                <svg class="absolute inset-0 w-full h-full -rotate-90">
-                  <circle class="opacity-80" cx="128" cy="128" fill="transparent" r="112"
-                    stroke="#003b93" stroke-dasharray="703.7" stroke-dashoffset="422" stroke-width="16" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tabla comparativa anual -->
-      <div class="bg-white rounded-xl shadow-sm ghost-border mb-12">
-        <div class="p-8">
-          <h2 class="text-xl font-bold font-headline text-primary mb-6">Comparativa Anual Proyectada</h2>
           <div class="overflow-x-auto">
-            <table class="w-full text-left">
+            <table class="w-full text-sm">
               <thead>
-                <tr class="text-tertiary text-xs uppercase tracking-widest border-b border-outline-variant/10">
-                  <th class="pb-4 font-bold">Categoría</th>
-                  <th class="pb-4 font-bold">Ejecutado 2025</th>
-                  <th class="pb-4 font-bold">Presupuesto 2026</th>
-                  <th class="pb-4 font-bold">Variación %</th>
-                  <th class="pb-4 font-bold text-right">Estado</th>
+                <tr class="bg-surface-container-low">
+                  <th class="px-5 py-3 text-left text-xs font-bold text-tertiary uppercase tracking-wider">Coeficiente</th>
+                  <th class="px-5 py-3 text-right text-xs font-bold text-primary uppercase tracking-wider">Opción 1 (61.2%)</th>
+                  <th class="px-5 py-3 text-right text-xs font-bold text-tertiary uppercase tracking-wider">Opción 2 (52.3%)</th>
+                  <th class="px-5 py-3 text-right text-xs font-bold text-orange-700 uppercase tracking-wider">Diferencia</th>
                 </tr>
               </thead>
-              <tbody class="text-sm">
-                <!-- TODO: Reemplazar con datos reales de la administración -->
-                <tr class="border-b border-outline-variant/5">
-                  <td class="py-5 font-semibold text-on-surface">Mantenimiento Ascensores</td>
-                  <td class="py-5 text-tertiary">$45,000</td>
-                  <td class="py-5 text-on-surface">$48,500</td>
-                  <td class="py-5 text-green-600 font-medium">+7.7%</td>
-                  <td class="py-5 text-right"><span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold">Crítico</span></td>
+              <tbody class="divide-y divide-outline-variant/10">
+                <tr class="hover:bg-surface-container-low/50 transition-colors">
+                  <td class="px-5 py-4 font-bold text-on-surface">0.075 <span class="text-xs font-normal text-tertiary ml-1">(apto tipo pequeño)</span></td>
+                  <td class="px-5 py-4 text-right font-bold text-primary">$228,000</td>
+                  <td class="px-5 py-4 text-right text-tertiary">$215,400</td>
+                  <td class="px-5 py-4 text-right font-medium text-orange-700">$12,600</td>
                 </tr>
-                <tr class="border-b border-outline-variant/5">
-                  <td class="py-5 font-semibold text-on-surface">Personal de Conserjería</td>
-                  <td class="py-5 text-tertiary">$120,000</td>
-                  <td class="py-5 text-on-surface">$132,000</td>
-                  <td class="py-5 text-green-600 font-medium">+10%</td>
-                  <td class="py-5 text-right"><span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-bold">Nómina</span></td>
+                <tr class="hover:bg-surface-container-low/50 transition-colors">
+                  <td class="px-5 py-4 font-bold text-on-surface">0.089 <span class="text-xs font-normal text-tertiary ml-1">(apto tipo medio)</span></td>
+                  <td class="px-5 py-4 text-right font-bold text-primary">$270,600</td>
+                  <td class="px-5 py-4 text-right text-tertiary">$255,600</td>
+                  <td class="px-5 py-4 text-right font-medium text-orange-700">$15,000</td>
                 </tr>
-                <tr class="border-b border-outline-variant/5">
-                  <td class="py-5 font-semibold text-on-surface">Jardinería y Paisajismo</td>
-                  <td class="py-5 text-tertiary">$22,000</td>
-                  <td class="py-5 text-on-surface">$20,500</td>
-                  <td class="py-5 text-red-600 font-medium">-6.8%</td>
-                  <td class="py-5 text-right"><span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-bold">Optimizado</span></td>
+                <tr class="hover:bg-surface-container-low/50 transition-colors">
+                  <td class="px-5 py-4 font-bold text-on-surface">0.112 <span class="text-xs font-normal text-tertiary ml-1">(apto tipo grande)</span></td>
+                  <td class="px-5 py-4 text-right font-bold text-primary">$340,500</td>
+                  <td class="px-5 py-4 text-right text-tertiary">$321,700</td>
+                  <td class="px-5 py-4 text-right font-medium text-orange-700">$18,800</td>
                 </tr>
-                <tr>
-                  <td class="py-5 font-semibold text-on-surface">Seguro Multi-Riesgo</td>
-                  <td class="py-5 text-tertiary">$58,000</td>
-                  <td class="py-5 text-on-surface">$61,000</td>
-                  <td class="py-5 text-green-600 font-medium">+5.1%</td>
-                  <td class="py-5 text-right"><span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold">Legal</span></td>
+                <tr class="hover:bg-surface-container-low/50 transition-colors">
+                  <td class="px-5 py-4 font-bold text-on-surface">0.120 <span class="text-xs font-normal text-tertiary ml-1">(apto tipo penthouse)</span></td>
+                  <td class="px-5 py-4 text-right font-bold text-primary">$364,800</td>
+                  <td class="px-5 py-4 text-right text-tertiary">$344,700</td>
+                  <td class="px-5 py-4 text-right font-medium text-orange-700">$20,100</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <div class="p-4 bg-primary-fixed/30 flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5">info</span>
+            <p class="text-xs text-tertiary">
+              El coeficiente de copropiedad de tu apartamento está en la escritura pública o puedes consultarlo en la Administración. Para conocer tu cuota exacta, usa el <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" class="font-bold text-primary hover:underline">Simulador de Cuota</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── ¿A DÓNDE VA EL DINERO? ─────────────────────────────────── -->
+      <section class="mb-6">
+        <h2 class="text-xl font-bold font-headline text-on-surface mb-5 flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary">donut_large</span>
+          ¿A dónde va el dinero? (Opción 1)
+        </h2>
+
+        <div class="bg-surface-container-lowest rounded-2xl ghost-border shadow-sm p-6 mb-4">
+          <!-- Barra visual -->
+          <div class="flex rounded-full overflow-hidden h-7 mb-6 w-full">
+            <div class="bg-primary flex items-center justify-center text-white text-[9px] font-bold" style="width:76.6%" title="Servicios Operativos 76.6%">76.6%</div>
+            <div class="bg-orange-500 flex items-center justify-center text-white text-[9px] font-bold" style="width:10.6%" title="Mantenimientos 10.6%">10.6%</div>
+            <div class="bg-teal-500 flex items-center justify-center text-white text-[9px] font-bold" style="width:6.3%" title="Reservas 6.3%">6%</div>
+            <div class="bg-secondary flex items-center justify-center text-white text-[9px] font-bold" style="width:5.8%" title="Seguros 5.8%">6%</div>
+            <div class="bg-slate-400" style="width:0.7%"></div>
+          </div>
+
+          <!-- Detalle de categorías -->
+          <div class="space-y-4">
+
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-sm bg-primary flex-shrink-0"></span>
+                  <span class="text-sm font-bold text-on-surface">Servicios Operativos</span>
+                  <span class="text-xs text-tertiary">— Seguridad, Aseo, Admin, Personal Club House, Servicios Públicos</span>
+                </div>
+                <span class="text-sm font-bold text-primary flex-shrink-0">76.6%</span>
+              </div>
+              <div class="pl-5 grid md:grid-cols-2 gap-x-8 gap-y-1 text-xs text-tertiary">
+                <span>• Vigilancia 24/7: <strong class="text-on-surface">$1,342,570,894</strong> <span class="text-slate-400">(36.8%)</span></span>
+                <span>• Aseo (5 operarias + turnos CH): <strong class="text-on-surface">$352,688,000</strong></span>
+                <span>• Administración Copropiedad: <strong class="text-on-surface">$324,224,000</strong></span>
+                <span>• Personal Club House (9 meses): <strong class="text-on-surface">$172,444,444</strong></span>
+                <span>• Energía eléctrica (CH incluido): <strong class="text-on-surface">$349,000,000</strong></span>
+                <span>• Gas natural (zonas húmedas): <strong class="text-on-surface">$144,000,000</strong></span>
+              </div>
+            </div>
+
+            <div class="border-t border-outline-variant/10 pt-4">
+              <div class="flex justify-between items-center mb-1">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-sm bg-orange-500 flex-shrink-0"></span>
+                  <span class="text-sm font-bold text-on-surface">Mantenimientos Especializados</span>
+                </div>
+                <span class="text-sm font-bold text-orange-700 flex-shrink-0">10.6%</span>
+              </div>
+              <div class="pl-5 grid md:grid-cols-2 gap-x-8 gap-y-1 text-xs text-tertiary">
+                <span>• Ascensores (9 unidades): <strong class="text-on-surface">$94,590,592</strong></span>
+                <span>• Zonas húmedas (piscinas, spa): <strong class="text-on-surface">$42,875,000</strong></span>
+                <span>• Puertas cortafuego (220): <strong class="text-on-surface">$35,000,000</strong></span>
+                <span>• Instrumentación sísmica: <strong class="text-on-surface">$19,000,000</strong></span>
+                <span>• Bombas y motobombas: <strong class="text-on-surface">$17,800,000</strong></span>
+                <span>• Otros mantenimientos: <strong class="text-on-surface">~$178,000,000</strong></span>
+              </div>
+            </div>
+
+            <div class="border-t border-outline-variant/10 pt-4">
+              <div class="flex justify-between items-center mb-1">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-sm bg-teal-500 flex-shrink-0"></span>
+                  <span class="text-sm font-bold text-on-surface">Reservas de Valorización</span>
+                  <span class="text-xs text-orange-600 font-semibold">Solo Opción 1</span>
+                </div>
+                <span class="text-sm font-bold text-teal-700 flex-shrink-0">6.3%</span>
+              </div>
+              <div class="pl-5 grid md:grid-cols-2 gap-x-8 gap-y-1 text-xs text-tertiary">
+                <span>• Fondo fachadas (5 años): <strong class="text-on-surface">$100,000,000</strong></span>
+                <span>• Fondo cubiertas (5 años): <strong class="text-on-surface">$100,000,000</strong></span>
+              </div>
+              <p class="pl-5 mt-1.5 text-xs text-teal-700">Ahorro programado de $200,384,000 anuales. Evita cuotas extraordinarias en el futuro.</p>
+            </div>
+
+            <div class="border-t border-outline-variant/10 pt-4">
+              <div class="flex justify-between items-center mb-1">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-sm bg-secondary flex-shrink-0"></span>
+                  <span class="text-sm font-bold text-on-surface">Seguros y Legal</span>
+                </div>
+                <span class="text-sm font-bold text-secondary flex-shrink-0">5.8%</span>
+              </div>
+              <div class="pl-5 grid md:grid-cols-2 gap-x-8 gap-y-1 text-xs text-tertiary">
+                <span>• Seguros copropiedad: <strong class="text-on-surface">$194,000,000</strong> <span class="text-green-700">(3 cuotas sin intereses)</span></span>
+                <span>• Fondo de imprevistos (1%): <strong class="text-on-surface">$36,117,675</strong></span>
+                <span>• Revisoría Fiscal: <strong class="text-on-surface">$30,000,000</strong></span>
+              </div>
+            </div>
+
+            <div class="border-t border-outline-variant/10 pt-4">
+              <div class="flex justify-between items-center mb-1">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-sm bg-slate-400 flex-shrink-0"></span>
+                  <span class="text-sm font-bold text-on-surface">Gestión Administrativa y Varios</span>
+                </div>
+                <span class="text-sm font-bold text-tertiary flex-shrink-0">0.7%</span>
+              </div>
+              <div class="pl-5 grid md:grid-cols-2 gap-x-8 gap-y-1 text-xs text-tertiary">
+                <span>• Asambleas y reuniones: <strong class="text-on-surface">$18,000,000</strong></span>
+                <span>• Actividades de convivencia: <strong class="text-on-surface">$9,500,000</strong></span>
+                <span>• Gastos bancarios: <strong class="text-on-surface">$5,705,172</strong></span>
+                <span>• Carteleras y comunicaciones: <strong class="text-on-surface">$6,500,000</strong></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── ESTRATEGIAS DE EFICIENCIA ──────────────────────────────── -->
+      <details class="pto-card bg-surface-container-lowest rounded-2xl ghost-border shadow-sm mb-4">
+        <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+              <span class="material-symbols-outlined text-xl">lightbulb</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-secondary uppercase tracking-widest">Eficiencia Operativa</p>
+              <h2 class="text-lg font-bold font-headline text-on-surface">Estrategias para Optimizar el Gasto</h2>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-slate-400 pto-chevron">expand_more</span>
+        </summary>
+        <div class="pto-body px-6 pb-6">
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-surface-container-low p-5 rounded-xl">
+              <span class="material-symbols-outlined text-primary text-2xl mb-3" style="font-variation-settings:'FILL' 1;">build</span>
+              <h3 class="font-bold text-sm mb-2">Todero Especializado</h3>
+              <p class="text-xs text-tertiary">Figura interna para resolver reparaciones menores de forma inmediata, reduciendo la dependencia y costos de contratación externa.</p>
+            </div>
+            <div class="bg-surface-container-low p-5 rounded-xl">
+              <span class="material-symbols-outlined text-primary text-2xl mb-3" style="font-variation-settings:'FILL' 1;">schedule</span>
+              <h3 class="font-bold text-sm mb-2">Horarios Club House Optimizados</h3>
+              <p class="text-xs text-tertiary">Zonas húmedas y gimnasio operando en horarios de alta demanda (<strong class="text-on-surface">6AM–9AM y 4PM–9PM</strong>) para racionalizar el gasto en servicios públicos y personal.</p>
+            </div>
+            <div class="bg-surface-container-low p-5 rounded-xl">
+              <span class="material-symbols-outlined text-primary text-2xl mb-3" style="font-variation-settings:'FILL' 1;">cleaning_services</span>
+              <h3 class="font-bold text-sm mb-2">Gestión de Aseo Distribuida</h3>
+              <p class="text-xs text-tertiary">Equipo de <strong class="text-on-surface">5 operarias</strong> distribuidas estratégicamente por torres y zonas comunes para garantizar la limpieza sin sobredimensionar la nómina.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- ── COMPARATIVA 2025 vs 2026 ───────────────────────────────── -->
+      <details class="pto-card bg-surface-container-lowest rounded-2xl ghost-border shadow-sm mb-6">
+        <summary class="flex items-center justify-between p-6 hover:bg-surface-container-low/50 rounded-2xl transition-colors">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 monolith-gradient rounded-xl flex items-center justify-center text-white flex-shrink-0">
+              <span class="material-symbols-outlined text-xl">compare_arrows</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-secondary uppercase tracking-widest">Contexto</p>
+              <h2 class="text-lg font-bold font-headline text-on-surface">Comparativa 2025 vs 2026</h2>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-slate-400 pto-chevron">expand_more</span>
+        </summary>
+        <div class="pto-body px-6 pb-6">
+          <div class="grid md:grid-cols-2 gap-5 mb-5">
+            <div class="bg-surface-container-low p-5 rounded-xl">
+              <p class="text-xs font-bold text-tertiary uppercase tracking-wider mb-3">2025 — Año Parcial</p>
+              <p class="text-2xl font-bold font-headline text-on-surface mb-1">$1,802,441,550</p>
+              <p class="text-xs text-tertiary">Cuotas recaudadas durante el año de arranque gradual del conjunto. <strong class="text-on-surface">Solo torres 1-3 y zonas básicas</strong>.</p>
+            </div>
+            <div class="bg-primary-fixed/60 p-5 rounded-xl">
+              <p class="text-xs font-bold text-primary uppercase tracking-wider mb-3">2026 — Primer año completo (Op.1)</p>
+              <p class="text-2xl font-bold font-headline text-primary mb-1">$3,647,885,149</p>
+              <p class="text-xs text-tertiary">Opera el <strong class="text-on-surface">100% del conjunto</strong>: Club House, zonas húmedas, Torre 4, todos los servicios activos.</p>
+            </div>
+          </div>
+          <div class="bg-surface-container-low p-5 rounded-xl">
+            <p class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3">Nuevos gastos en 2026 que NO existían en 2025:</p>
+            <div class="grid md:grid-cols-2 gap-2 text-xs text-tertiary">
+              <span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">add_circle</span>Personal Club House (recepción, salvavidas, piscinero, instructor): <strong class="text-on-surface">$172M/año</strong></span>
+              <span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">add_circle</span>Gas natural (zonas húmedas — 8 meses): <strong class="text-on-surface">$144M/año</strong></span>
+              <span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">add_circle</span>2 turnos adicionales de vigilancia (Torre 4 + CH): incluidos en $1,342M</span>
+              <span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">add_circle</span>3 turnos adicionales de aseo (Club House): incluidos en $352M</span>
+              <span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">add_circle</span>Mantenimiento zonas húmedas (calderas, piscinas): <strong class="text-on-surface">$46M/año</strong></span>
+              <span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">add_circle</span>Energía eléctrica Club House (referencia similares): estimado <strong class="text-on-surface">$35M/mes</strong></span>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- ── CTA SIMULADOR ──────────────────────────────────────────── -->
+      <div class="bg-primary rounded-2xl p-8 text-white relative overflow-hidden shadow-xl">
+        <div class="absolute top-0 right-0 w-48 h-48 opacity-5 pointer-events-none">
+          <svg viewBox="0 0 100 100" class="w-full h-full"><circle cx="80" cy="20" r="60" fill="currentColor" /></svg>
+        </div>
+        <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <h2 class="text-xl font-bold font-headline mb-2">Conoce tu cuota exacta</h2>
+            <p class="text-on-primary/80 text-sm max-w-md">Ingresa el coeficiente de copropiedad de tu apartamento para calcular el valor mensual exacto según cada opción de presupuesto.</p>
+            <p class="text-on-primary/50 text-xs mt-2 italic">Los valores finales serán definidos por votación en la Asamblea General.</p>
+          </div>
+          <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" rel="noopener"
+             class="flex-shrink-0 inline-flex items-center gap-3 bg-white text-primary px-7 py-4 rounded-xl font-bold text-base shadow-lg hover:bg-primary-fixed transition-all hover:-translate-y-0.5 active:scale-95">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">calculate</span>
+            Simular mi cuota
+          </a>
         </div>
       </div>
 
-      <!-- CTA Simulador -->
-      <section class="bg-surface-container-high rounded-xl p-10 flex flex-col md:flex-row items-center justify-between gap-8 ghost-border">
-        <div class="max-w-xl">
-          <h2 class="text-2xl font-bold font-headline text-primary mb-2">Simulador de Cuota Dinámica</h2>
-          <p class="text-tertiary leading-relaxed">
-            Utilice nuestra herramienta de simulación para entender cómo impacta el nuevo presupuesto en su unidad específica basándose en su coeficiente de copropiedad.
-          </p>
-        </div>
-        <a href="https://cuota-administracion-iconik68.vercel.app/" target="_blank" rel="noopener"
-           class="monolith-gradient text-white font-bold py-4 px-10 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex items-center gap-3 flex-shrink-0">
-          Acceder al Simulador
-          <span class="material-symbols-outlined">analytics</span>
-        </a>
-      </section>
-
     </main>
 
-    <!-- Footer -->
     <footer class="w-full bg-slate-50 border-t border-slate-200/40 py-8 px-8 mt-8">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-xs text-slate-500">© 2026 Asamblea Residencial Iconik 68 — Gestión Financiera</p>
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">© 2026 Portal Informativo — Asamblea Residencial Iconik 68</p>
         <div class="flex gap-8">
           <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Política de Privacidad</a>
-          <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Transparencia</a>
           <a href="#" class="text-xs text-slate-400 hover:text-primary transition-colors">Contactar Admin</a>
         </div>
       </div>
