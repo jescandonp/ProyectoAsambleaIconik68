@@ -2,14 +2,5 @@
   "outputDirectory": ".",
   "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/informe-gestion", "dest": "/informe-gestion.html" },
-    { "src": "/presupuesto", "dest": "/presupuesto.html" },
-    { "src": "/proyectos", "dest": "/proyectos.html" },
-    { "src": "/manual-convivencia", "dest": "/manual-convivencia.html" },
-    { "src": "/documentos", "dest": "/documentos.html" },
-    { "src": "/galeria", "dest": "/galeria.html" }
-  ]
+  "trailingSlash": false
 }
