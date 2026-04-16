@@ -115,40 +115,6 @@
         <div class="gallery-grid" id="gallery-grid"></div>
       </section>
 
-      <!-- ── CÓMO AGREGAR FOTOS ─────────────────────────────────────── -->
-      <section class="mb-20 fade-up">
-        <div class="bg-surface-container-lowest ghost-border rounded-3xl p-8 lg:p-10 ambient-shadow">
-          <div class="flex items-start gap-5">
-            <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0 mt-1">
-              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">tips_and_updates</span>
-            </div>
-            <div>
-              <h3 class="text-lg font-headline font-bold text-on-surface mb-2">¿Cómo agregar fotos a la galería?</h3>
-              <p class="text-slate-500 text-sm leading-relaxed mb-4">
-                La galería lee automáticamente el arreglo <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs text-primary font-mono">GALERIA_PHOTOS</code>
-                definido al final de esta misma página. Para publicar nuevas imágenes, edita ese arreglo con el nombre del archivo, su título, descripción y categoría.
-              </p>
-              <div class="bg-slate-900 rounded-xl p-4 text-xs font-mono overflow-x-auto">
-                <pre class="text-slate-300 whitespace-pre"><span class="text-blue-400">const</span> <span class="text-green-400">GALERIA_PHOTOS</span> = [
-  <span class="text-slate-500">// Ejemplo de entrada:</span>
-  {
-    <span class="text-yellow-300">src</span>:      <span class="text-orange-300">"assets/gallery/asamblea-2026.jpg"</span>,
-    <span class="text-yellow-300">titulo</span>:   <span class="text-orange-300">"Asamblea General 2026"</span>,
-    <span class="text-yellow-300">desc</span>:     <span class="text-orange-300">"Apertura oficial de la Asamblea"</span>,
-    <span class="text-yellow-300">categoria</span>:<span class="text-orange-300">"asamblea"</span>   <span class="text-slate-500">// asamblea | obras | eventos | zonas</span>
-  },
-];</pre>
-              </div>
-              <p class="text-xs text-slate-400 mt-3">
-                <span class="material-symbols-outlined text-[14px] align-middle">folder</span>
-                Ruta de imágenes: <code class="bg-slate-100 px-1.5 py-0.5 rounded font-mono">assets/gallery/</code>
-                — Formatos soportados: JPG · PNG · WEBP
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- FOOTER -->
       <footer class="mt-6 pt-12 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-4">
