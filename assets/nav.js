@@ -22,9 +22,9 @@ const ICONIK_NAV = {
     {
       id:    'gestion',
       href:  'informe-gestion.html',
-      label: 'Informe de Gestión',
+      label: 'Gestión Consejos',
       icon:  'analytics',
-      desc:  'Logros y resultados del período'
+      desc:  'Informe de Gestión Consejos de Administración'
     },
     {
       id:    'presupuesto',
